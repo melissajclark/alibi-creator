@@ -17,15 +17,18 @@
 var firstMessage = alert("So you messed up again! You idiot. It's alright, all you gotta do is answer a few measly questions and you'll have the perfect alibi for your latest fuckup.");
 
 var alibiQuestion = {
-	name: prompt("Who is this alibi for? (mom, girlfriend, professor, etc)"),
+	who: prompt("Who is this alibi for? (mom, girlfriend, professor, etc)"),
 	firstTime: prompt("Is this the first time? (yes/no)"),
 	scaleOfIssue: prompt("How bad did you mess up? (on a scale of 1 to 10)")
 	// need more alibi questions
 }
 
+
+
 console.log(alibiQuestion); // logs user's answers into the console
 
-
+var alibiSummary = "Damn, you REALLY pissed off your " + alibiQuestion.who
+console.log(alibiSummary); 
 
 	
 </script>
