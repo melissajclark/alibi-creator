@@ -22,9 +22,16 @@ var alibiQuestion = {
 	// need more alibi questions
 }
 
+var repeatMistakeQ = "";
+
+if (alibiQuestion.firstTime === "yes") {
+	repeatMistakeQ = ""
+}
+
 console.log(alibiQuestion); // logs user's answers into the console
 
-var alibiSummary = "Damn, you REALLY pissed off your " + alibiQuestion.who + "for the" 
+
+var alibiSummary = "Damn, you REALLY pissed off your " + alibiQuestion.who + " " + repeatMistakeQ
 console.log(alibiSummary); 
 
 
