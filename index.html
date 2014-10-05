@@ -25,17 +25,26 @@ var alibiQuestion = {
 
 	// analyzes answers to questions
 var firstTime = (
-if (alibiQuestion.firstTime === "yes") {
-	firstTime = "first time";
-} else (alibiQuestion.firstTime ==== "no") {
-	firstTime = "not your first time"
+	if (alibiQuestion.firstTime === "yes")) {
+
 }
-console.log(firstTime); 
 
-// console.log(alibiQuestion); // logs user's answers into the console
+var welcomeStatement = "";
+if (alibiQuestion.firstTime === "yes") {
+	// logic for first time
+	// assign variable for this 
 
-// var alibiSummary = "Damn, you REALLY pissed off your " + alibiQuestion.who + "for the" 
-// console.log(alibiSummary); 
+} else {
+	// logic for second time
+	// assign other variable
+}
+
+// console.log(welcomeStatement); <-- Tessa's example
+
+console.log(alibiQuestion); // logs user's answers into the console
+
+var alibiSummary = "Damn, you REALLY pissed off your " + alibiQuestion.who + "for the" 
+console.log(alibiSummary); 
 
 
 
