@@ -25,11 +25,15 @@ var alibiQuestion = {
 var repeatMistakeQ = "";
 
 if (alibiQuestion.firstTime === "yes") {
-	repeatMistakeQ = ""
+	repeatMistakeQ = "for the first time";
+	console.log(repeatMistakeQ);
+} else if (alibiQuestion.firstTime === "no") {
+	repeatMistakeQ = "again"; 
+	console.log(repeatMistakeQ);
+
 }
 
 console.log(alibiQuestion); // logs user's answers into the console
-
 
 var alibiSummary = "Damn, you REALLY pissed off your " + alibiQuestion.who + " " + repeatMistakeQ
 console.log(alibiSummary); 
