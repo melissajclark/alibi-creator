@@ -25,19 +25,19 @@ var alibiQuestion = {
 var repeatMistakeQ = " ";
 
 if (alibiQuestion.firstTime === "yes") {
-	repeatMistakeQ = "for the first time";
+	repeatMistakeQ = "At least it was for the first time.";
 	console.log(repeatMistakeQ);
 } else if (alibiQuestion.firstTime === "no") {
-	repeatMistakeQ = "again"; 
+	repeatMistakeQ = "And you've done it before? Shit."; 
 	console.log(repeatMistakeQ);
-} else (alibiQuestion.firstTime != "yes" || alibiQuestion.firstTime != "no") 
-	repeatMistakeQ = "wrong answer";
-	console.log(repeatMistakeQ);
+} //else (alibiQuestion.firstTime != "yes" && alibiQuestion.firstTime != "no"); 
+// 	repeatMistakeQ = "wrong answer";
+// 	console.log(repeatMistakeQ); 
 
 
 console.log(alibiQuestion); // logs user's answers into the console
 
-var alibiSummary = "Damn, you REALLY pissed off your " + alibiQuestion.who + " " + repeatMistakeQ
+var alibiSummary = "Damn, you REALLY pissed off your " + alibiQuestion.who + "! " + repeatMistakeQ
 console.log(alibiSummary); 
 
 
