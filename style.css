@@ -16,6 +16,11 @@ h1 {
 	font-size:2.9em;
 	color: #586A79;
 }
+
+h2 {
+	text-align: center;
+}
+
 .caption {
 	font-style: italic;
 	font-weight: 400;
@@ -34,5 +39,6 @@ a:hover {
 
 footer {
 	text-align:center;
-	padding-top:20em;
+	padding-top:25em;
+	padding-bottom:2em;
 }
