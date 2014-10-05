@@ -1,8 +1,33 @@
-h1 {
-	text-align: center;
+body {
+	font-family: "Open Sans", sans-serif;
+	margin-top:5em;
+	background-color: rgba(236, 217, 168, 0.43);
+	font-weight:400;
+	color:#222;
 }
 
-p.caption {
-	text-align: center;
+
+.intro {
+	text-align:center;
+}
+
+h1 {
+	font-weight:600;
+	font-size:2.9em;
+	color: #586A79;
+}
+.caption {
 	font-style: italic;
+	font-weight: 400;
+}
+
+/* Link Styling */
+a, a:focus {
+	text-decoration: none;
+	color:#719362;
+	
+}
+
+a:hover {
+	border-bottom: 2px solid #586A79;
 }
