@@ -22,30 +22,25 @@ var alibiQuestion = {
 	scaleOfIssue: prompt("How bad did you mess up? (on a scale of 1 to 10)")
 	// more alibi questions?
 }
-// logs initial answers
-console.log("Who you pissed off: " + alibiQuestion.who + ", " + "First time: " +  alibiQuestion.firstTime + ", Scale of Issue: " + alibiQuestion.scaleOfIssue + " .");
+// logs initial answers 
+console.log("Who you pissed off: " + alibiQuestion.who + ", " + "First time: " +  alibiQuestion.firstTime + ", Scale of Issue: " + alibiQuestion.scaleOfIssue + ".");
+
 
 
 var repeatMistakeQ = " "; // this section analyzes user's answer to the firstTime prompt
 
 if (alibiQuestion.firstTime === "yes") {
 	repeatMistakeQ = "At least it was for the first time.";
-	console.log(repeatMistakeQ);
+	// console.log(repeatMistakeQ);
 } else if (alibiQuestion.firstTime === "no") {
 	repeatMistakeQ = "And you've done it before? Shit."; 
-	console.log(repeatMistakeQ);
-} //
-//below info = attempt at else statment, kept outputting "wrong answer" for everything
-
-//else (alibiQuestion.firstTime != "yes" && alibiQuestion.firstTime != "no"); 
-// 	repeatMistakeQ = "wrong answer";
-// 	console.log(repeatMistakeQ); 
-// ----------
+	// console.log(repeatMistakeQ); 
+}
 
 
 var scaleOfIssueQ = ""; // this section analyzes user's answer to scaleofIssue prompt
 
-if (alibiQuestion.scaleOfIssue = 10) {
+if (alibiQuestion.scaleOfIssue === 10) {
 	scaleOfIssueQ = "Holy shit, this could be bad. I don't know if I can get you outta this one";
 	console.log(scaleOfIssueQ);
 } else if (alibiQuestion.scaleOfIssue >= 8 && alibiQuestion.scaleOfIssue <= 9) {
@@ -65,19 +60,12 @@ if (alibiQuestion.scaleOfIssue = 10) {
 }
 
 
+// Below: Logs User's Input to Give Summary Based on Ansers
 
-/*
-* 	Below: Logs User's Input to Give Summary Based on Ansers
-*/
-console.log(alibiQuestion); // logs user's answers into the console
+// console.log(alibiQuestion); 
 var alibiSummary = "Damn, you REALLY pissed off your " + alibiQuestion.who + "! " + repeatMistakeQ + ". " + scaleOfIssueQ + ". "
 
 console.log(alibiSummary); 
-
-
-
-
-
 
 	
 </script>
