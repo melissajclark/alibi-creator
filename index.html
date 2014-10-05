@@ -68,19 +68,20 @@
 		scaleOfIssue: prompt("How bad did you mess up? (on a scale of 1 to 10)")
 		// more alibi questions?
 	}
-	// updates variables to ignore case in user's answer
-	// var alibiQuestionfirstTime = " ";
-	alibiQuestion.firstTime.toLowerCase( );
-	console.log(alibiQuestion.firstTime);
+	// renames & updates variables to ignore case in user's answer
+	var firstTimeAnswer = alibiQuestion.firstTime.toLowerCase( );
+	console.log(firstTimeAnswer);
 	
+	var whosePissed = alibiQuestion.who.toLowerCase( );
+	console.log(whosePissed);
 
 	// this section analyzes user's answer to the firstTime prompt
 	var repeatMistakeQ = " "; 
 
-	if (alibiQuestion.firstTime === "yes") {
+	if (firstTimeAnswer === "yes") {
 		repeatMistakeQ = "At least it was for the first time.";
 		// console.log(repeatMistakeQ);
-	} else if (alibiQuestion.firstTime === "no") {
+	} else if (firstTimeAnswer === "no") {
 		repeatMistakeQ = "And you've done it before? Eep."; 
 		// console.log(repeatMistakeQ); 
 	}
@@ -110,7 +111,7 @@
 	// Below: Logs User's Input to Give Summary Based on Ansers
 
 	// console.log(alibiQuestion); 
-	var alibiSummary = "Damn, you REALLY pissed off your " + alibiQuestion.who + "! " + repeatMistakeQ + ". " + scaleOfIssueQ + ". "
+	var alibiSummary = "Damn, you REALLY pissed off your " + whosePissed + "! " + repeatMistakeQ + ". " + scaleOfIssueQ + ". "
 
 	console.log(alibiSummary); 
 	</script>
