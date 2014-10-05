@@ -4,27 +4,47 @@ body {
 	background-color: rgba(236, 217, 168, 0.43);
 	font-weight:400;
 	color:#222;
+	max-width: 45em;
+	margin: auto;
 }
 
+.main { 
+	max-width:40em;
+	padding: 2em;
+}
 
 .intro {
 	text-align:center;
 }
 
-h1 {
-	font-weight:600;
-	font-size:2.9em;
-	color: #586A79;
-}
-
-h2 {
-	text-align: center;
-}
-
 .caption {
 	font-style: italic;
 	font-weight: 400;
+	text-align:center;
 }
+
+footer {
+	text-align:center;
+	padding-top:25em;
+	padding-bottom:2em;
+}
+
+
+/* global heading styles */
+h1, h2 {
+	color: #586A79;
+	text-align: center;
+	font-weight:600;
+}
+
+h1 {
+	font-size: 2.9em;
+}
+
+h2 {
+	font-size: 1.5em;
+}
+
 
 /* Link Styling */
 a, a:focus {
@@ -37,8 +57,8 @@ a:hover {
 	border-bottom: 2px solid #586A79;
 }
 
-footer {
-	text-align:center;
-	padding-top:25em;
-	padding-bottom:2em;
+span.highlight {
+	background-color: rgba(67, 36, 133, 0.22);
+	padding-top: 1px;
+	padding-bottom: 2px;
 }
