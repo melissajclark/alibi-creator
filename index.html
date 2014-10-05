@@ -31,21 +31,34 @@ if (alibiQuestion.firstTime === "yes") {
 } else if (alibiQuestion.firstTime === "no") {
 	repeatMistakeQ = "And you've done it before? Shit."; 
 	console.log(repeatMistakeQ);
-} 
+} //
+//below info = attempt at else statment, kept outputting "wrong answer" for everything
 
-/* 
-* below info = attempt at else statment, kept outputting "wrong answer" for everything
-*/ 
-// -----
 //else (alibiQuestion.firstTime != "yes" && alibiQuestion.firstTime != "no"); 
 // 	repeatMistakeQ = "wrong answer";
 // 	console.log(repeatMistakeQ); 
 // ----------
 
-console.log(alibiQuestion); // logs user's answers into the console
 
-var alibiSummary = "Damn, you REALLY pissed off your " + alibiQuestion.who + "! " + repeatMistakeQ
+var scaleOfIssueQ = " ";
+
+if (alibiQuestion.scaleOfIssue === "yes") {
+	scaleOfIssueQ = "At least it was for the first time.";
+	console.log(scaleOfIssueQ);
+} else (alibiQuestion.scaleOfIssue === "no") {
+	scaleOfIssueQ = "And you've done it before? Shit."; 
+	console.log(scaleOfIssueQ);
+}
+
+/*
+* 	Below: Logs User's Input to Give Summary Based on Ansers
+*/
+console.log(alibiQuestion); // logs user's answers into the console
+var alibiSummary = "Damn, you REALLY pissed off your " + alibiQuestion.who + "! " + repeatMistakeQ + ". " + scaleOfIssueQ.
+
 console.log(alibiSummary); 
+
+
 
 
 
