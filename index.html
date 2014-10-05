@@ -22,15 +22,18 @@ var alibiQuestion = {
 	// need more alibi questions
 }
 
-var repeatMistakeQ = "";
+var repeatMistakeQ = " ";
 
 if (alibiQuestion.firstTime === "yes") {
 	repeatMistakeQ = "for the first time";
 	console.log(repeatMistakeQ);
-} else if (alibiQuestion.firstTime === "no") {
+} else if {
+	(alibiQuestion.firstTime === "no") {
 	repeatMistakeQ = "again"; 
 	console.log(repeatMistakeQ);
-
+} else (alibiQuestion.firstTime != "yes" || alibiQuestion.firstTime != "no"){
+	repeatMistakeQ = "wrong answer";
+	console.log(repeatMistakeQ);
 }
 
 console.log(alibiQuestion); // logs user's answers into the console
