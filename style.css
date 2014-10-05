@@ -66,3 +66,9 @@ span.highlight {
 ul li span.highlight {
 	background-color: rgba(44, 165, 150, 0.22);
 }
+
+hr {
+	color: #586A79;
+	border: 1px solid;
+	margin-bottom:2em;
+}
