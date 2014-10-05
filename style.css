@@ -62,3 +62,7 @@ span.highlight {
 	padding-top: 1px;
 	padding-bottom: 2px;
 }
+
+ul li span.highlight {
+	background-color: rgba(44, 165, 150, 0.22);
+}
