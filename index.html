@@ -13,6 +13,12 @@
 	<script> 
 	var firstMessage = alert("So you messed up again! You idiot. It's alright, all you gotta do is answer a few measly questions and you'll have the perfect alibi for your latest fuckup.");
 
+	/*
+	*
+	* Part 1 of Code: User's Answers & Summary of Answers
+	*
+	*/
+
 	var alibiQuestion = { 
 	// would be good to add if statement in case user inputs other answer
 		who: prompt("Who is this alibi for? (mom, dad, girlfriend, boyfriend, partner, professor)"),
@@ -41,28 +47,32 @@
 
 	if (alibiQuestion.scaleOfIssue === 10 || alibiQuestion.scaleOfIssue >= 10) {
 		scaleOfIssueQ = "Holy shit, this could be bad. I don't know if I can get you outta this one";
-		// console.log(scaleOfIssueQ);
 	} else if (alibiQuestion.scaleOfIssue >= 8 && alibiQuestion.scaleOfIssue <= 9) {
 		scaleOfIssueQ = "Eep, that bad's pretty bad. I'll do my best";
-		// console.log(scaleOfIssueQ);
 	} else if (alibiQuestion.scaleOfIssue >= 6 && alibiQuestion.scaleOfIssue <= 7 ) {
 		scaleOfIssueQ = "Hmmm, alright, I think I can help you out";
-			// console.log(scaleOfIssueQ); 
 	} else if (alibiQuestion.scaleOfIssue >= 4 && alibiQuestion.scaleOfIssue <= 5) {
 		scaleOfIssueQ = "Okay, sounds like didn't mess up too badly, I got your back. We'll get through this together";
-		// console.log(scaleOfIssueQ);
 	} else if (alibiQuestion.scaleOfIssue >= 2 && alibiQuestion.scaleOfIssue <= 3) {
 		scaleOfIssueQ = "You barely messed up! Let's call this a misdemeanour";
-		// console.log(scaleOfIssueQ);
 	} else if (alibiQuestion.scaleOfIssue = 1) {
 		scaleOfIssueQ = "You know what, you'll be fine. I bet your " + alibiQuestion.who + " is already over it. Let's get you an alibi, just in case" 
 	}
 
-	// Below: Logs User's Input to Give Summary Based on Ansers
-
-	// console.log(alibiQuestion); 
+	// Below: Logs User's Input to Give Summary Based on Answers
 	var alibiSummary = "Damn, you pissed off your " + whosePissed + "? " + repeatMistakeQ + " " + scaleOfIssueQ + ". "
 	console.log(alibiSummary); 
+
+
+	/*
+	*
+	* Part 2 of Code: Alibi Creation
+	*
+	*/
+
+
+
+
 	</script>
 
 	<section class="intro">
@@ -72,7 +82,7 @@
 	</section>
 
 	<script>
-	document.write(alibiSummary);
+	document.write(alibiSummary + "<br/><br/>" + "Alright, I'm formulating an alibi just for <em>you</em>.");
 	</script>
 
 
