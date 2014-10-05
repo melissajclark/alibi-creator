@@ -23,7 +23,7 @@ var alibiQuestion = {
 	// more alibi questions?
 }
 
-var repeatMistakeQ = " ";
+var repeatMistakeQ = " "; // this section analyzes user's answer to the firstTime prompt
 
 if (alibiQuestion.firstTime === "yes") {
 	repeatMistakeQ = "At least it was for the first time.";
@@ -40,14 +40,13 @@ if (alibiQuestion.firstTime === "yes") {
 // ----------
 
 
-var scaleOfIssueQ = " ";
+var scaleOfIssueQ = ""; // this section analyzes user's answer to scaleofIssue prompt
 
-if (alibiQuestion.scaleOfIssue === 10) {
+if (alibiQuestion.scaleOfIssue === "10") {
 	scaleOfIssueQ = "Holy shit, this could be bad. I don't know if I can get you outta this one";
-	console.log(scaleOfIssueQ);
-} else (alibiQuestion.scaleOfIssue ) 
-	scaleOfIssueQ = "And you've done it before? Shit"; 
-	console.log(scaleOfIssueQ);
+	console.log(scaleOfIssueQ)
+} 
+
 
 
 /*
