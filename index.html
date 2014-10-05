@@ -22,41 +22,42 @@ var alibiQuestion = {
 	scaleOfIssue: prompt("How bad did you mess up? (on a scale of 1 to 10)")
 	// more alibi questions?
 }
+
 // logs initial answers 
-console.log("Who you pissed off: " + alibiQuestion.who + ", " + "First time: " +  alibiQuestion.firstTime + ", Scale of Issue: " + alibiQuestion.scaleOfIssue + ".");
 
+// console.log("Answer summary ---> Who you pissed off: " + alibiQuestion.who + ", " + "First time: " +  alibiQuestion.firstTime + ", Scale of Issue: " + alibiQuestion.scaleOfIssue + ".");
 
-
-var repeatMistakeQ = " "; // this section analyzes user's answer to the firstTime prompt
+// this section analyzes user's answer to the firstTime prompt
+var repeatMistakeQ = " "; 
 
 if (alibiQuestion.firstTime === "yes") {
 	repeatMistakeQ = "At least it was for the first time.";
 	// console.log(repeatMistakeQ);
 } else if (alibiQuestion.firstTime === "no") {
-	repeatMistakeQ = "And you've done it before? Shit."; 
+	repeatMistakeQ = "And you've done it before? Eep."; 
 	// console.log(repeatMistakeQ); 
 }
 
+// this section analyzes user's answer to scaleofIssue prompt
+var scaleOfIssueQ = ""; 
 
-var scaleOfIssueQ = ""; // this section analyzes user's answer to scaleofIssue prompt
-
-if (alibiQuestion.scaleOfIssue === 10) {
+if (alibiQuestion.scaleOfIssue === 10 || alibiQuestion.scaleOfIssue >= 10) {
 	scaleOfIssueQ = "Holy shit, this could be bad. I don't know if I can get you outta this one";
-	console.log(scaleOfIssueQ);
+	// console.log(scaleOfIssueQ);
 } else if (alibiQuestion.scaleOfIssue >= 8 && alibiQuestion.scaleOfIssue <= 9) {
 	scaleOfIssueQ = "Eep, that bad's pretty bad. I'll do my best";
-	console.log(scaleOfIssueQ);
+	// console.log(scaleOfIssueQ);
 } else if (alibiQuestion.scaleOfIssue >= 6 && alibiQuestion.scaleOfIssue <= 7 ) {
 	scaleOfIssueQ = "Hmmm, alright, I think I can help you out";
-		console.log(scaleOfIssueQ); 
+		// console.log(scaleOfIssueQ); 
 } else if (alibiQuestion.scaleOfIssue >= 4 && alibiQuestion.scaleOfIssue <= 5) {
-	scaleOfIssueQ = "You didn't mess up too badly, I got your back. We'll get through this together";
-	console.log(scaleOfIssueQ);
+	scaleOfIssueQ = "Okay, sounds like didn't mess up too badly, I got your back. We'll get through this together";
+	// console.log(scaleOfIssueQ);
 } else if (alibiQuestion.scaleOfIssue >= 2 && alibiQuestion.scaleOfIssue <= 3) {
 	scaleOfIssueQ = "You barely messed up! Let's call this a misdemeanour";
-	console.log(scaleOfIssueQ);
+	// console.log(scaleOfIssueQ);
 } else if (alibiQuestion.scaleOfIssue = 1) {
-	scaleOfIssueQ = "You'll be fine, REALLY. I bet your " + alibiQuestion.who + "is already over it. Let's get you an alibi, just in case" 
+	scaleOfIssueQ = "You know what, you'll be fine. I bet your " + alibiQuestion.who + " is already over it. Let's get you an alibi, just in case" 
 }
 
 
