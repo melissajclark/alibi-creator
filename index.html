@@ -89,6 +89,14 @@
 	// starts with I (was)
 	var alibiIWas = ["watching porn", "in Tijuana", "in a coma", "helping an old lady cross the street", "robbed", "arrested"];
 
+
+	// final part 
+	  var random = function(arr) {
+      var num = arr.length;
+      var random = Math.floor(Math.random() * arr.length);
+      return arr[random];
+    }
+
 	var prefix = [ "My", "I was", "I had"];
 
 	// function addPrefix() {
@@ -102,12 +110,7 @@
 
 
 
-    // final part 
-	  var random = function(arr) {
-      var num = arr.length;
-      var random = Math.floor(Math.random() * arr.length);
-      return arr[random];
-    }
+  
 
     var createAlibi = function() {
       var name = random(alibiIWas) + " " + random(alibiMy) + " " + random(alibiIHad);
@@ -116,11 +119,11 @@
       console.log(createAlibi());
     }
 
-	 var random = function(arr) {
-      var num = arr.length;
-      var random = Math.floor(Math.random() * arr.length);
-      return arr[random];
-    }
+	 // var random = function(arr) {
+  //     var num = arr.length;
+  //     var random = Math.floor(Math.random() * arr.length);
+  //     return arr[random];
+  //   }
 
 
 	</script>
