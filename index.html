@@ -95,16 +95,11 @@
     }
 
     // updates array values to include prefix when called 
-	var alibiMy = prefix[0] + " " + random(alibiMy);
-	var alibiIWas = prefix[1] + " " + random(alibiIWas);
-	var alibiIHad = prefix[2] + " " + random(alibiIHad);
-		
-    var createAlibi = function() {
-      var alibiOption1 = alibiIHad;
-      var alibiOption2 = alibiIWas;
-      var alibiOption3 = alibiMy;
+	var alibiOption1 = prefix[0] + " " + random(alibiOption1);
+	var alibiOption2 = prefix[1] + " " + random(alibiOption2);
+	var alibiOption3 = prefix[2] + " " + random(alibiOption3);
 
-      return "Okay, here's three options for you to tell your " + whosePissed + ". " + " 1. " + alibiIHad + ", 2. " + alibiIWas + ", 3. " + alibiMy + ". ";
+      return "Okay, here's three options for you to tell your " + whosePissed + ". " + " 1. " + alibiOption1 + ", 2. " + alibiOption2 + ", 3. " + alibiOption3 + ". ";
       console.log(createAlibi);
     }
 
