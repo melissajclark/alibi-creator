@@ -112,11 +112,14 @@
     }
 
     var createAlibi = function() {
-    	var finalAlibi = pickAlibi(alibiMy) + " " ;
+    	var finalAlibi = pickAlibi(alibiMy) + " " + pickAlibi(alibiIHad) + " " + pickAlibi(alibiIWas) + " ." ;
 
+    	return "You should tell your " + whosePissed + ": " + finalAlibi + " .";
     }
 
-    console.log("You should tell your " + whosePissed + ": " + finalAlibi + " ." );
+    console.log(finalAlibi);
+
+   
 
 
 
