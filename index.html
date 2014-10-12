@@ -105,18 +105,30 @@
 		"arrested"
 	];
 
-	 var random = function(arr) {
+	    var random = function(arr) {
       var num = arr.length;
       var random = Math.floor(Math.random() * arr.length);
       return arr[random];
     }
 
-    var createAlibi = function() {
-    	var finalAlibi = random(alibiMy) + " " + random(alibiIHad) + " " + random(alibiIWas);
+    var comeUpWithName = function() {
+      var name = random(alibiIWas) + " " + random(alibiMy) + " " + random(alibiIHad);
 
-    	return "You should tell your " + whosePissed + ": " + finalAlibi + " .";
-    	// console.log(finalAlibi);
+      return "You should name your cat: " + name;
     }
+
+	 // var random = function(arr) {
+  //     var num = arr.length;
+  //     var random = Math.floor(Math.random() * arr.length);
+  //     return arr[random];
+  //   }
+
+  //   var createAlibi = function() {
+  //   	var finalAlibi = random(alibiMy) + " " + random(alibiIHad) + " " + random(alibiIWas);
+
+  //   	return "You should tell your " + whosePissed + ": " + finalAlibi + " .";
+  //   	// console.log(finalAlibi);
+  //   }
 
     
 
