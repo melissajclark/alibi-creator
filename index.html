@@ -82,16 +82,10 @@
 
 	// defines prefixes to insert before array items
 	var prefix = [ "My", "I was", "I had"]; 
-
-	// starts with my 
-	var alibiMy = [ "toilet expoloded", "apartment flooded", "grandma died"];
-
-	// starts with I (had)
-	var alibiIHad = [ "diarrhea", "the bird flu", "my first period", "to meet my parole officer"];
-
-	// starts with I (was)
-	var alibiIWas = ["watching porn", "in Tijuana", "in a coma", "helping an old lady cross the street", "robbed", "arrested"];
-
+	
+	/* My */ 	var alibiMy = [ "toilet expoloded", "apartment flooded", "grandma died"]; 
+	/* I had */ var alibiIHad = [ "diarrhea", "the bird flu", "my first period", "to meet my parole officer"]; 
+	/* I was */ var alibiIWas = ["watching porn", "in Tijuana", "in a coma", "helping an old lady cross the street", "robbed", "arrested"]; 
 
 	// returns random item from array 
 	  var random = function(arr) {
@@ -105,14 +99,14 @@
 	var alibiIWas = prefix[1] + " " + random(alibiIWas);
 	var alibiIHad = prefix[2] + " " + random(alibiIHad);
 		
-
     var createAlibi = function() {
       var alibiOption1 = alibiIHad;
       var alibiOption2 = alibiIWas;
       var alibiOption3 = alibiMy;
 
-      return "Okay, here's three options for you to tell your " + whosePissed + ". " + " 1. " + alibiOption1 + ", 2. " + alibiOption2 + ", 3. " + alibiOption3 + ". "
+      return "Okay, here's three options for you to tell your " + whosePissed + ". " + " 1. " + alibiOption1 + ", 2. " + alibiOption2 + ", 3. " + alibiOption3 + ". ";
       console.log(createAlibi);
+      document.
     }
 
 	</script>
