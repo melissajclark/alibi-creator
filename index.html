@@ -105,12 +105,13 @@
 	var alibiIWas = prefix[1] + " " + random(alibiIWas);
 	var alibiIHad = prefix[2] + " " + random(alibiIHad);
 		
-   
 
     var createAlibi = function() {
-      var name = random(alibiIWas) + " " + random(alibiMy) + " " + random(alibiIHad);
+      var alibiOption1 = alibiIHad;
+      var alibiOption2 = alibiIWas;
+      var alibiOption3 = alibiMy;
 
-      return "You should name your cat: " + name;
+      return "Okay, here's three options for you to tell your " + whosePissed + ". " + " 1. " + alibiOption1 + ", 2. " + alibiOption2 + ", 3. " + alibiOption3 + ". "
       console.log(createAlibi);
     }
 
