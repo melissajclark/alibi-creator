@@ -105,19 +105,20 @@
 		"arrested"
 	];
 
-	 var pickAlibi = function(arr) {
+	 var random = function(arr) {
       var num = arr.length;
-      var pickAlibi = Math.floor(Math.random() * arr.length);
-      return arr[pickAlibi];
+      var random = Math.floor(Math.random() * arr.length);
+      return arr[random];
     }
 
     var createAlibi = function() {
-    	var finalAlibi = pickAlibi(alibiMy) + " " + pickAlibi(alibiIHad) + " " + pickAlibi(alibiIWas) + " ." ;
+    	var finalAlibi = random(alibiMy) + " " + random(alibiIHad) + " " + random(alibiIWas);
 
     	return "You should tell your " + whosePissed + ": " + finalAlibi + " .";
+    	// console.log(finalAlibi);
     }
 
-    console.log(finalAlibi);
+    
 
    
 
