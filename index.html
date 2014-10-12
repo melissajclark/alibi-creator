@@ -99,16 +99,13 @@
 	var alibiOption2 = prefix[1] + " " + random(alibiOption2);
 	var alibiOption3 = prefix[2] + " " + random(alibiOption3);
 
-	var createAlibi = function(){	// defines function for creating alibi optiopns	 
-      console.log("Okay, here's three options for you to tell your " + whosePissed + ". ");
-      console.log("1. " + alibiOption1 + ".");
-      console.log("2. " + alibiOption2 + ".");
-      console.log("3. " + alibiOption3 + ".");
-    }
+	// defines function for creating alibi optiopns	 
+	var createAlibi = function(){	
+		return "Okay, here's three options for you to tell your " + whosePissed + ". " + "1. " + alibiOption1 + "." + "2. " + alibiOption2 + "." + "3. " + alibiOption3 + ".";
+    };
+    createAlibi(); 
 
-    createAlibi(); // calls function that creates alibi options
-
-    document.write(createAlibi);
+    // document.write(createAlibi);
 
 
 	</script>
