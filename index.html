@@ -86,6 +86,8 @@
 	/* My */ 	var alibiOption1 = [ "toilet expoloded", "apartment flooded", "great-aunt twice removed died", "cat had a seizure", "my phone died"];
 	/* I had */ var alibiOption2 = [ "diarrhea", "the bird flu", "my first period", "to meet my parole officer", "food poisoning", "vertigo"]; 
 	/* I was */ var alibiOption3 = ["watching porn", "in Montreal", "in a coma", "helping an old lady cross the street", "robbed", "arrested", "doing laundry", "in rehab", "at a Katy Perry concert", "dealing with my bedbug infestation"]; 
+	/* bad */ 	var badWord = ["awful", "terrible", "serious", "a bummer", "dreadful", "atrocious", "godawful", "gross", "abominable", "despicable", "horrid", "repulsive", "rotten"];
+	/* final sentence*/ var moreAlibi = [""]
 
 	// returns random item from array 
 	  var random = function(arr) {
@@ -96,8 +98,8 @@
 
     // updates array values to include prefix when called 
 	var alibiOption1 = "I am SO sorry! Oh god, " + prefix[0] + " " + random(alibiOption1) + ". It was a real nightmare."; 
-	var alibiOption2 = "Believe me, I wish I could have been there. " + prefix[1] + " " + random(alibiOption2) + "and it was awful!";
-	var alibiOption3 = prefix[2] + " " + random(alibiOption3);
+	var alibiOption2 = "Believe me, I wish I could have been there. " + prefix[1] + " " + random(alibiOption2) + " and it was " + random(badWord) + "!";
+	var alibiOption3 = "I can't believe I'm saying this aloud, I feel  " + random(badWord) + ". But, I need to be honest with you... " + prefix[2] + " " + random(alibiOption3) + ". ";
 
 
 	// defines function for creating alibi optiopns	 
