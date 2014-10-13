@@ -5,11 +5,12 @@
 	<title>I ain't Got No Alibi</title>
 <link type="text/css"rel="stylesheet" href="style.css">
 <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,400,600' rel='stylesheet' type='text/css'>
-
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 </head>
 <body>
 
 <main> 
+
 	<header>
 		<section class="intro">
 			<h1>You ain't got no alibi?</h1>
@@ -18,7 +19,9 @@
 		</section>
 	</header>
 
-	<script> 
+	<script>
+
+	$(document).ready(function( ){
 	
 	var firstMessage = alert("So you messed up again! You idiot. It's alright, all you gotta do is answer a few measly questions and you'll have the perfect alibi for your latest fuckup.");
 
@@ -103,7 +106,6 @@
 	var alibiOption2 = "Believe me, I wish I could have been there. " + prefix[1] + " " + random(alibiOption2) + " and it was " + random(badWord) + "! " + random(moreAlibi) + " " + random(alibiApology);
 	var alibiOption3 = "I can't believe I'm saying this aloud, I feel  " + random(badWord) + ". But, I need to be honest with you... " + prefix[2] + " " + random(alibiOption3) + ". " + random(moreAlibi) + " " + random(alibiApology);
 
-
 	// defines function for creating alibi optiopns	 
 	var createAlibi = function(){	
 		console.log("Okay, here's three options for you to tell your " + whosePissed + ". " + "1. " + alibiOption1 + "2. " + alibiOption2 + "3. " + alibiOption3);
@@ -117,11 +119,16 @@
     document.write("<br/><br/>" + "2. " + alibiOption2);
     document.write("<br/><br/>" + "3. " + alibiOption3);
 
+}); // end of document ready function
 
+
+// having issues - wrapped code in  document ready function, now after javascript alerts the page loses CSS imports
+ready();
 	</script>
 
 	<footer>
 	<p><a href="https://github.com/melissajclark/alibi-creator">Alibi Creator on Github</a></p>
+	
 	</footer>
 
 
