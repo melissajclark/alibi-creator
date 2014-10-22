@@ -14,3 +14,8 @@ $("form.questions").on("submit",function(event){
 
 }); // end doc ready function
 
+
+// Notes:
+
+// $("[value~='mom']")
+// selects elements with the value attribute and the word mom
