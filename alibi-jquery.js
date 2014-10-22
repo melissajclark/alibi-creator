@@ -5,14 +5,17 @@ $(document).ready(function(){
 		event.preventDefault(); // prevents form from refreshing
 	}); // end of form.questions event function
 
+		var who = $("fieldset.who input[type='radio']").val();
+		var firstTimeAnswer = $("fieldset.alibiTiming input[type='radio']").val();
+		var scaleOfIssueQ = $("select.scaleMessUp").val();
 	
 	$("input[type=submit]").on("click",function(){
 		$(this).addClass("animated wobble");
 
 		// below: variables to store user's answers
-		var who = $("fieldset.who input[type='radio'] input[name='your']").val();
-		var firstTimeAnswer = $("fieldset.alibiTiming input[type='radio']").val();
-		var scaleOfIssueQ = $("select.scaleMessUp").val();
+		who = $("fieldset.who input[type='radio']").val();
+		firstTimeAnswer = $("fieldset.alibiTiming input[type='radio']").val();
+		scaleOfIssueQ = $("select.scaleMessUp").val();
 		console.log(who + ", " + firstTimeAnswer + ", " + scaleOfIssueQ);
 
 	}); // end of click submit function
