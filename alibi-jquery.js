@@ -10,7 +10,10 @@ $(document).ready(function(){
 	}); // end of click submit function
 
 	var who = $("fieldset.who input[type='radio']").val();
-	console.log(who);
+	var firstTimeAnswer = $("fieldset.alibiTiming input[type='radio']").val();
+	var scaleOfIssueQ = $("select.scaleMessUp").val();
+
+	console.log(who + ", " + firstTimeAnswer + ", " + scaleOfIssueQ);
 
 
 }); // end doc ready function
