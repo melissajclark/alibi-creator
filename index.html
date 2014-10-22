@@ -24,7 +24,7 @@
 			<!-- Question 1 -->
 			
 			<fieldset class="who">
-			    <legend>Who is this alibi for?</legend>
+			    <legend class="alibiQ">Who is this alibi for?</legend>
 			    <p>
 			      <input type="radio" name="your" id="who_1" value="mom" />
 			      <label for="who_1">mom</label>
@@ -63,7 +63,7 @@
 			<!-- Question 2 -->
 				
 			<fieldset class="alibiTiming">
-			   <legend>Have you done this before?</legend>
+			   <legend class="alibiQ">Have you done this before?</legend>
 			     <p>
 			      <input type="radio" id="occurrence_1" value="yes" />
 			      <label for="who_7">Ugh, yes.</label>
@@ -76,7 +76,7 @@
 			
 			<!-- Question 3 -->
 
-			<p>How bad did you mess up? <em>On a scale from 1 to 10.</em></p>
+			<p class="alibiQ">How bad did you mess up? <em>On a scale from 1 to 10.</em></p>
 			<select name="scale" class="scaleMessUp">
 				<option value="1">1</option>
 				<option value="2">2</option>
@@ -90,8 +90,11 @@
 				<option value="10">10</option>
 			</select>
 
+			<p>
+				<input type="submit" value="Submit!">
+			</p>
 
-		</form>
+	</form>
 
 
 		
