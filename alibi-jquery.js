@@ -9,6 +9,7 @@ $(document).ready(function(){
 		$(this).addClass("animated wobble");
 	}); // end of click submit function
 
+	// below: variables to store user's answers
 	var who = $("fieldset.who input[type='radio']").val();
 	var firstTimeAnswer = $("fieldset.alibiTiming input[type='radio']").val();
 	var scaleOfIssueQ = $("select.scaleMessUp").val();
