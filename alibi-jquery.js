@@ -4,17 +4,22 @@ $(document).ready(function(){
 	$("form.questions").on("submit",function(event){
 		event.preventDefault(); // prevents form from refreshing
 	}); // end of form.questions event function
+
 	
 	$("input[type=submit]").on("click",function(){
 		$(this).addClass("animated wobble");
+		
+		// below: variables to store user's answers
+		var who = $("fieldset.who input[type='radio']").val();
+		var firstTimeAnswer = $("fieldset.alibiTiming input[type='radio']").val();
+		var scaleOfIssueQ = $("select.scaleMessUp").val();
+		console.log(who + ", " + firstTimeAnswer + ", " + scaleOfIssueQ);
+
 	}); // end of click submit function
 
-	// below: variables to store user's answers
-	var who = $("fieldset.who input[type='radio']").val();
-	var firstTimeAnswer = $("fieldset.alibiTiming input[type='radio']").val();
-	var scaleOfIssueQ = $("select.scaleMessUp").val();
+	
 
-	console.log(who + ", " + firstTimeAnswer + ", " + scaleOfIssueQ);
+	
 
 
 }); // end doc ready function
