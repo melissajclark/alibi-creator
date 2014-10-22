@@ -7,8 +7,11 @@ $(document).ready(function(){
 	
 	$("input[type=submit]").on("click",function(){
 		$(this).addClass("animated wobble");
-
 	}); // end of click submit function
+
+	var who = $("fieldset.who input[type='radio']").val();
+	console.log(who);
+
 
 }); // end doc ready function
 
