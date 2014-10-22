@@ -20,11 +20,13 @@ $(document).ready(function(){
 
 	}); // end of click submit function
 
-	
+	var who = "";
 
-	
+	$("fieldset.who input[type='radio']").on("change", function(){
+		 who = $(this).val();
+	});
 
-
+	 
 }); // end doc ready function
 
 
