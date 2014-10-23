@@ -1,5 +1,10 @@
 $(document).ready(function(){
 
+/**
+*
+* Code Section 1: Variables defined for user's input
+*
+**/
 
 	$("form.questions").on("submit",function(event){
 		event.preventDefault(); // prevents form from refreshing
@@ -36,7 +41,11 @@ $(document).ready(function(){
 		console.log("whosePissed alibi is for: " + whosePissed + ", " + "Happened before? "+ firstTimeAnswer + ", Scale of mess up: " + scaleOfIssueQ); // logs user's answers
 	}); // end of click submit function
 
-	
+/**
+*
+* Code Section 2: Alibi Summary for User
+*
+**/
 
 
 	 
