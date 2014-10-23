@@ -19,7 +19,7 @@ $(document).ready(function(){
 	}
 
 	// this function defines alibiQuestion.who alibi is for & stores the value
-	$("fieldset.alibiQuestion.who input[type='radio']").on("change", function(){
+	$("fieldset.who input[type='radio']").on("change", function(){
 		 alibiQuestion.who = $(this).val(); 
 	}); // end of function listening on "alibiQuestion.who" question
 
