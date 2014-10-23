@@ -29,18 +29,9 @@ $(document).ready(function(){
 	$("input[type=submit]").on("click",function(){
 		$(this).addClass("animated wobble"); // fun effect for submit
 
-		// if ("fieldset.who input[value='other']") {
-		// 	who = $("fieldset.who input[type='text']").val();
-		// } else if ("fieldset.who input[type='radio']"){
-		// 	who = $("fieldset.who input[type='radio']").val();
-		// } 
-
 		if (!"fieldset.who input[value='your']" && "fieldset.who input[type='text']" ) {
 			who = $("fieldset.who input[value='other']").val();
 		} 
-
-		// if user selects other, log text value inputted
-		// if user selects a radio button option, log that value
 
 		console.log("Who alibi is for: " + who + ", " + "Happened before? "+ firstTimeAnswer + ", Scale of mess up: " + scaleOfIssueQ); // logs user's answers
 	}); // end of click submit function
