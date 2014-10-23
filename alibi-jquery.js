@@ -25,12 +25,12 @@ $(document).ready(function(){
 
 	// this function defines whether it's the first time or not & stores the value
 	$("fieldset.alibiTiming input[type='radio']").on("change", function(){
-		 firstTimeAnswer = $(this).val(); 
+		 alibiQuestion.firstTime = $(this).val(); 
 	}); // end of function listening on alibi Timing
 
 	// this function defines the scale of the issue & stores the value
 	$("select.scaleMessUp").on("change", function(){
-		 scaleOfIssueQ = $(this).val(); 
+		 alibiQuestion.scaleOfIssue = $(this).val(); 
 	}); // end of function listening on scale of Mess up Input
 
 	// functions that run on submit button:	
@@ -41,7 +41,7 @@ $(document).ready(function(){
 			alibiQuestion.who = $("fieldset.alibiQuestion.who input[type=text]").val();
 		}
 
-		console.log("Who alibi is for: " + alibiQuestion.who + ", " + "Happened before? "+ alibiQuestion.firstTimeAnswer + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
+		console.log("Who alibi is for: " + alibiQuestion.who + ", " + "Happened before? "+ alibiQuestion.firstTime + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
 
 		/**
 		*
