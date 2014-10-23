@@ -7,6 +7,7 @@
 ----
 
 **Branch**: master = Project 1
+
 **Branch**: alibi-jquery = Project 2
 
 ## Project 1 vs. Project 2
