@@ -7,7 +7,7 @@ $(document).ready(function(){
 **/
 
 	$(".otherField").hide(); // hides other text field on page load
-	$("fieldset.who [type='text']").on("click", function(){
+	$("fieldset.who [value='other']").on("click", function(){
 		$(".otherField").show();
 	});
 
