@@ -5,26 +5,32 @@ $(document).ready(function(){
 		event.preventDefault(); // prevents form from refreshing
 	}); // end of form.questions event function
 
-		var who = $("fieldset.who input[type='radio']").val();
-		var firstTimeAnswer = $("fieldset.alibiTiming input[type='radio']").val();
-		var scaleOfIssueQ = $("select.scaleMessUp").val();
-	
+	// empty variables to store user's input:
+	var who = "";
+	var firstTimeAnswer = "";
+	var scaleOfIssueQ = "";
+
+	// this function defines who alibi is for & stores the value
+	$("fieldset.who input[type='radio']").on("change", function(){
+		 who = $(this).val(); 
+	}); // end of function listening on "who" question
+
+	// this function defines whether it's the first time or not & stores the value
+	$("fieldset.alibiTiming input[type='radio']").on("change", function(){
+		 firstTimeAnswer = $(this).val(); 
+	}); // end of function listening on alibi Timing
+
+	// this function defines the scale of the issue & stores the value
+	$("select.scaleMessUp").on("change", function(){
+		 scaleOfIssueQ = $(this).val(); 
+	}); // end of function listening on scale of Mess up Input
+
+	// functions that run on submit button:	
 	$("input[type=submit]").on("click",function(){
-		$(this).addClass("animated wobble");
-
-		// below: variables to store user's answers
-		who = $("fieldset.who input[type='radio']").val();
-		firstTimeAnswer = $("fieldset.alibiTiming input[type='radio']").val();
-		scaleOfIssueQ = $("select.scaleMessUp").val();
-		console.log(who + ", " + firstTimeAnswer + ", " + scaleOfIssueQ);
-
+		$(this).addClass("animated wobble"); // fun effect for submit
+		console.log("Who alibi is for: " + who + ", " + "Happened before? "+ firstTimeAnswer + ", Scale of mess up: " + scaleOfIssueQ); // logs user's answers
 	}); // end of click submit function
 
-	var who = "";
-
-	$("fieldset.who input[type='radio']").on("change", function(){
-		 who = $(this).val();
-	});
 
 	 
 }); // end doc ready function
