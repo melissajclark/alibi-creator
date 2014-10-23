@@ -38,7 +38,7 @@ $(document).ready(function(){
 		$(this).addClass("animated wobble"); // fun effect for submit
 
 		if (alibiQuestion.who == "other") { // checks the value of input with the value of "other"
-			alibiQuestion.who = $("fieldset.alibiQuestion.who input[type=text]").val();
+			alibiQuestion.who = $("fieldset.who input[type=text]").val();
 		}
 
 		console.log("Who alibi is for: " + alibiQuestion.who + ", " + "Happened before? "+ alibiQuestion.firstTime + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
