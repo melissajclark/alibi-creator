@@ -36,6 +36,8 @@ $(document).ready(function(){
 		// } 
 
 		if (!"fieldset.who input[value='your']") {
+			who = $("fieldset.who input[value='your']").val();
+		} else if ("fieldset.who input[value='other']" && "fieldset.who input[type='text']") {
 			who = $("fieldset.who input[value='text']").val();
 		}
 
