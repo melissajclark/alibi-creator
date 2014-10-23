@@ -7,6 +7,9 @@ $(document).ready(function(){
 **/
 
 	$(".otherField").hide(); // hides other text field on page load
+	$("fieldset.who [type='text']").on("click", function(){
+		$(".otherField").show();
+	});
 
 	$("form.questions").on("submit",function(event){
 		event.preventDefault(); // prevents form from refreshing
