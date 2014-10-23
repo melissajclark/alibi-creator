@@ -72,6 +72,7 @@ $(document).ready(function(){
 
 	}); // end of click submit function that analyzes scale of Issue
 
+	
 
 
 	 
