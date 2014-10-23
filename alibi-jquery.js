@@ -31,9 +31,9 @@ $(document).ready(function(){
 
 		if ("fieldset.who input[value='other']") {
 			who = $("fieldset.who input[type='text']").val();
-		} else {
-			who = ("fieldset.who input[type='radio']").val();
-		}
+		} else if ("fieldset.who input[type='radio']"){
+			who = $("fieldset.who input[type='radio']").val();
+		} 
 
 		console.log("Who alibi is for: " + who + ", " + "Happened before? "+ firstTimeAnswer + ", Scale of mess up: " + scaleOfIssueQ); // logs user's answers
 	}); // end of click submit function
