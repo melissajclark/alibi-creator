@@ -29,9 +29,9 @@ $(document).ready(function(){
 	$("input[type=submit]").on("click",function(){
 		$(this).addClass("animated wobble"); // fun effect for submit
 
-		if (!"fieldset.who input[value='your']" && "fieldset.who input[type='text']" ) {
-			who = $("fieldset.who input[value='other']").val();
-		} 
+		if (who == "other") { // checks the value of input with the value of "other"
+			who = $("fieldset.who input[type=text]").val();
+		}
 
 		console.log("Who alibi is for: " + who + ", " + "Happened before? "+ firstTimeAnswer + ", Scale of mess up: " + scaleOfIssueQ); // logs user's answers
 	}); // end of click submit function
