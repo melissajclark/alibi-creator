@@ -35,11 +35,9 @@ $(document).ready(function(){
 		// 	who = $("fieldset.who input[type='radio']").val();
 		// } 
 
-		if (!"fieldset.who input[value='your']") {
-			who = $("fieldset.who input[value='your']").val();
-		} else if ("fieldset.who input[value='other']" && "fieldset.who input[type='text']") {
-			who = $("fieldset.who input[value='text']").val();
-		}
+		if (!"fieldset.who input[value='your']" && "fieldset.who input[type='text']" ) {
+			who = $("fieldset.who input[value='other']").val();
+		} 
 
 		// if user selects other, log text value inputted
 		// if user selects a radio button option, log that value
