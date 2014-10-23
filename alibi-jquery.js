@@ -10,10 +10,13 @@ $(document).ready(function(){
 		event.preventDefault(); // prevents form from refreshing
 	}); // end of form.questions event function
 
-	// empty variables to store user's input:
-	var whosePissed = "";
-	var firstTimeAnswer = "";
-	var scaleOfIssueQ = "";
+	var alibiQuestion = { 
+	// would be good to add if statement in case user inputs other answer
+		who: "",
+		firstTime: "",
+		scaleOfIssue: ""
+		// more alibi questions?
+	}
 
 	// this function defines whosePissed alibi is for & stores the value
 	$("fieldset.whosePissed input[type='radio']").on("change", function(){
