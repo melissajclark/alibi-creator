@@ -43,14 +43,18 @@ $(document).ready(function(){
 
 		console.log("Who alibi is for: " + alibiQuestion.who + ", " + "Happened before? "+ alibiQuestion.firstTime + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
 
-		/**
-		*
-		* Code Section 2: Alibi Summary for User
-		*
-		**/
+		}); // end of click submit function & logging of quick alibi summary
 
+	/**
+	*
+	* Code Section 2: Alibi Summary for User
+	*
+	**/
+
+	var scaleOfIssueQ = ""; 
+
+	$("input[type=submit]").on("click",function(){
 		// this section analyzes user's answer to scaleofIssue prompt
-		var scaleOfIssueQ = ""; 
 
 		if (alibiQuestion.scaleOfIssue === 10 || alibiQuestion.scaleOfIssue >= 10) {
 			scaleOfIssueQ = "Holy shit, this could be bad. I don't know if I can get you outta this one";
@@ -65,9 +69,9 @@ $(document).ready(function(){
 		} else if (alibiQuestion.scaleOfIssue = 1) {
 			scaleOfIssueQ = "You know what, you'll be fine. I bet your " + alibiQuestion.who + " is already over it. Let's get you an alibi, just in case" 
 		}
-		console.log(scaleOfIssueQ);
+		console.log(scaleOfIssueQ); // logs reply to user's input
 
-	}); // end of click submit function
+	}); // end of click submit function that analyzes scale of Issue
 
 
 
