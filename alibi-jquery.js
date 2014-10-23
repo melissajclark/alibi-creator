@@ -6,14 +6,14 @@ $(document).ready(function(){
 	}); // end of form.questions event function
 
 	// empty variables to store user's input:
-	var who = "";
+	var whosePissed = "";
 	var firstTimeAnswer = "";
 	var scaleOfIssueQ = "";
 
-	// this function defines who alibi is for & stores the value
-	$("fieldset.who input[type='radio']").on("change", function(){
-		 who = $(this).val(); 
-	}); // end of function listening on "who" question
+	// this function defines whosePissed alibi is for & stores the value
+	$("fieldset.whosePissed input[type='radio']").on("change", function(){
+		 whosePissed = $(this).val(); 
+	}); // end of function listening on "whosePissed" question
 
 	// this function defines whether it's the first time or not & stores the value
 	$("fieldset.alibiTiming input[type='radio']").on("change", function(){
@@ -29,12 +29,14 @@ $(document).ready(function(){
 	$("input[type=submit]").on("click",function(){
 		$(this).addClass("animated wobble"); // fun effect for submit
 
-		if (who == "other") { // checks the value of input with the value of "other"
-			who = $("fieldset.who input[type=text]").val();
+		if (whosePissed == "other") { // checks the value of input with the value of "other"
+			whosePissed = $("fieldset.whosePissed input[type=text]").val();
 		}
 
-		console.log("Who alibi is for: " + who + ", " + "Happened before? "+ firstTimeAnswer + ", Scale of mess up: " + scaleOfIssueQ); // logs user's answers
+		console.log("whosePissed alibi is for: " + whosePissed + ", " + "Happened before? "+ firstTimeAnswer + ", Scale of mess up: " + scaleOfIssueQ); // logs user's answers
 	}); // end of click submit function
+
+	
 
 
 	 
