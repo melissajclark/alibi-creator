@@ -31,7 +31,7 @@ $(document).ready(function(){
 
 		if ("fieldset.who input[value='other']") {
 			who = $("fieldset.who input[type='text']").val();
-		} else if ("fieldset.who input[type='radio']") {
+		} else {
 			who = ("fieldset.who input[type='radio']").val();
 		}
 
