@@ -41,7 +41,7 @@ $(document).ready(function(){
 			alibiQuestion.who = $("fieldset.alibiQuestion.who input[type=text]").val();
 		}
 
-		console.log("alibiQuestion.who alibi is for: " + alibiQuestion.who + ", " + "Happened before? "+ firstTimeAnswer + ", Scale of mess up: " + scaleOfIssueQ); // logs user's answers
+		console.log("Who alibi is for: " + alibiQuestion.who + ", " + "Happened before? "+ alibiQuestion.firstTimeAnswer + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
 
 		/**
 		*
