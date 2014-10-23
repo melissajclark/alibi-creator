@@ -31,9 +31,8 @@ $(document).ready(function(){
 	// this function defines the scale of the issue & stores the value
 	$("select.scaleMessUp").on("change", function(){
 		 alibiQuestion.scaleOfIssue = $(this).val(); 
-	}); // end of function listening on scale of Mess up Input
+	}); // end of function listening on scale of Mess up Input	
 
-	// functions that run on submit button:	
 	$("input[type=submit]").on("click",function(){
 		$(this).addClass("animated wobble"); // fun effect for submit
 
@@ -43,13 +42,13 @@ $(document).ready(function(){
 
 		console.log("Who alibi is for: " + alibiQuestion.who + ", " + "Happened before? "+ alibiQuestion.firstTime + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
 
-		}); // end of click submit function & logging of quick alibi summary
+	}); // end of click submit function & logging of quick alibi summary
 
-	/**
-	*
-	* Code Section 2: Alibi Summary for User
-	*
-	**/
+/**
+*
+* Code Section 2: Alibi Summary for User
+*
+**/
 
 	var scaleOfIssueQ = ""; 
 
