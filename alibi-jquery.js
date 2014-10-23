@@ -6,6 +6,8 @@ $(document).ready(function(){
 *
 **/
 
+	$(".otherField").hide(); // hides other text field on page load
+
 	$("form.questions").on("submit",function(event){
 		event.preventDefault(); // prevents form from refreshing
 	}); // end of form.questions event function
