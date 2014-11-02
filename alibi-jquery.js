@@ -84,6 +84,7 @@ $(document).ready(function(){
 	// variables below: defines empty variables for storing generated content from function below
 	var scaleOfIssueQ = ""; 
 	var analyzedAlibi = "";
+	var alibiButton = '<button class="createAlibi">Ready for an Alibi?</button>';
 
 	$("input[type=submit]").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
 
@@ -104,6 +105,8 @@ $(document).ready(function(){
 		var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + ", " + alibiQuestion.whoName + "." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
 		
 		$(".alibiSummary").append(analyzedAlibi); // inserts response to answers into the DOM
+
+		$(".alibiSummary").after(alibiButton);
 
 	}); // end of click submit function that analyzes scale of Issue
 
