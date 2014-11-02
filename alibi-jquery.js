@@ -146,8 +146,9 @@ $(document).ready(function(){
 * Code Section 4: Alibi Output
 *
 **/
-
+$("input[type=submit]").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
 	$(".alibiSummary").after(alibiButton); // adds button after AlibiSummary
+});
 
 	$("button.createAlibi").one("click", function(){
 		$("section.alibiOutput ol").append("<li>"+alibiOption1+"</li>");
