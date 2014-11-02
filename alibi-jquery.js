@@ -63,11 +63,15 @@ $(document).ready(function(){
 		 alibiQuestion.scaleOfIssue = $(this).val(); 
 	}); // end of function listening on scale of Mess up Input	
 
-	$("input[type=submit]").one("click",function(){
+	$("input[type=submit]").on("click",function(){
 		$(this).addClass("animated wobble"); // fun effect for submit
 
 		if (alibiQuestion.who == "other") { // checks the value of input with the value of "other"
 			alibiQuestion.who = $("fieldset.who input[type=text]").val();
+		}
+
+		if (alibiQuestion.who != "other") { // checks the value of input with the value of "other"
+			alibiQuestion.who = $("fieldset.pissedName input[type=text]").val();
 		}
 
 		console.log("Who alibi is for: " + alibiQuestion.who + ", " + alibiQuestion.whoName + "Happened before? "+ alibiQuestion.firstTime + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
