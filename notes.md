@@ -16,4 +16,11 @@
 - BUT, if you change the value after clicking submit, it still logs the first value
 - need to listen for changes on other text field?
 
+### TO DO 
+
+(November 2, 2014)
+
+1. add "selected" class to elements once selected
+2. hide items without selected class
+
 
