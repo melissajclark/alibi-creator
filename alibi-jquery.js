@@ -27,7 +27,7 @@ $(document).ready(function(){
 	$("fieldset.who input[type='radio']").on("change", function(){
 		 alibiQuestion.who = $(this).val(); 
 
-	var nameQhtml = '<label for="who_9">' + 'Whats your ' + alibiQuestion.who + 's ' + 'name?' + '</label><span class="whoName"><br/><input type="text" name="their" id="who_8" placeholder="name" /></span>';
+	var nameQhtml = '<label for="who_9">' + 'Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</label><span class="whoName"><br/><input type="text" name="their" id="who_8" placeholder="name" /></span>';
 
 		 if (alibiQuestion.who != "other" ) { // checks the value of input with the value of "other"
 		 	$(this).parent().after("<p>"+nameQhtml+"</p>"); // this selects the parent of the selector and adds the html after it
