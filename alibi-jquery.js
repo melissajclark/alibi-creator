@@ -31,8 +31,10 @@ $(document).ready(function(){
 
 		 if (alibiQuestion.who != "other" ) { // checks the value of input with the value of "other"
 		 	$(this).parent().after("<p>"+nameQhtml+"</p>"); // this selects the parent of the selector and adds the html after it
-		 	console.log(nameQhtml);
+		 	// console.log(nameQhtml);
 		 }
+
+	var nameofPissed = $("fieldset.who input[type=text]").val();
 	}); // end of function listening on "alibiQuestion.who" question
 
 
@@ -84,17 +86,11 @@ $(document).ready(function(){
 		}
 		console.log(scaleOfIssueQ); // logs reply to user's input
 
-		var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + " ." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
+		var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + "," + nameofPissed + " ." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
 
 		$(".alibiSummary").append(analyzedAlibi); // inserts response to answers into the DOM
 
 	}); // end of click submit function that analyzes scale of Issue
-
-
-	// $("input[type=submit]").on("click",function(){
-	// 	// this section analyzes user's answer to scaleofIssue prompt
-
-	// // started this but realized I should do it within the above function
 
 	// }); // end of click submit function that analyzes scale of Issue
 
