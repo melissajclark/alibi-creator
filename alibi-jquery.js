@@ -47,7 +47,7 @@ $(document).ready(function(){
 		 	$("fieldset.pissedName").hide();
 		 }
 
-		alibiQuestion.whoName = $("fieldset.who input[type=text]").val();
+		// alibiQuestion.whoName = $("fieldset.who input[type=text]").val();
 		
 	}); // end of function listening on "alibiQuestion.who" question
 
