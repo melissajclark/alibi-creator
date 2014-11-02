@@ -26,7 +26,7 @@ $(document).ready(function(){
 	}
 
 	// this function defines alibiQuestion.who alibi is for & stores the value
-	$("fieldset.who input[type='radio']").on("click", function(){
+	$("fieldset.who input[type='radio']").one("click", function(){
 		 alibiQuestion.who = $(this).val(); 
 
 		 var nameQhtml = '<fieldset class="pissedName"><legend class="nameofPissed">Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</legend><br/><input type="text" name="their" id="who_8" placeholder="name" /></fieldset>';
@@ -74,8 +74,9 @@ $(document).ready(function(){
 * Code Section 2: Alibi Summary for User
 *
 **/
-
-	var scaleOfIssueQ = ""; // defines empty variable for storing generated content
+	// variables below: defines empty variables for storing generated content from function below
+	var scaleOfIssueQ = ""; 
+	var analyzedAlibi = "";
 
 	$("input[type=submit]").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
 
@@ -92,18 +93,19 @@ $(document).ready(function(){
 		} else if (alibiQuestion.scaleOfIssue = 1) {
 			scaleOfIssueQ = "You know what, you'll be fine. I bet your " + alibiQuestion.who + ", " + alibiQuestion.whoName + " is already over it. Let's get you an alibi, just in case" 
 		}
-		console.log(scaleOfIssueQ); // logs reply to user's input
 
-	// $("input[type=submit]").on("click",function(){
-		// this section analyzes 
-	var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + ", " + alibiQuestion.whoName + "." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
+		var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + ", " + alibiQuestion.whoName + "." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
 
-	$(".alibiSummary").append(analyzedAlibi); // inserts response to answers into the DOM
-
-	// }); // end of click submit function that analyzes scale of Issue
-
+		$(".alibiSummary").append(analyzedAlibi); // inserts response to answers into the DOM
 
 	}); // end of click submit function that analyzes scale of Issue
+
+
+
+
+
+
+
 
 }); // end doc ready function
 
