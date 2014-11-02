@@ -11,6 +11,8 @@ $(document).ready(function(){
 		$(".otherField").show();
 	});
 
+	$("fieldset.pissedName").hide(); // hides pissedName fieldset on page load
+
 	$("form.questions").on("submit",function(event){
 		event.preventDefault(); // prevents form from refreshing
 	}); // end of form.questions event function
@@ -32,7 +34,7 @@ $(document).ready(function(){
 		var nameQhtml = '<label for="who_9">' + 'Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</label><br/><input type="text" name="their" id="who_8" placeholder="name" />';
 
 		 if (alibiQuestion.who != "other" ) { // checks the value of input with the value of "other"
-		 	$(this).parent().after("<p>"+nameQhtml+"</p>"); // this selects the parent of the selector and adds the html after it
+		 	$("fieldset.pissedName").append(nameQhtml); // this selects the parent of the selector and adds the html after it
 		 	// console.log(nameQhtml);
 		 }
 
