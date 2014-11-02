@@ -28,7 +28,7 @@ $(document).ready(function(){
 		 alibiQuestion.who = $(this).val(); 
 	}); // end of function listening on "alibiQuestion.who" question
 
-	if (alibiQuestion.who === "mom" || alibiQuestion.who === "girlfriend" || ) { // checks the value of input with the value of "other"
+	if (alibiQuestion.who === "mom" || alibiQuestion.who === "girlfriend") { // checks the value of input with the value of "other"
 		alibiQuestion.who = $("fieldset.who input[type=text]").val();
 	}
 
