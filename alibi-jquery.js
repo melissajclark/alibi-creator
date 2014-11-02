@@ -36,9 +36,11 @@ $(document).ready(function(){
 		 	// console.log(nameQhtml);
 		 }
 
-		nameofPissed = $("fieldset.who input[type=text]").val();
-		// console.log(alibiQuestion.nameofPissed);
+		nameofPissed = $("input#who_8").val();
+		
 	}); // end of function listening on "alibiQuestion.who" question
+
+	console.log(nameofPissed);
 
 	// this function defines whether it's the first time or not & stores the value
 	$("fieldset.alibiTiming input[type='radio']").on("change", function(){
@@ -57,7 +59,7 @@ $(document).ready(function(){
 			alibiQuestion.who = $("fieldset.who input[type=text]").val();
 		}
 
-		console.log("Who alibi is for: " + alibiQuestion.who + ", " + "Happened before? "+ alibiQuestion.firstTime + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
+		console.log("Who alibi is for: " + alibiQuestion.who + ", " + nameofPissed + "Happened before? "+ alibiQuestion.firstTime + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
 
 	}); // end of click submit function & logging of quick alibi summary
 
@@ -83,17 +85,21 @@ $(document).ready(function(){
 		} else if (alibiQuestion.scaleOfIssue >= 2 && alibiQuestion.scaleOfIssue <= 3) {
 			scaleOfIssueQ = "You barely messed up! Let's call this a misdemeanour";
 		} else if (alibiQuestion.scaleOfIssue = 1) {
-			scaleOfIssueQ = "You know what, you'll be fine. I bet your " + alibiQuestion.who + " is already over it. Let's get you an alibi, just in case" 
+			scaleOfIssueQ = "You know what, you'll be fine. I bet your " + alibiQuestion.who + nameofPissed + " is already over it. Let's get you an alibi, just in case" 
 		}
 		console.log(scaleOfIssueQ); // logs reply to user's input
 
-		var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + "," + nameofPissed + " ." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
-
-		$(".alibiSummary").append(analyzedAlibi); // inserts response to answers into the DOM
-
 	}); // end of click submit function that analyzes scale of Issue
 
-	// }); // end of click submit function that analyzes scale of Issue
+
+	$("input[type=submit]").on("click",function(){
+		// this section analyzes 
+	var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + "," + nameofPissed + " ." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
+
+	$(".alibiSummary").append(analyzedAlibi); // inserts response to answers into the DOM
+
+
+	}); // end of click submit function that analyzes scale of Issue
 
 }); // end doc ready function
 
