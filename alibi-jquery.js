@@ -40,7 +40,15 @@ $(document).ready(function(){
 		
 	}); // end of function listening on "alibiQuestion.who" question
 
-	console.log(nameofPissed);
+	var whoSelected = function(){
+		var numberSelected = $("input:checked").length;
+		console.log(numberSelected);
+	};
+	whoSelected();
+
+	$("fieldset.who input[type=radio]").on("click", whoSelected);
+
+
 
 	// this function defines whether it's the first time or not & stores the value
 	$("fieldset.alibiTiming input[type='radio']").on("change", function(){
