@@ -40,24 +40,6 @@ $(document).ready(function(){
 		
 	}); // end of function listening on "alibiQuestion.who" question
 
-	// numberSelected = "";
-
-	// var whoSelected = function(){ // creates function
-	// 	var numberSelected = $("input:checked").length;
-	// 	console.log(numberSelected);
-	// };
-	// whoSelected(); // calls function
-
-	// var selectedWho = $("fieldset.who input[type=radio]").on("click", whoSelected);
-	// console.log(numberSelected);
-
-	// if (numberSelected === 1) {
-	// 	$("[input:checked]").on("select",function(){
-	// 	$(this).addClass("selected");
-	// 	});	
-	// } 
-	// // .addClass("selected");
-
 
 
 	// this function defines whether it's the first time or not & stores the value
