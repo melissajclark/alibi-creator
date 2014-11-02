@@ -26,7 +26,7 @@ $(document).ready(function(){
 	var nameofPissed = "";
 
 	// this function defines alibiQuestion.who alibi is for & stores the value
-	$("fieldset.who input[type='radio']").on("change", function(){
+	$("fieldset.who input[type='radio']").on("click", function(){
 		 alibiQuestion.who = $(this).val(); 
 
 		var nameQhtml = '<label for="who_9">' + 'Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</label><br/><input type="text" name="their" id="who_8" placeholder="name" />';
