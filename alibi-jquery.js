@@ -38,7 +38,7 @@ $(document).ready(function(){
 		 alibiQuestion.scaleOfIssue = $(this).val(); 
 	}); // end of function listening on scale of Mess up Input	
 
-	$("input[type=submit]").on("click",function(){
+	$("input[type=submit]").one("click",function(){
 		$(this).addClass("animated wobble"); // fun effect for submit
 
 		if (alibiQuestion.who == "other") { // checks the value of input with the value of "other"
@@ -75,12 +75,20 @@ $(document).ready(function(){
 		}
 		console.log(scaleOfIssueQ); // logs reply to user's input
 
+		var alibiSummary = "<p>"+scaleOfIssueQ+"</p>"; 
+
+		$(".alibiSummary").append(alibiSummary); // inserts response to answers into the DOM
+
 	}); // end of click submit function that analyzes scale of Issue
 
-	
 
+	// $("input[type=submit]").on("click",function(){
+	// 	// this section analyzes user's answer to scaleofIssue prompt
 
-	 
+	// // started this but realized I should do it within the above function
+
+	// }); // end of click submit function that analyzes scale of Issue
+
 }); // end doc ready function
 
 
