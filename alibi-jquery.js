@@ -36,7 +36,7 @@ $(document).ready(function(){
 		 	// console.log(nameQhtml);
 		 }
 
-		nameofPissed = $("input#who_8").val();
+		nameofPissed = $("input[name='their']").val();
 		
 	}); // end of function listening on "alibiQuestion.who" question
 
