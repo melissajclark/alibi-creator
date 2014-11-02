@@ -28,8 +28,11 @@ $(document).ready(function(){
 		 alibiQuestion.who = $(this).val(); 
 	}); // end of function listening on "alibiQuestion.who" question
 
+	var nameQhtml = '<label for="who_9">Whats their name?</label><input type="radio" name="their" id="who_8" value="name" /><span class="whoName"><em>specify below</em><br/><input type="text" name="their" id="who_8" placeholder="name" /></span>';
+
 	if (alibiQuestion.who == "mom") { // checks the value of input with the value of "other"
-		alibiQuestion.who = $("fieldset.who input[type=text]").val();
+		$("p .nameofPissed").append(nameQhtml);
+		console.log(nameQhtml);
 	}
 
 	// this function defines whether it's the first time or not & stores the value
@@ -94,6 +97,7 @@ $(document).ready(function(){
 	// }); // end of click submit function that analyzes scale of Issue
 
 }); // end doc ready function
+
 
 
 
