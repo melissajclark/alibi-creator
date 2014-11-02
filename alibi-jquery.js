@@ -40,24 +40,23 @@ $(document).ready(function(){
 		
 	}); // end of function listening on "alibiQuestion.who" question
 
-	numberSelected = "";
+	// numberSelected = "";
 
-	var whoSelected = function(){ // creates function
-		var numberSelected = $("input:checked").length;
-		console.log(numberSelected);
-	};
-	whoSelected(); // calls function
+	// var whoSelected = function(){ // creates function
+	// 	var numberSelected = $("input:checked").length;
+	// 	console.log(numberSelected);
+	// };
+	// whoSelected(); // calls function
 
-	var selectedWho = $("fieldset.who input[type=radio]").on("click", whoSelected);
-	console.log(numberSelected);
+	// var selectedWho = $("fieldset.who input[type=radio]").on("click", whoSelected);
+	// console.log(numberSelected);
 
-	if (numberSelected === 1) {
-		$("[input:checked]").on("click",function(){
-		$(this).addClass("selected");
-		});
-		
-	} 
-	// .addClass("selected");
+	// if (numberSelected === 1) {
+	// 	$("[input:checked]").on("select",function(){
+	// 	$(this).addClass("selected");
+	// 	});	
+	// } 
+	// // .addClass("selected");
 
 
 
