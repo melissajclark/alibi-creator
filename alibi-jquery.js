@@ -101,12 +101,17 @@ $(document).ready(function(){
 
 	}); // end of click submit function that analyzes scale of Issue
 
+/**
+*
+* Code Section 3: Alibi Output
+*
+**/
 
+	$("button.createAlibi").on("click", function(){
+		$("section.formContent").remove();
+		
 
-
-
-
-
+	});
 
 }); // end doc ready function
 
