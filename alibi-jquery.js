@@ -106,11 +106,7 @@ $(document).ready(function(){
 		
 		$(".alibiSummary").append(analyzedAlibi); // inserts response to answers into the DOM
 
-		$(".alibiSummary").after(alibiButton);
-
 	}); // end of click submit function that analyzes scale of Issue
-
-
 
 /**
 *
@@ -118,11 +114,12 @@ $(document).ready(function(){
 *
 **/
 
-	// $("button.createAlibi").on("click", function(){
-	// 	$("section.formContent").remove();
-	// 	$(".alibiOutput ol").append("<li>hello</li>");
+	$(".alibiSummary").after(alibiButton); // adds button after AlibiSummary
 
-	// });
+	$("button.createAlibi").one("click", function(){
+		$("section.alibiOutput").append("hello");
+
+	});
 
 }); // end doc ready function
 
