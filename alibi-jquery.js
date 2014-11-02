@@ -84,7 +84,6 @@ $(document).ready(function(){
 	// variables below: defines empty variables for storing generated content from function below
 	var scaleOfIssueQ = ""; 
 	var analyzedAlibi = "";
-	var alibiButton = '<button class="createAlibi">Ready for an Alibi?</button>';
 
 	$("input[type=submit]").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
 
@@ -147,8 +146,11 @@ $(document).ready(function(){
 * Code Section 4: Alibi Output
 *
 **/
+	var alibiButton = '<button class="createAlibi">Ready for an Alibi?</button>';
 
-	$(".alibiSummary").after(alibiButton); // adds button after AlibiSummary
+	$("input[type=submit]").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
+		$(".alibiSummary").after(alibiButton); // adds button after AlibiSummary
+	});
 
 	$("button.createAlibi").one("click", function(){
 		$("section.alibiOutput ol").append("<li>"+alibiOption1+"</li>");
