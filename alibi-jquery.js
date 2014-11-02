@@ -96,7 +96,8 @@ $(document).ready(function(){
 		}
 
 		var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + ", " + alibiQuestion.whoName + "." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
-
+		
+		$("section.formContent").remove();
 		$(".alibiSummary").append(analyzedAlibi); // inserts response to answers into the DOM
 
 	}); // end of click submit function that analyzes scale of Issue
@@ -107,11 +108,11 @@ $(document).ready(function(){
 *
 **/
 
-	$("button.createAlibi").on("click", function(){
-		$("section.formContent").remove();
-		
+	// $("button.createAlibi").on("click", function(){
+	// 	$("section.formContent").remove();
+	// 	$(".alibiOutput ol").append("<li>hello</li>");
 
-	});
+	// });
 
 }); // end doc ready function
 
