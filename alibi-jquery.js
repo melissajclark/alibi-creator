@@ -23,12 +23,12 @@ $(document).ready(function(){
 		// more alibi questions?
 	}
 
-	var nameQhtml = '<label for="who_9">Whats their name?</label><input type="radio" name="their" id="who_8" value="name" /><span class="whoName"><em>specify below</em><br/><input type="text" name="their" id="who_8" placeholder="name" /></span>';
+	var nameQhtml = '<label for="who_9">' + 'Whats your' + alibiQuestion.who + 's' + 'name?' + '</label><input type="radio" name="their" id="who_8" value="name" /><span class="whoName"><em>specify below</em><br/><input type="text" name="their" id="who_8" placeholder="name" /></span>';
 
 	// this function defines alibiQuestion.who alibi is for & stores the value
 	$("fieldset.who input[type='radio']").one("change", function(){
 		 alibiQuestion.who = $(this).val(); 
-		 if (alibiQuestion.who === "mom") { // checks the value of input with the value of "other"
+		 if (alibiQuestion.who != "other" ) { // checks the value of input with the value of "other"
 		 	$("p.nameofPissed").append(nameQhtml);
 		 	console.log(nameQhtml);
 		 }
