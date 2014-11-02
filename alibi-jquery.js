@@ -23,16 +23,19 @@ $(document).ready(function(){
 		// more alibi questions?
 	}
 
-	var nameQhtml = '<label for="who_9">' + 'Whats your' + alibiQuestion.who + 's' + 'name?' + '</label><input type="radio" name="their" id="who_8" value="name" /><span class="whoName"><em>specify below</em><br/><input type="text" name="their" id="who_8" placeholder="name" /></span>';
-
 	// this function defines alibiQuestion.who alibi is for & stores the value
-	$("fieldset.who input[type='radio']").one("change", function(){
+	$("fieldset.who input[type='radio']").on("change", function(){
 		 alibiQuestion.who = $(this).val(); 
+
+	var nameQhtml = '<label for="who_9">' + 'Whats your ' + alibiQuestion.who + 's ' + 'name?' + '</label><input type="radio" name="their" id="who_8" value="name" /><span class="whoName"><em>specify below</em><br/><input type="text" name="their" id="who_8" placeholder="name" /></span>';
+
 		 if (alibiQuestion.who != "other" ) { // checks the value of input with the value of "other"
 		 	$("p.nameofPissed").append(nameQhtml);
 		 	console.log(nameQhtml);
 		 }
 	}); // end of function listening on "alibiQuestion.who" question
+
+
 
 	// this function defines whether it's the first time or not & stores the value
 	$("fieldset.alibiTiming input[type='radio']").on("change", function(){
