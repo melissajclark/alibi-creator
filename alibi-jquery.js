@@ -7,12 +7,10 @@ $(document).ready(function(){
 **/
 
 	$(".otherField").hide(); // hides other text field on page load
+	$("fieldset.pissedName").hide(); // hides pissedName fieldset on page load
 	$("fieldset.who [value='other']").on("click", function(){
 		$(".otherField").show();
 	});
-
-	$("fieldset.pissedName").hide(); // hides pissedName fieldset on page load
-
 
 	$("form.questions").on("submit",function(event){
 		event.preventDefault(); // prevents form from refreshing
@@ -27,30 +25,22 @@ $(document).ready(function(){
 		// more alibi questions?
 	}
 
-	// var nameofPissed = "";
-
 	// this function defines alibiQuestion.who alibi is for & stores the value
 	$("fieldset.who input[type='radio']").on("click", function(){
 		 alibiQuestion.who = $(this).val(); 
 
 		 var nameQhtml = '<fieldset class="pissedName"><legend class="nameofPissed">Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</legend><br/><input type="text" name="their" id="who_8" placeholder="name" /></fieldset>';
 
-		 if (alibiQuestion.who != "other" ) { // checks the value of input with the value of "other"
-
-		 	$("fieldset.who").after(nameQhtml); // this selects the parent of the selector and adds the html after it
-		 	// console.log(nameQhtml);
-		 	$(".otherField").hide(); // hides other text field on page load
-
+		 if (alibiQuestion.who != "other" ) { // checks for input that is not "other"
+		 	$("fieldset.who").after(nameQhtml); // puts Q about name after first fieldset
+		 	$(".otherField").hide(); // hides other text if "other" is not selected
 		 }
 
-		 if (alibiQuestion.who === "other") {
-		 	$("fieldset.pissedName").hide();
+		 if (alibiQuestion.who === "other") { // hides name Q if user selects other
+		 	$("fieldset.pissedName").hide(); 
 		 }
 
-		// alibiQuestion.whoName = $("fieldset.who input[type=text]").val();
-		
 	}); // end of function listening on "alibiQuestion.who" question
-
 
 
 	// this function defines whether it's the first time or not & stores the value
@@ -63,6 +53,7 @@ $(document).ready(function(){
 		 alibiQuestion.scaleOfIssue = $(this).val(); 
 	}); // end of function listening on scale of Mess up Input	
 
+	// this function happens when user hits submit - analyzes input and console logs 
 	$("input[type=submit]").on("click",function(){
 		$(this).addClass("animated wobble"); // fun effect for submit
 
@@ -84,10 +75,9 @@ $(document).ready(function(){
 *
 **/
 
-	var scaleOfIssueQ = ""; 
+	var scaleOfIssueQ = ""; // defines empty variable for storing generated content
 
-	$("input[type=submit]").on("click",function(){
-		// this section analyzes user's answer to scaleofIssue prompt
+	$("input[type=submit]").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
 
 		if (alibiQuestion.scaleOfIssue === 10 || alibiQuestion.scaleOfIssue >= 10) {
 			scaleOfIssueQ = "Holy shit, this could be bad. I don't know if I can get you outta this one";
