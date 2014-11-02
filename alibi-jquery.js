@@ -117,7 +117,7 @@ $(document).ready(function(){
 	// defines prefixes to insert before array items
 	var prefix = [ "my", "I had", "I was"]; 
 
-	/* My */ var alibiOption1 = [ "toilet expoloded", "apartment flooded", "great-aunt twice removed died", "cat had a seizure", "my phone died"];
+	/* My */ var alibiOption1 = [ "toilet exploded", "apartment flooded", "great-aunt twice removed died", "cat had a seizure", "my phone died"];
 
 	/* I had */ var alibiOption2 = [ "diarrhea", "the bird flu", "my first period", "to meet my parole officer", "food poisoning", "vertigo"]; 
 
