@@ -94,14 +94,13 @@ $(document).ready(function(){
 		}
 		console.log(scaleOfIssueQ); // logs reply to user's input
 
-	}); // end of click submit function that analyzes scale of Issue
-
-
-	$("input[type=submit]").on("click",function(){
+	// $("input[type=submit]").on("click",function(){
 		// this section analyzes 
-	var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + ", " + alibiQuestion.whoName + " ." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
+	var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + ", " + alibiQuestion.whoName + "." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
 
 	$(".alibiSummary").append(analyzedAlibi); // inserts response to answers into the DOM
+
+	// }); // end of click submit function that analyzes scale of Issue
 
 
 	}); // end of click submit function that analyzes scale of Issue
