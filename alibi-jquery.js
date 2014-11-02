@@ -141,13 +141,6 @@ $(document).ready(function(){
 	var alibiOption2 = "Believe me, I wish I could have been there. " + prefix[1] + " " + random(alibiOption2) + " and it was " + random(badWord) + "! " + random(moreAlibi) + " " + random(alibiApology);
 	var alibiOption3 = "I can't believe I'm saying this aloud, I feel  " + random(badWord) + ". But, I need to be honest with you... " + prefix[2] + " " + random(alibiOption3) + ". " + random(moreAlibi) + " " + random(alibiApology);
 
-	// defines function for creating alibi optiopns	 
-	// var createAlibi = function(){	
-	// 	console.log("Okay, here's three options for you to tell your " + alibiQuestion.who + ". " + "1. " + alibiOption1 + "2. " + alibiOption2 + "3. " + alibiOption3);
-	// 	return "Okay, here's three options for you to tell your " + alibiQuestion.who + ". " + "1. " + alibiOption1 + "." + "2. " + alibiOption2 + "3. " + alibiOption3 + ".";
-	// };
-	// createAlibi(); // calls function
-
 /**
 *
 * Code Section 4: Alibi Output
