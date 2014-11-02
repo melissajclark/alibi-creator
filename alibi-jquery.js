@@ -70,6 +70,12 @@ $(document).ready(function(){
 
 	}); // end of click submit function & logging of quick alibi summary
 
+
+	$("input[type=submit]").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
+			$("section.formContent").hide();
+	});
+
+
 /**
 *
 * Code Section 2: Alibi Summary for User
@@ -97,10 +103,11 @@ $(document).ready(function(){
 
 		var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + ", " + alibiQuestion.whoName + "." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
 		
-		$("section.formContent").remove();
 		$(".alibiSummary").append(analyzedAlibi); // inserts response to answers into the DOM
 
 	}); // end of click submit function that analyzes scale of Issue
+
+
 
 /**
 *
