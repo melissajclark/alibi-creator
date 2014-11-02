@@ -28,9 +28,10 @@ $(document).ready(function(){
 		 alibiQuestion.who = $(this).val(); 
 	}); // end of function listening on "alibiQuestion.who" question
 
-	if (alibiQuestion.who === "mom" || alibiQuestion.who === "girlfriend") { // checks the value of input with the value of "other"
-		alibiQuestion.who = $("fieldset.who input[type=text]").val();
-	}
+	// if (alibiQuestion.who == "mom" || alibiQuestion.who = "girlfriend") { // checks the value of input with the value of "other"
+	// 	// alibiQuestion.who = $("fieldset.who input[type=text]").val();
+	// 	console.log(alibiQuestion.who);
+	// }
 
 	// this function defines whether it's the first time or not & stores the value
 	$("fieldset.alibiTiming input[type='radio']").on("change", function(){
