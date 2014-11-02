@@ -40,13 +40,24 @@ $(document).ready(function(){
 		
 	}); // end of function listening on "alibiQuestion.who" question
 
-	var whoSelected = function(){
+	numberSelected = "";
+
+	var whoSelected = function(){ // creates function
 		var numberSelected = $("input:checked").length;
 		console.log(numberSelected);
 	};
-	whoSelected();
+	whoSelected(); // calls function
 
-	$("fieldset.who input[type=radio]").on("click", whoSelected);
+	var selectedWho = $("fieldset.who input[type=radio]").on("click", whoSelected);
+	console.log(numberSelected);
+
+	if (numberSelected === 1) {
+		$("[input:checked]").on("click",function(){
+		$(this).addClass("selected");
+		});
+		
+	} 
+	// .addClass("selected");
 
 
 
