@@ -143,8 +143,8 @@ $(document).ready(function(){
 
 	// defines function for creating alibi optiopns	 
 	var createAlibi = function(){	
-		console.log("Okay, here's three options for you to tell your " + whosePissed + ". " + "1. " + alibiOption1 + "2. " + alibiOption2 + "3. " + alibiOption3);
-		return "Okay, here's three options for you to tell your " + whosePissed + ". " + "1. " + alibiOption1 + "." + "2. " + alibiOption2 + "3. " + alibiOption3 + ".";
+		console.log("Okay, here's three options for you to tell your " + alibiQuestion.who + ". " + "1. " + alibiOption1 + "2. " + alibiOption2 + "3. " + alibiOption3);
+		return "Okay, here's three options for you to tell your " + alibiQuestion.who + ". " + "1. " + alibiOption1 + "." + "2. " + alibiOption2 + "3. " + alibiOption3 + ".";
 	};
 	createAlibi(); // calls function
 
@@ -157,7 +157,9 @@ $(document).ready(function(){
 	$(".alibiSummary").after(alibiButton); // adds button after AlibiSummary
 
 	$("button.createAlibi").one("click", function(){
-		$("section.alibiOutput").append("hello");
+		$("section.alibiOutput").append("<li>"+alibiOption1+"</li>");
+		$("section.alibiOutput").append("<li>"+alibiOption2+"</li>");
+		$("section.alibiOutput").append("<li>"+alibiOption3+"</li>");
 
 	});
 
