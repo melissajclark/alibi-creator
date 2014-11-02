@@ -21,12 +21,13 @@ $(document).ready(function(){
 	var alibiQuestion = { 
 	// would be good to add if statement in case user inputs other answer
 		who: "",
+		whoName: "",
 		firstTime: "",
 		scaleOfIssue: ""
 		// more alibi questions?
 	}
 
-	var nameofPissed = "";
+	// var nameofPissed = "";
 
 	// this function defines alibiQuestion.who alibi is for & stores the value
 	$("fieldset.who input[type='radio']").on("click", function(){
@@ -46,7 +47,7 @@ $(document).ready(function(){
 		 	$("fieldset.pissedName").hide();
 		 }
 
-		nameofPissed = $("input[name='their']").val();
+		alibiQuestion.whoName = $("fieldset.who input[type=text]").val();
 		
 	}); // end of function listening on "alibiQuestion.who" question
 
@@ -69,7 +70,7 @@ $(document).ready(function(){
 			alibiQuestion.who = $("fieldset.who input[type=text]").val();
 		}
 
-		console.log("Who alibi is for: " + alibiQuestion.who + ", " + nameofPissed + "Happened before? "+ alibiQuestion.firstTime + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
+		console.log("Who alibi is for: " + alibiQuestion.who + ", " + alibiQuestion.whoName + "Happened before? "+ alibiQuestion.firstTime + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
 
 	}); // end of click submit function & logging of quick alibi summary
 
@@ -95,7 +96,7 @@ $(document).ready(function(){
 		} else if (alibiQuestion.scaleOfIssue >= 2 && alibiQuestion.scaleOfIssue <= 3) {
 			scaleOfIssueQ = "You barely messed up! Let's call this a misdemeanour";
 		} else if (alibiQuestion.scaleOfIssue = 1) {
-			scaleOfIssueQ = "You know what, you'll be fine. I bet your " + alibiQuestion.who + ", " + nameofPissed + " is already over it. Let's get you an alibi, just in case" 
+			scaleOfIssueQ = "You know what, you'll be fine. I bet your " + alibiQuestion.who + ", " + alibiQuestion.whoName + " is already over it. Let's get you an alibi, just in case" 
 		}
 		console.log(scaleOfIssueQ); // logs reply to user's input
 
@@ -104,7 +105,7 @@ $(document).ready(function(){
 
 	$("input[type=submit]").on("click",function(){
 		// this section analyzes 
-	var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + ", " + nameofPissed + " ." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
+	var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + ", " + alibiQuestion.whoName + " ." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
 
 	$(".alibiSummary").append(analyzedAlibi); // inserts response to answers into the DOM
 
