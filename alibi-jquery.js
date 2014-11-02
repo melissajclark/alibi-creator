@@ -38,6 +38,8 @@ $(document).ready(function(){
 
 		 	$("fieldset.who").after(nameQhtml); // this selects the parent of the selector and adds the html after it
 		 	// console.log(nameQhtml);
+		 	$(".otherField").hide(); // hides other text field on page load
+
 		 }
 
 		 if (alibiQuestion.who === "other") {
