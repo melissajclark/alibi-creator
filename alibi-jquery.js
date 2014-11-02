@@ -26,12 +26,13 @@ $(document).ready(function(){
 	}
 
 	// this function defines alibiQuestion.who alibi is for & stores the value
-	$("fieldset.who input[type='radio']").on("change", function(){
+	$("fieldset.who input[type='radio']").on("click", function(){
 		 alibiQuestion.who = $(this).val(); 
 
-		 var nameQhtml = '<fieldset class="pissedName"><legend class="nameofPissed">Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</legend><br/><input type="text" name="their" id="who_8" placeholder="name" /></fieldset>';
+		 var nameQhtml = '<fieldset class="pissedName"><legend>Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</legend><br/><input type="text" name="their" id="who_8" placeholder="name" /></fieldset>';
 
-		 if (alibiQuestion.who != "other" ) { // checks for input that is not "other"
+		 if (alibiQuestion.who != "other") { // checks for input that is not "other"
+		 	$("fieldset.pissedName").remove();
 		 	$("fieldset.who").after(nameQhtml); // puts Q about name after first fieldset
 		 	$(".otherField").hide(); // hides other text if "other" is not selected
 		 }
