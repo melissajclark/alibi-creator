@@ -13,6 +13,7 @@ $(document).ready(function(){
 
 	$("fieldset.pissedName").hide(); // hides pissedName fieldset on page load
 
+
 	$("form.questions").on("submit",function(event){
 		event.preventDefault(); // prevents form from refreshing
 	}); // end of form.questions event function
@@ -31,10 +32,11 @@ $(document).ready(function(){
 	$("fieldset.who input[type='radio']").on("click", function(){
 		 alibiQuestion.who = $(this).val(); 
 
-		var nameQhtml = '<label for="who_9">' + 'Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</label><br/><input type="text" name="their" id="who_8" placeholder="name" />';
+		 var nameQhtml = '<fieldset class="pissedName"><legend class="nameofPissed">Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</legend><br/><input type="text" name="their" id="who_8" placeholder="name" /></fieldset>';
 
 		 if (alibiQuestion.who != "other" ) { // checks the value of input with the value of "other"
-		 	$("fieldset.pissedName").append(nameQhtml); // this selects the parent of the selector and adds the html after it
+
+		 	$("fieldset.who").after(nameQhtml); // this selects the parent of the selector and adds the html after it
 		 	// console.log(nameQhtml);
 		 }
 
