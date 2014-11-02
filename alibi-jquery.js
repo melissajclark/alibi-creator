@@ -40,6 +40,10 @@ $(document).ready(function(){
 		 	// console.log(nameQhtml);
 		 }
 
+		 if (alibiQuestion.who === "other") {
+		 	$("fieldset.pissedName").hide();
+		 }
+
 		nameofPissed = $("input[name='their']").val();
 		
 	}); // end of function listening on "alibiQuestion.who" question
