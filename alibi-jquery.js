@@ -75,7 +75,7 @@ $(document).ready(function(){
 		}
 		console.log(scaleOfIssueQ); // logs reply to user's input
 
-		var alibiSummary = "<p>"+scaleOfIssueQ+"</p>"; 
+		var alibiSummary = "<p>"+scaleOfIssueQ+ "." + "</p>"; 
 
 		$(".alibiSummary").append(alibiSummary); // inserts response to answers into the DOM
 
