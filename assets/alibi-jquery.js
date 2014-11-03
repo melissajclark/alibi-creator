@@ -48,6 +48,7 @@ $(document).ready(function(){
 	}
 
 	var whosePissed = "";
+	var otherName = "";
 
 	// this function defines alibiQuestion.who alibi is for & stores the value
 	$("fieldset.who input[type='radio']").on("click", function(){
@@ -90,12 +91,14 @@ $(document).ready(function(){
 			alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
 		}
 
-		whosePissed = '<span class="capitalized">' + alibiQuestion.whoName + '</span>'; // on submit: updates the name with span class so it can be styled with CSS
+		// on submit: updates the name with span class so it can be styled with CSS
+		whosePissed = '<span class="capitalized">' + alibiQuestion.whoName + '</span>';
+		otherName =  '<span class="capitalized">' + alibiQuestion.who + '</span>';
 
 	}); // end of click submit function & logging of quick alibi summary
 
 
-	$("input[type=submit]").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
+	$("input[type=submit]").on("click",function(){ 	// this section hides the form content when user clicks submit
 			$("section.formContent").hide();
 	});
 
