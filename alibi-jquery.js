@@ -2,7 +2,7 @@ $(document).ready(function(){
 
 /**
 *
-* Code Section 1: Variables defined for user's input
+* Code Section 1: Hiding of Elemnts & Variables defined for user's input
 *
 **/
 
@@ -75,16 +75,17 @@ $(document).ready(function(){
 			$("section.formContent").hide();
 	});
 
-
 /**
 *
 * Code Section 2: Alibi Summary for User
 *
 **/
+	var alibiButton = '<button class="createAlibi">Ready for an Alibi?</button>';
+
 	// variables below: defines empty variables for storing generated content from function below
 	var scaleOfIssueQ = ""; 
 	var analyzedAlibi = "";
-	var alibiButton = '<button class="createAlibi">Ready for an Alibi?</button>';
+
 
 	$("input[type=submit]").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
 
@@ -146,6 +147,7 @@ $(document).ready(function(){
 * Code Section 4: Alibi Output
 *
 **/
+
 $("input[type=submit]").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
 	$(".alibiSummary").after(alibiButton); // adds button after AlibiSummary
 	$("button.createAlibi").on("click", function(){
@@ -153,8 +155,8 @@ $("input[type=submit]").on("click",function(){ 	// this section analyzes user's 
 		$("section.alibiOutput ol").append("<li>"+alibiOption2+"</li>");
 		$("section.alibiOutput ol").append("<li>"+alibiOption3+"</li>");
 
-	});
-});
+	}); // closes function on button
+}); // closes on click submit function
 
 
 
