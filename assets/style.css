@@ -29,6 +29,14 @@ body {
   text-align: center;
 }
 
+/*============================================
+=           Form Element Styling            =
+============================================*/
+.grid-form fieldset {
+  margin-top: 2.5em;
+  margin-bottom: 2.5em;
+}
+
 /*==================================
 =           Typography            =
 ==================================*/
@@ -84,14 +92,6 @@ ul li span.highlight {
 hr {
   color: #586A79;
   border: 1px solid;
-  margin-bottom: 2em;
-}
-
-/*============================================
-=           Form Element Styling            =
-============================================*/
-fieldset {
-  margin-top: 2em;
   margin-bottom: 2em;
 }
 
@@ -471,10 +471,10 @@ optgroup::-moz-focus-inner {
   background: #eeeeee;
 }
 
-/*==================================
+/* ==================================
 =            Grid Forms            =
-==================================*/
-/* Source: https://github.com/kumailht/gridforms */
+================================== */
+/* ! Source:https://github.com/kumailht/gridforms */
 .grid-form *, .grid-form *:before, .grid-form *:after {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -510,7 +510,6 @@ optgroup::-moz-focus-inner {
 .grid-form fieldset {
   border: none;
   padding: 0;
-  margin: 0;
 }
 
 .grid-form fieldset legend {
