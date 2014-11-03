@@ -19,16 +19,6 @@ body {
   max-width: 45em;
 }
 
-.intro {
-  text-align: center;
-}
-
-.caption {
-  font-style: italic;
-  font-weight: 400;
-  text-align: center;
-}
-
 /*============================================
 =           Form Element Styling            =
 ============================================*/
@@ -47,11 +37,10 @@ body, p {
   color: #222;
 }
 
-h1, h2 {
+h1, h2, .caption {
   font-family: "grafolita-script", sans-serif;
   font-weight: 400;
   font-style: normal;
-  color: #586A79;
   text-align: center;
 }
 
@@ -68,6 +57,16 @@ h1 {
 
 h2 {
   font-size: 1.5em;
+}
+
+.intro {
+  text-align: center;
+}
+
+.caption {
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
 }
 
 /*=============================
@@ -95,7 +94,7 @@ hr {
 }
 
 hr {
-  border-bottom: 5px solid #E3A424;
+  border-bottom: 4px solid #E3A424;
   margin-bottom: 2em;
   display: block;
   -webkit-margin-before: 0em;
@@ -527,8 +526,8 @@ optgroup::-moz-focus-inner {
 
 .grid-form fieldset legend {
   border: none;
-  border-bottom: 4px solid #404040;
-  color: #404040;
+  border-bottom: 4px solid #E3A424;
+  margin-bottom: 1em;
   font-size: 18px;
   font-weight: bold;
   padding-bottom: 5px;
