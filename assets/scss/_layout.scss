@@ -11,9 +11,19 @@ body {
 	margin-bottom: 3em;
 }
 
-.main { 
-	max-width:45%;
+// main { 
+// 	max-width:45%;
+// }
+
+@media screen and (max-width:800px) {
+	body {
+		width: 100%;
+	}
 }
+
+
+
+
 
 .intro {
 	text-align:center;
