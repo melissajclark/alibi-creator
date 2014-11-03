@@ -23,11 +23,11 @@ body, p {
 	color:#222;
 }
 
-h1, h2 {
+h1, h2, .caption {
 	font-family: "grafolita-script", sans-serif;
 	font-weight: 400;
 	font-style: normal;
-	color: #586A79;
+	// color: #586A79;
 	text-align: center;
 }
 
@@ -45,4 +45,14 @@ h1 {
 
 h2 {
 	font-size: 1.5em;
+}
+
+.intro {
+	text-align:center;
+}
+
+.caption {
+	font-style: italic;
+	font-weight: 400;
+	text-align:center;
 }
