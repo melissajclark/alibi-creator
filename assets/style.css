@@ -496,11 +496,16 @@ optgroup::-moz-focus-inner {
   padding: 0;
   margin: 0;
   width: 100%;
+  border: 1px solid whitesmoke;
+  border-radius: 3px;
+  background: whitesmoke;
 }
 
 .grid-form input[type="text"], .grid-form input[type="email"], .grid-form textarea {
   border: 0;
-  background: transparent;
+  background: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 3px;
 }
 
 .grid-form input[type="text"]::-webkit-input-placeholder, .grid-form input[type="email"]::-webkit-input-placeholder, .grid-form textarea::-webkit-input-placeholder {
@@ -525,10 +530,8 @@ optgroup::-moz-focus-inner {
 .grid-form fieldset legend {
   border: none;
   border-bottom: 4px solid #E3A424;
-  margin-bottom: 1em;
   font-size: 1.3em;
   font-weight: 500;
-  padding-bottom: 5px;
   position: static;
   width: 100%;
 }
