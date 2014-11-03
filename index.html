@@ -5,6 +5,11 @@
 	<title>I ain't Got No Alibi</title>
 <link type="text/css"rel="stylesheet" href="assets/style.css">
 <link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
+
+<!-- Typekit -->
+<script src="//use.typekit.net/lmi6lkl.js"></script>
+<script>try{Typekit.load();}catch(e){}</script>
+
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
 <script src="assets/alibi-jquery.js"></script>
 
@@ -96,32 +101,36 @@
 		<!-- Question 2 -->		
 		<fieldset class="alibiTiming">
 		   <legend class="alibiQ">Have you done this before?</legend>
-		     <p>
+
+		   <section data-row-span="2">
+		     <p data-field-span="1">
 		      <input type="radio" id="occurrence_1" value="yes" />
 		      <label for="who_7">Ugh, yes.</label>
 		    </p>
-		     <p>
+		     <p data-field-span="1">
 		      <input type="radio" id="occurrence_2" value="no" />
 		      <label for="occurrence_2">No, never!</label>
 		    </p>
+
+		    </section> <!-- End of set of 2 Rows -->
 		  </fieldset>
 		
 		<!-- Question 3 -->
-
-		<p class="alibiQ">How bad did you mess up? <em>On a scale from 1 to 10.</em></p>
-		<select name="scale" class="scaleMessUp">
-			<option value="1">1</option>
-			<option value="2">2</option>
-			<option value="3">3</option>
-			<option value="4">4</option>
-			<option value="5">5</option>
-			<option value="6">6</option>
-			<option value="7">7</option>
-			<option value="8">8</option>
-			<option value="9">9</option>
-			<option value="10">10</option>
-		</select>
-
+		<fieldset>
+			<legend class="alibiQ">How bad did you mess up? <em>On a scale from 1 to 10.</em></legend>
+			<select name="scale" class="scaleMessUp">
+				<option value="1">1</option>
+				<option value="2">2</option>
+				<option value="3">3</option>
+				<option value="4">4</option>
+				<option value="5">5</option>
+				<option value="6">6</option>
+				<option value="7">7</option>
+				<option value="8">8</option>
+				<option value="9">9</option>
+				<option value="10">10</option>
+			</select>
+		</fieldset>
 		<p>
 			<input type="submit" value="Submit!">
 		</p>
