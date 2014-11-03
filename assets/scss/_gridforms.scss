@@ -16,8 +16,10 @@
 	width: 100%;
 }
 .grid-form input[type="text"], .grid-form input[type="email"], .grid-form textarea {
-	border: 0;
-	background: transparent;
+  border: 0;
+  background: whitesmoke;
+  border: 1px solid whitesmoke;
+  border-radius: 3px;	
 }
 .grid-form input[type="text"]::-webkit-input-placeholder, .grid-form input[type="email"]::-webkit-input-placeholder, .grid-form textarea::-webkit-input-placeholder {
 	font-weight: 100;
