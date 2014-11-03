@@ -197,6 +197,13 @@ $("input[type=submit]").on("click",function(){
 	var alibiOption2 = "Believe me, I wish I could have been there. " + prefix[1] + " " + random(alibiOption2) + " and it was " + random(badWord) + "! " + random(moreAlibi) + " " + random(alibiApology);
 	var alibiOption3 = "I can't believe I'm saying this aloud, I feel  " + random(badWord) + ". But, I need to be honest with you... " + prefix[2] + " " + random(alibiOption3) + ". " + random(moreAlibi) + " " + random(alibiApology);
 
+	// defines function for creating alibi optiopns	 
+	var createAlibi = function(){	
+		console.log("Okay, here's three options for you to tell" + whoIsMadandTheirName + ": " + alibiOption1 + " " + alibiOption2 +  alibiOption3);
+		return "Okay, here's three options for you to tell" + whoIsMadandTheirName + ": " + alibiOption1 + " " + alibiOption2 +  alibiOption3;
+	};
+	createAlibi(); // calls function 
+
 /**
 *
 * Alibi Output
@@ -205,9 +212,9 @@ $("input[type=submit]").on("click",function(){
 
 var alibiButton = '<button class="createAlibi">Ready for an Alibi?</button>';
 
-$("input[type=submit]").on("click",function(){ 	// functions below are executed after user hits submit
+$("input[type=submit]").one("click",function(){ 	// functions below are executed after user hits submit
 	$(".alibiSummary").after(alibiButton); // adds button after AlibiSummary
-	$("button.createAlibi").on("click", function(){
+	$("button.createAlibi").one("click", function(createAlibi){
 		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption1+"</li>");
 		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption2+"</li>");
 		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption3+"</li>");
