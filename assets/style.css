@@ -8,7 +8,7 @@
 ==============================*/
 body {
   margin-top: 2em;
-  max-width: 50em;
+  max-width: 50%;
   margin: auto;
   padding: 1em;
   background-color: rgba(179, 179, 179, 0);
@@ -16,7 +16,7 @@ body {
 }
 
 .main {
-  max-width: 45em;
+  max-width: 45%;
 }
 
 .intro {
