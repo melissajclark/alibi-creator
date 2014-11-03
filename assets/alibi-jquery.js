@@ -2,9 +2,11 @@ $(document).ready(function(){
 
 /**
 *
-* Code Section 1: Hiding of Elemnts & Variables defined for user's input
+* Code Section 1: Hiding of Elements, Stuff to Do on Page Load
 *
 **/
+
+	$(".fitThis").fitText(0.8, {minFontSize:'25px', maxFontSize: '100px'});
 
 	$(".otherField").hide(); // hides other text field on page load
 	$("fieldset.pissedName").hide(); // hides pissedName fieldset on page load
@@ -15,6 +17,13 @@ $(document).ready(function(){
 	$("form.questions").on("submit",function(event){
 		event.preventDefault(); // prevents form from refreshing
 	}); // end of form.questions event function
+
+
+/**
+*
+* Code Section 2: Variables Defined for User's Input
+*
+**/
 
 	var alibiQuestion = { 
 	// would be good to add if statement in case user inputs other answer
@@ -77,7 +86,7 @@ $(document).ready(function(){
 
 /**
 *
-* Code Section 2: Alibi Summary for User
+* Code Section 3: Alibi Summary for User
 *
 **/
 	var alibiButton = '<button class="createAlibi">Ready for an Alibi?</button>';
@@ -111,7 +120,7 @@ $(document).ready(function(){
 
 /**
 *
-* Code Section 3: Alibi Creation
+* Code Section 4: Alibi Creation
 *
 **/
 
@@ -144,7 +153,7 @@ $(document).ready(function(){
 
 /**
 *
-* Code Section 4: Alibi Output
+* Code Section 5: Alibi Output
 *
 **/
 
