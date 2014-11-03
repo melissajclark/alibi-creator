@@ -20,7 +20,7 @@
 // font-style: normal;
 // font-weight: 400;
 
-body, p {
+body, p, {
 	font-family: "adelle",serif;
 	font-style: normal;
 	font-weight: 400;
@@ -28,11 +28,10 @@ body, p {
 }
 
 h1, h2, .caption {
-	font-family: "grafolita-script", sans-serif;
-	font-weight: 400;
+	font-family: "adelle",serif;
 	font-style: normal;
-	// color: #586A79;
 	text-align: center;
+	font-weight: 500;
 }
 
 h1.fitThis {
@@ -56,4 +55,5 @@ h2 {
 
 .caption {
 	font-size: 1.7em;
+	font-style: italic;
 }
