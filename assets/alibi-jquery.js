@@ -90,7 +90,7 @@ $(document).ready(function(){
 			alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
 		}
 
-		whosePissed = '<span class="capitalizeName">' + alibiQuestion.whoName + '</span>'; // on submit: updates the name with span class so it can be styled with CSS
+		whosePissed = '<span class="capitalized">' + alibiQuestion.whoName + '</span>'; // on submit: updates the name with span class so it can be styled with CSS
 
 	}); // end of click submit function & logging of quick alibi summary
 
