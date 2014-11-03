@@ -101,6 +101,22 @@ $(document).ready(function(){
 
 /**
 *
+* Updates value of Who
+*
+**/
+
+/* What I want to do:
+	- create an if statement that sets the value of a user's input on the who question
+	- ie. insert certain words based on input etc
+*/
+
+
+
+
+
+
+/**
+*
 * Alibi Summary for User
 *
 **/
