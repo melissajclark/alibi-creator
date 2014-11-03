@@ -90,9 +90,9 @@ $(document).ready(function(){
 			alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
 		}
 
-		var whosePissed = $("fieldset.pissedName input[type=text]").val();
+		var whosePissed = '<span class="capitalizeName">' + alibiQuestion.whoName + '</span>';
 
-		console.log("Name "+ whosePissed);
+		console.log("Name "+ alibiQuestion.whoName);
 
 		console.log("Who alibi is for: " + alibiQuestion.who + ", " + whosePissed + "Happened before? "+ alibiQuestion.firstTime + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
 
@@ -133,7 +133,7 @@ $(document).ready(function(){
 			scaleOfIssueQ = "You know what, you'll be fine. I bet your " + alibiQuestion.who + ", " + alibiQuestion.whoName + " is already over it. Let's get you an alibi, just in case" 
 		}
 
-		var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + ", " + alibiQuestion.whoName + "." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
+		var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + ", " + whosePissed + "." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
 		
 		$(".alibiSummary").append(analyzedAlibi); // inserts response to answers into the DOM
 
