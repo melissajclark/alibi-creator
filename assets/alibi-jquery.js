@@ -116,12 +116,11 @@ $("input[type=submit]").on("click",function(){
 
 	if (alibiQuestion.who == "other") { // checks the value of input with the value of "other"
 		alibiQuestion.who = $("fieldset.who input[type=text]").val();
-		alibiQuestion.who = otherName;
 	}
 
 	if (alibiQuestion.who != "other") { // checks the value of input with the value of "other"
 		alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
-	}
+	}	stringWhoPissed = "your " + alibiQuestion.who + "," + whosePissed;
 
 	// on submit: updates the name with span class so it can be styled with CSS
 	whosePissed = '<span class="capitalized">' + alibiQuestion.whoName + '</span>';
