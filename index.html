@@ -24,57 +24,73 @@
 <section class="formContent">
 	<form class="questions grid-form">
 		
-		<!-- Question 1 -->
-			
-		<fieldset class="who">
-		    <legend class="alibiQ">Who is this alibi for?</legend>
-		    <div data-row-span="3"> 
-		    <p>
-		    <div data-field-span="1">
+	<!-- Question 1 -->
+		
+	<fieldset class="who">
+	    <legend class="alibiQ">Who is this alibi for?</legend>
+
+	    <section data-row-span="3">
+
+		    <p data-field-span="1">
 		      <input type="radio" name="your" id="who_1" value="mom" />
 		      <label for="who_1">mom</label>
-		      </div>
 		    </p>
 			
-		    <p>
+		    <p data-field-span="1">
 		      <input type="radio" name="your" id="who_2" value="dad" />
 		      <label for="who_2">dad</label>
 		    </p>
-		    <p>
+
+		    <p data-field-span="1">
 		      <input type="radio" name="your" id="who_3" value="girlfriend" />
 		      <label for="who_3">girlfriend</label>
 		    </p>
-		    </div>
-		    <p>
+
+	    </section> <!-- end of first set of 3 rows -->
+
+	    <section data-row-span="3">
+
+		    <p data-field-span="1">
 		      <input type="radio" name="your" id="who_4" value="boyfriend" />
 		      <label for="who_4">boyfriend</label>
 		    </p>
-		      <p>
+
+		    <p data-field-span="1">
 		      <input type="radio" name="your" id="who_5" value="partner" />
 		      <label for="who_5">partner</label>
 		    </p>
-		      <p>
+
+		    <p data-field-span="1">
 		      <input type="radio" name="your" id="who_6" value="boss" />
 		      <label for="who_6">boss</label>
 		    </p>
-		    </p>
-		     <p>
+
+		</section> <!-- end of second set of 3 rows -->
+
+		<section data-row-span="3">
+
+		    <p data-field-span="1">
 		      <input type="radio" name="your" id="who_7" value="professor" />
 		      <label for="who_7">professor</label>
 		    </p>
-		     <p>
-		     <label for="who_8">Other:</label>
+
+		    <p data-field-span="1"> 
 		      <input type="radio" name="your" id="who_8" value="other" />
+		      <label for="who_8">Other</label>
+		    </p>
+
+		    <p data-field-span="1">
 		      	<span class="otherField">
-			      <em>specify below</em>
-			      <br/>
 			      <input type="text" name="your" id="who_8" placeholder="other" />
 			    </span>
 		    </p>
-		  <!-- Question 1B -->
 
-		  <!-- Who is pissed Q appears next -->
-		  </fieldset>
+	   </section> <!-- end of third & final set of 3 rows -->
+	   
+	  <!-- Question 1B -->
+
+	  <!-- Who is pissed Q appears next -->
+	  </fieldset>
 
 		
 		<!-- Question 2 -->		
@@ -110,7 +126,7 @@
 			<input type="submit" value="Submit!">
 		</p>
 
-	</form>
+	</form><!-- end of entire form (.questions .grid-form) -->
 </section>
 
 <section class="alibiSummary">
