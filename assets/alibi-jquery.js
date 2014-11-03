@@ -47,6 +47,8 @@ $(document).ready(function(){
 		// more alibi questions?
 	}
 
+	var nameofPissed = alibiQuestion.whoName.toUpperCase( );
+
 	// this function defines alibiQuestion.who alibi is for & stores the value
 	$("fieldset.who input[type='radio']").on("click", function(){
 		 alibiQuestion.who = $(this).val(); 
@@ -88,7 +90,7 @@ $(document).ready(function(){
 			alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
 		}
 
-		console.log("Who alibi is for: " + alibiQuestion.who + ", " + alibiQuestion.whoName + "Happened before? "+ alibiQuestion.firstTime + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
+		console.log("Who alibi is for: " + alibiQuestion.who + ", " + nameofPissed + "Happened before? "+ alibiQuestion.firstTime + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
 
 	}); // end of click submit function & logging of quick alibi summary
 
