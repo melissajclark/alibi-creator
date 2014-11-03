@@ -105,7 +105,6 @@ $(document).ready(function(){
 * Alibi Summary for User
 *
 **/
-	var alibiButton = '<button class="createAlibi">Ready for an Alibi?</button>';
 
 	// variables below: defines empty variables for storing generated content from function below
 	var scaleOfIssueQ = ""; 
@@ -172,6 +171,8 @@ $(document).ready(function(){
 * Alibi Output
 *
 **/
+
+var alibiButton = '<button class="createAlibi">Ready for an Alibi?</button>';
 
 $("input[type=submit]").on("click",function(){ 	// functions below are executed after user hits submit
 	$(".alibiSummary").after(alibiButton); // adds button after AlibiSummary
