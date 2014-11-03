@@ -4,26 +4,16 @@
 
 body {
 	margin-top:2em;
-	max-width: 50%;
+	max-width: 50em;
 	margin: auto;
 	padding: 1em;
 	background-color: rgba(179, 179, 179, 0);
 	margin-bottom: 3em;
 }
 
-// main { 
-// 	max-width:45%;
-// }
-
-// @media screen and (max-width:800px) {
-// 	body {
-// 		width: 100%;
-// 		margin: auto;
-// 		margin-bottom: 1em;
-// 		margin-top: 1em;
-// 		padding: 0;
-// 	}
-// }
+.main { 
+	max-width:45em;
+}
 
 .intro {
 	text-align:center;
