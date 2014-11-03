@@ -47,7 +47,7 @@ $(document).ready(function(){
 		// more alibi questions?
 	}
 
-	var nameofPissed = alibiQuestion.whoName.toUpperCase( );
+	// var nameofPissed = alibiQuestion.whoName.toUpperCase( );
 
 	// this function defines alibiQuestion.who alibi is for & stores the value
 	$("fieldset.who input[type='radio']").on("click", function(){
@@ -87,7 +87,7 @@ $(document).ready(function(){
 		}
 
 		if (alibiQuestion.who != "other") { // checks the value of input with the value of "other"
-			nameofPissed = $("fieldset.pissedName input[type=text]").val();
+			alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
 		}
 
 		console.log("Who alibi is for: " + alibiQuestion.who + ", " + nameofPissed + "Happened before? "+ alibiQuestion.firstTime + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
@@ -126,10 +126,10 @@ $(document).ready(function(){
 		} else if (alibiQuestion.scaleOfIssue >= 2 && alibiQuestion.scaleOfIssue <= 3) {
 			scaleOfIssueQ = "You barely messed up! Let's call this a misdemeanour";
 		} else if (alibiQuestion.scaleOfIssue = 1) {
-			scaleOfIssueQ = "You know what, you'll be fine. I bet your " + alibiQuestion.who + ", " + nameofPissed + " is already over it. Let's get you an alibi, just in case" 
+			scaleOfIssueQ = "You know what, you'll be fine. I bet your " + alibiQuestion.who + ", " + alibiQuestion.whoName + " is already over it. Let's get you an alibi, just in case" 
 		}
 
-		var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + ", " + nameofPissed + "." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
+		var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + ", " + alibiQuestion.whoName + "." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
 		
 		$(".alibiSummary").append(analyzedAlibi); // inserts response to answers into the DOM
 
