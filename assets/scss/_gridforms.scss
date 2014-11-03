@@ -14,6 +14,9 @@
 	padding: 0;
 	margin: 0;
 	width: 100%;
+	border: 1px solid whitesmoke;
+	border-radius: 3px;
+	background: whitesmoke;
 }
 .grid-form input[type="text"], .grid-form input[type="email"], .grid-form textarea {
   border: 0;
