@@ -158,7 +158,7 @@ $(document).ready(function(){
 *
 **/
 
-$("input[type=submit]").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
+$("input[type=submit]").on("click",function(){ 	// functions below are executed after user hits submit
 	$(".alibiSummary").after(alibiButton); // adds button after AlibiSummary
 	$("button.createAlibi").on("click", function(){
 		$("section.alibiOutput ol").append("<li>"+alibiOption1+"</li>");
