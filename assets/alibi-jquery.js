@@ -112,7 +112,7 @@ $("input[type=submit]").on("click",function(){
 	if (alibiQuestion.who === "mom" || alibiQuestion.who === "dad" ) {
 		alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
 		nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.whoName + '</span>';
-		nameUsedInFinalAlibi = ' ' + '<span class="capitalized">' + alibiQuestion.who + '</span>';
+		nameUsedInFinalAlibi = ' ' + '<span class="capitalized">' + alibiQuestion.who + '</span>' + ', ';
 		whoIsMadandTheirName = " your " + alibiQuestion.who + "," + nameOfAngryPerson;
 	} 
 
@@ -120,13 +120,13 @@ $("input[type=submit]").on("click",function(){
 		alibiQuestion.who = $("fieldset.who input[type=text]").val();
 		nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.who + '</span>';
 		whoIsMadandTheirName = nameOfAngryPerson;
-		nameUsedInFinalAlibi = nameOfAngryPerson;
+		nameUsedInFinalAlibi = nameOfAngryPerson + ', ';
 	}
 	else if (alibiQuestion.who != "other" && alibiQuestion.who != "mom" && alibiQuestion.who != "dad") { 
 		alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
 		nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.whoName + '</span>';
 		whoIsMadandTheirName = " your " + alibiQuestion.who + "," + nameOfAngryPerson;
-		nameUsedInFinalAlibi = nameOfAngryPerson;
+		nameUsedInFinalAlibi = nameOfAngryPerson + ', ';
 	}
 	
 	console.log(nameOfAngryPerson);
@@ -208,9 +208,9 @@ var alibiButton = '<button class="createAlibi">Ready for an Alibi?</button>';
 $("input[type=submit]").on("click",function(){ 	// functions below are executed after user hits submit
 	$(".alibiSummary").after(alibiButton); // adds button after AlibiSummary
 	$("button.createAlibi").on("click", function(){
-		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi+alibiOption1+"</li>");
-		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi+alibiOption2+"</li>");
-		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi+alibiOption3+"</li>");
+		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption1+"</li>");
+		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption2+"</li>");
+		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption3+"</li>");
 
 	}); // closes function on button
 }); // closes on click submit function
