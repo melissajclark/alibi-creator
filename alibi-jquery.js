@@ -148,14 +148,15 @@ $(document).ready(function(){
 **/
 $("input[type=submit]").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
 	$(".alibiSummary").after(alibiButton); // adds button after AlibiSummary
-});
-
-	$("button.createAlibi").one("click", function(){
+	$("button.createAlibi").on("click", function(){
 		$("section.alibiOutput ol").append("<li>"+alibiOption1+"</li>");
 		$("section.alibiOutput ol").append("<li>"+alibiOption2+"</li>");
 		$("section.alibiOutput ol").append("<li>"+alibiOption3+"</li>");
 
 	});
+});
+
+
 
 }); // end doc ready function
 
