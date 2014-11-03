@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>I ain't Got No Alibi</title>
+<link type="text/css"rel="stylesheet" href="style.css">
+<link type="text/css" rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/animate.css/3.1.1/animate.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="alibi-jquery.js"></script>
+
+</head>
+
+<body>
+
+	<main> 
+		<header>
+			<section class="intro">
+				<h1>You ain't got no alibi?</h1>
+				<p class="caption">It's alright, you're in the right place now.</p>
+				<hr>
+			</section>
+		</header>
+
+<section class="formContent">
+	<form class="questions grid-form">
+		
+		<!-- Question 1 -->
+			
+		<fieldset class="who">
+		    <legend class="alibiQ">Who is this alibi for?</legend>
+		    <div data-row-span="3"> 
+		    <p>
+		    <div data-field-span="1">
+		      <input type="radio" name="your" id="who_1" value="mom" />
+		      <label for="who_1">mom</label>
+		      </div>
+		    </p>
+			
+		    <p>
+		      <input type="radio" name="your" id="who_2" value="dad" />
+		      <label for="who_2">dad</label>
+		    </p>
+		    <p>
+		      <input type="radio" name="your" id="who_3" value="girlfriend" />
+		      <label for="who_3">girlfriend</label>
+		    </p>
+		    </div>
+		    <p>
+		      <input type="radio" name="your" id="who_4" value="boyfriend" />
+		      <label for="who_4">boyfriend</label>
+		    </p>
+		      <p>
+		      <input type="radio" name="your" id="who_5" value="partner" />
+		      <label for="who_5">partner</label>
+		    </p>
+		      <p>
+		      <input type="radio" name="your" id="who_6" value="boss" />
+		      <label for="who_6">boss</label>
+		    </p>
+		    </p>
+		     <p>
+		      <input type="radio" name="your" id="who_7" value="professor" />
+		      <label for="who_7">professor</label>
+		    </p>
+		     <p>
+		     <label for="who_8">Other:</label>
+		      <input type="radio" name="your" id="who_8" value="other" />
+		      	<span class="otherField">
+			      <em>specify below</em>
+			      <br/>
+			      <input type="text" name="your" id="who_8" placeholder="other" />
+			    </span>
+		    </p>
+		  <!-- Question 1B -->
+
+		  <!-- Who is pissed Q appears next -->
+		  </fieldset>
+
+		
+		<!-- Question 2 -->		
+		<fieldset class="alibiTiming">
+		   <legend class="alibiQ">Have you done this before?</legend>
+		     <p>
+		      <input type="radio" id="occurrence_1" value="yes" />
+		      <label for="who_7">Ugh, yes.</label>
+		    </p>
+		     <p>
+		      <input type="radio" id="occurrence_2" value="no" />
+		      <label for="occurrence_2">No, never!</label>
+		    </p>
+		  </fieldset>
+		
+		<!-- Question 3 -->
+
+		<p class="alibiQ">How bad did you mess up? <em>On a scale from 1 to 10.</em></p>
+		<select name="scale" class="scaleMessUp">
+			<option value="1">1</option>
+			<option value="2">2</option>
+			<option value="3">3</option>
+			<option value="4">4</option>
+			<option value="5">5</option>
+			<option value="6">6</option>
+			<option value="7">7</option>
+			<option value="8">8</option>
+			<option value="9">9</option>
+			<option value="10">10</option>
+		</select>
+
+		<p>
+			<input type="submit" value="Submit!">
+		</p>
+
+	</form>
+</section>
+
+<section class="alibiSummary">
+	<!-- Alibi Creater's reply to answers appended here -->
+</section>
+
+<section class="alibiOutput">
+	
+	<ol>	
+		<!-- Created Alibis go here -->
+	</ol>
+
+</section>
+
+<!-- 		
+		<footer>
+			<p>
+				<a href="https://github.com/melissajclark/alibi-creator">Alibi Creator on Github</a>
+			</p>
+		
+		</footer> -->
+
+	</main>
+</body>
+</html>
