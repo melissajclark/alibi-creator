@@ -3,14 +3,27 @@ $(document).ready(function(){
 /*=============================================
 =            Code Sections:           		=
 =============================================
-	
-1. Hiding of Elements, Stuff to Do on Page Load
-2. Variables Defined for User's Input
-3. Alibi Summary for User
-4. Alibi Creation
-5. Alibi Output
+	Empty Variables	
+	Hiding of Elements, Stuff to Do on Page Load
+	Variables Defined for User's Input
+	Function Updates Value of "Who"
+	Alibi Summary for User
+	Alibi Creation
+	Alibi Output
 
 =============================================*/
+
+/*=================================================
+=   Empty variables (to be used later on) =
+==================================================*/
+
+var nameOfAngryPerson = "";
+var scaleOfIssueQ = ""; 
+var analyzedAlibi = "";
+var whoIsMadandTheirName = "";
+
+/*-----  End of All empty variables ------*/
+
 
 /**
 *
@@ -31,7 +44,7 @@ $(document).ready(function(){
 		event.preventDefault(); // prevents form from refreshing
 	}); // end of form.questions event function
 
-
+	
 /**
 *
 * Variables Defined for User's Input
@@ -46,8 +59,6 @@ $(document).ready(function(){
 		scaleOfIssue: ""
 		// more alibi questions?
 	}
-
-	var nameOfAngryPerson = "";
 
 	// this function defines alibiQuestion.who alibi is for & stores the value
 	$("fieldset.who input[type='radio']").on("click", function(){
@@ -81,16 +92,12 @@ $(document).ready(function(){
 
 /**
 *
-* Updates value of Who
+* Function Updates Value of "Who"
 *
 **/
 
-/* What I want to do:
-	- create an if statement that sets the value of a user's input on the who question
-	- ie. insert certain words based on input etc
-*/
-
 // this function happens when user hits submit - analyzes input of "who" fields
+
 $("input[type=submit]").on("click",function(){
 	$(this).addClass("animated wobble"); // fun effect for submit
 
@@ -103,15 +110,12 @@ $("input[type=submit]").on("click",function(){
 	else if (alibiQuestion.who != "other") { // checks the value of input with the value of "other"
 		alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
 		nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.whoName + '</span>'; 	// on submit: updates the name with span class so it can be styled with CSS
-		whoIsMadandTheirName = "your " + alibiQuestion.who + "," + nameOfAngryPerson;
+		whoIsMadandTheirName = " your " + alibiQuestion.who + "," + nameOfAngryPerson;
 	}	
-
 
 	$("section.formContent").hide();
 
 }); // end of click submit function & logging of quick alibi summary
-
-
 
 
 /**
@@ -119,11 +123,6 @@ $("input[type=submit]").on("click",function(){
 * Alibi Summary for User
 *
 **/
-
-	// variables below: defines empty variables for storing generated content from function below
-	var scaleOfIssueQ = ""; 
-	var analyzedAlibi = "";
-
 
 	$("input[type=submit]").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
 
@@ -198,6 +197,7 @@ $("input[type=submit]").on("click",function(){ 	// functions below are executed 
 
 	}); // closes function on button
 }); // closes on click submit function
+
 
 
 
