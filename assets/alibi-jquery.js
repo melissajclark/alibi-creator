@@ -1,8 +1,20 @@
 $(document).ready(function(){
 
+/*=============================================
+=            Code Sections:           		=
+=============================================
+	
+1. Hiding of Elements, Stuff to Do on Page Load
+2. Variables Defined for User's Input
+3. Alibi Summary for User
+4. Alibi Creation
+5. Alibi Output
+
+=============================================*/
+
 /**
 *
-* Code Section 1: Hiding of Elements, Stuff to Do on Page Load
+* Hiding of Elements, Stuff to Do on Page Load
 *
 **/
 
@@ -22,7 +34,7 @@ $(document).ready(function(){
 
 /**
 *
-* Code Section 2: Variables Defined for User's Input
+* Variables Defined for User's Input
 *
 **/
 
@@ -85,9 +97,12 @@ $(document).ready(function(){
 			$("section.formContent").hide();
 	});
 
+
+
+
 /**
 *
-* Code Section 3: Alibi Summary for User
+* Alibi Summary for User
 *
 **/
 	var alibiButton = '<button class="createAlibi">Ready for an Alibi?</button>';
@@ -121,7 +136,7 @@ $(document).ready(function(){
 
 /**
 *
-* Code Section 4: Alibi Creation
+* Alibi Creation
 *
 **/
 
@@ -154,7 +169,7 @@ $(document).ready(function(){
 
 /**
 *
-* Code Section 5: Alibi Output
+* Alibi Output
 *
 **/
 
