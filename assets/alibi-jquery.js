@@ -96,16 +96,8 @@ var nameUsedInFinalAlibi = "";
 *
 **/
 
-// if user selects mom or dad, want to be able to print "Mom" / "Dad" later && be able to print their name seperately
-// but if they select girlfriend, boyfriend, etc - I only want to print their name
-// if they select other, I only want to print their name
-
-
 // this function happens when user hits submit - analyzes input of "who" fields
-
-
-
-$("input[type=submit]").on("click",function(){
+$("input[type=submit]").on("click",function(){ 
 	$(this).addClass("animated wobble"); // fun effect for submit
 
 
@@ -197,13 +189,6 @@ $("input[type=submit]").on("click",function(){
 	var alibiOption2 = "Believe me, I wish I could have been there. " + prefix[1] + " " + random(alibiOption2) + " and it was " + random(badWord) + "! " + random(moreAlibi) + " " + random(alibiApology);
 	var alibiOption3 = "I can't believe I'm saying this aloud, I feel  " + random(badWord) + ". But, I need to be honest with you... " + prefix[2] + " " + random(alibiOption3) + ". " + random(moreAlibi) + " " + random(alibiApology);
 
-	// defines function for creating alibi optiopns	 
-	var createAlibi = function(){	
-		console.log("Okay, here's three options for you to tell" + whoIsMadandTheirName + ": " + alibiOption1 + " " + alibiOption2 +  alibiOption3);
-		return "Okay, here's three options for you to tell" + whoIsMadandTheirName + ": " + alibiOption1 + " " + alibiOption2 +  alibiOption3;
-	};
-	createAlibi(); // calls function 
-
 /**
 *
 * Alibi Output
@@ -214,7 +199,7 @@ var alibiButton = '<button class="createAlibi">Ready for an Alibi?</button>';
 
 $("input[type=submit]").one("click",function(){ 	// functions below are executed after user hits submit
 	$(".alibiSummary").after(alibiButton); // adds button after AlibiSummary
-	$("button.createAlibi").one("click", function(createAlibi){
+	$("button.createAlibi").one("click", function(){
 		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption1+"</li>");
 		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption2+"</li>");
 		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption3+"</li>");
