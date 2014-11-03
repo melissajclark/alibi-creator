@@ -67,7 +67,7 @@
 .grid-form [data-row-span]:after {
 	clear: both;
 }
-@media only screen and (min-width:0) and (max-width:700px) {
+@media screen and (min-width:0) and (max-width:700px) {
 	.grid-form [data-row-span] {
 		border-bottom: none;
 	}
@@ -76,13 +76,13 @@
 	padding: 8px;
 	float: left;
 }
-@media only screen and (min-width:0) and (max-width:700px) {
+@media screen and (min-width:0) and (max-width:700px) {
 	.grid-form [data-row-span] [data-field-span] {
 		border-bottom: 1px solid #333333;
 		width: 100% !important;
 	}
 }
-@media only screen and (min-width:700px) {
+@media screen and (min-width:700px) {
 	.grid-form [data-row-span] [data-field-span] {
 		border-right: 1px solid #333333;
 		display: block;
