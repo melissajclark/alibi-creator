@@ -107,3 +107,41 @@ button, input[type=button] { width: auto; overflow: visible; }
 .clearfix:after { clear: both; }
 
 .clearfix { zoom: 1; }
+
+/*==============================
+=            Layout           =
+==============================*/
+body { margin-top: 5em; max-width: 45em; margin: auto; padding: 1em; }
+
+.main { max-width: 40em; padding: 2em; }
+
+.intro { text-align: center; }
+
+.caption { font-style: italic; font-weight: 400; text-align: center; }
+
+/*==================================
+=           Typography            =
+==================================*/
+body { font-family: sans-serif; background-color: rgba(236, 217, 168, 0.43); font-weight: 400; color: #222; }
+
+h1, h2 { color: #586A79; text-align: center; font-weight: 600; }
+
+h1 { font-size: 2.9em; }
+
+h2 { font-size: 1.5em; }
+
+/*=============================
+=            Links            =
+=============================*/
+a { color: #222222; }
+a:focus { text-decoration: none; }
+a:hover { border-bottom: 2px solid #586A79; }
+
+/*================================
+=            Elements            =
+================================*/
+span.highlight { background-color: rgba(67, 36, 133, 0.22); padding-top: 1px; padding-bottom: 2px; }
+
+ul li span.highlight { background-color: rgba(44, 165, 150, 0.22); }
+
+hr { color: #586A79; border: 1px solid; margin-bottom: 2em; }
