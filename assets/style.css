@@ -30,11 +30,13 @@ body {
 /*==================================
 =           Typography            =
 ==================================*/
-body, p {
+body, p, li {
   font-family: "adelle",serif;
   font-style: normal;
   font-weight: 400;
   color: #222;
+  font-size: 1.1em;
+  line-height: 1.5em;
 }
 
 h1, h2, .caption {
