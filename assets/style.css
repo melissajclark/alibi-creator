@@ -526,8 +526,8 @@ optgroup::-moz-focus-inner {
   border: none;
   border-bottom: 4px solid #E3A424;
   margin-bottom: 1em;
-  font-size: 18px;
-  font-weight: bold;
+  font-size: 1.3em;
+  font-weight: 500;
   padding-bottom: 5px;
   position: static;
   width: 100%;
