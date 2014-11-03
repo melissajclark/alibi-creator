@@ -96,33 +96,39 @@ var nameUsedInFinalAlibi = "";
 *
 **/
 
-// if user selects mom or dad, want to be able to print "Mom" / "Dad" later
+// if user selects mom or dad, want to be able to print "Mom" / "Dad" later && be able to print their name seperately
 // but if they select girlfriend, boyfriend, etc - I only want to print their name
 // if they select other, I only want to print their name
 
 
 // this function happens when user hits submit - analyzes input of "who" fields
 
+
+
 $("input[type=submit]").on("click",function(){
 	$(this).addClass("animated wobble"); // fun effect for submit
 
+
+	if (alibiQuestion.who === "mom" || alibiQuestion.who === "dad" ) {
+		alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
+		nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.whoName + '</span>';
+		nameUsedInFinalAlibi = ' ' + '<span class="capitalized">' + alibiQuestion.who + '</span>';
+		whoIsMadandTheirName = " your " + alibiQuestion.who + "," + nameOfAngryPerson;
+	} 
+
 	if (alibiQuestion.who ===  "other") { // checks the value of input with the value of "other"
 		alibiQuestion.who = $("fieldset.who input[type=text]").val();
-		nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.who + '</span>'; 	// on submit: updates the name with span class so it can be styled with CSS
+		nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.who + '</span>';
 		whoIsMadandTheirName = nameOfAngryPerson;
 		nameUsedInFinalAlibi = nameOfAngryPerson;
 	}
-	if (alibiQuestion.who === "mom" || alibiQuestion.who === "dad") {
-		alibiQuestion.who = $("fieldset.pissedName input[type=text]").val();
-		nameUsedInFinalAlibi = ' ' + '<span class="capitalized">' + alibiQuestion.who + '</span>';  
-	}
-
-	else if (alibiQuestion.who != "other") { // checks the value of input with the value of "other"
+	else if (alibiQuestion.who != "other" && alibiQuestion.who != "mom" && alibiQuestion.who != "dad") { 
 		alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
-		nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.whoName + '</span>'; 	// on submit: updates the name with span class so it can be styled with CSS
+		nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.whoName + '</span>';
 		whoIsMadandTheirName = " your " + alibiQuestion.who + "," + nameOfAngryPerson;
 		nameUsedInFinalAlibi = nameOfAngryPerson;
-	}	
+	}
+	
 	console.log(nameOfAngryPerson);
 	$("section.formContent").hide();
 
