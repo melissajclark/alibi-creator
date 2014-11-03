@@ -78,7 +78,7 @@ $(document).ready(function(){
 		 alibiQuestion.scaleOfIssue = $(this).val(); 
 	}); // end of function listening on scale of Mess up Input	
 
-	// this function happens when user hits submit - analyzes input and console logs 
+	// this function happens when user hits submit - analyzes input of "who" fields
 	$("input[type=submit]").on("click",function(){
 		$(this).addClass("animated wobble"); // fun effect for submit
 
@@ -90,7 +90,11 @@ $(document).ready(function(){
 			alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
 		}
 
-		console.log("Who alibi is for: " + alibiQuestion.who + ", " + nameofPissed + "Happened before? "+ alibiQuestion.firstTime + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
+		var whosePissed = $("fieldset.pissedName input[type=text]").val();
+
+		console.log("Name "+ whosePissed);
+
+		console.log("Who alibi is for: " + alibiQuestion.who + ", " + whosePissed + "Happened before? "+ alibiQuestion.firstTime + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
 
 	}); // end of click submit function & logging of quick alibi summary
 
