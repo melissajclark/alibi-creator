@@ -2,3 +2,7 @@
 
 .sass-cache
 *.css.map
+
+### Ignore Files From Previous Branches / Stages in Project ###
+
+alibi.js
