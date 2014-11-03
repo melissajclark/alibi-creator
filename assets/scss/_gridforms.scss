@@ -38,8 +38,10 @@
 }
 .grid-form fieldset legend {
 	border: none;
-	border-bottom: 4px solid #404040;
-	color: #404040;
+	// border-bottom: 4px solid #404040;
+	// color: #404040;
+	border-bottom: 5px solid #E3A424; // my styling
+	margin-bottom: 1em; // my styling
 	font-size: 18px;
 	font-weight: bold;
 	padding-bottom: 5px;
