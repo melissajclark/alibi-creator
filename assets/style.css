@@ -31,9 +31,9 @@ body {
 =           Typography            =
 ==================================*/
 body, p {
-  font-family: "pragmatica-web",sans-serif;
+  font-family: "adelle",serif;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   color: #222;
 }
 
