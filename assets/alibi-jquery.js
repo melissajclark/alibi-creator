@@ -199,7 +199,7 @@ var alibiButton = '<button type="button" class="createAlibi btn btn-default btn-
 
 $("input[type=submit]").one("click",function(){ 	// functions below are executed after user hits submit
 	$(".alibiSummary").after(alibiButton); // adds button after AlibiSummary
-	$("button.createAlibi").one("click", function(){
+	$("button.createAlibi.btn.btn-default.btn-lg.btn-block").one("click", function(){
 		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption1+"</li>");
 		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption2+"</li>");
 		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption3+"</li>");
