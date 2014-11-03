@@ -5,10 +5,18 @@
 **/
 
 // @import "reset";
+
+// @import "variables";
+// @import "bootstrap/clearfix";
+// @import "mixins";
+
 @import "layout";
 @import "form-elements";
 @import "type";
 @import "links";
+
+@import "bootstrap/buttons-css";
+
 @import "elements";
-@import "formalize"; // creates similar experience across browsers
+// @import "formalize"; // creates similar experience across browsers
 @import "gridforms"; // creates grid-like form experience

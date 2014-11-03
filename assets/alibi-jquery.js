@@ -195,7 +195,7 @@ $("input[type=submit]").on("click",function(){
 *
 **/
 
-var alibiButton = '<button class="createAlibi">Ready for an Alibi?</button>';
+var alibiButton = '<button type="button" class="createAlibi btn btn-default btn-lg btn-block">Ready for an Alibi?</button>';
 
 $("input[type=submit]").one("click",function(){ 	// functions below are executed after user hits submit
 	$(".alibiSummary").after(alibiButton); // adds button after AlibiSummary
