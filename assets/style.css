@@ -7,16 +7,16 @@
 =            Layout           =
 ==============================*/
 body {
-  margin-top: 5em;
-  max-width: 45em;
+  margin-top: 2em;
+  max-width: 50em;
   margin: auto;
   padding: 1em;
   background-color: rgba(179, 179, 179, 0);
+  margin-bottom: 3em;
 }
 
 .main {
-  max-width: 40em;
-  padding: 2em;
+  max-width: 45em;
 }
 
 .intro {
@@ -79,16 +79,6 @@ a:hover {
 /*================================
 =            Elements            =
 ================================*/
-span.highlight {
-  background-color: rgba(67, 36, 133, 0.22);
-  padding-top: 1px;
-  padding-bottom: 2px;
-}
-
-ul li span.highlight {
-  background-color: rgba(44, 165, 150, 0.22);
-}
-
 hr {
   color: #586A79;
   border: 1px solid;
