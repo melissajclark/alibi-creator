@@ -47,7 +47,7 @@ $(document).ready(function(){
 		// more alibi questions?
 	}
 
-	var whosePissed = "";
+	var nameOfAngryPerson = "";
 
 	// this function defines alibiQuestion.who alibi is for & stores the value
 	$("fieldset.who input[type='radio']").on("click", function(){
@@ -122,8 +122,8 @@ $("input[type=submit]").on("click",function(){
 
 	if (alibiQuestion.who != "other") { // checks the value of input with the value of "other"
 		alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
-		whosePissed = '<span class="capitalized">' + alibiQuestion.whoName + '</span>'; 	// on submit: updates the name with span class so it can be styled with CSS
-		stringWhoPissed = "your " + alibiQuestion.who + "," + whosePissed;
+		nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.whoName + '</span>'; 	// on submit: updates the name with span class so it can be styled with CSS
+		whoIsMadwithName = "your " + alibiQuestion.who + "," + nameOfAngryPerson;
 	}	
 
 
@@ -158,12 +158,13 @@ $("input[type=submit]").on("click",function(){
 		} else if (alibiQuestion.scaleOfIssue >= 2 && alibiQuestion.scaleOfIssue <= 3) {
 			scaleOfIssueQ = "You barely messed up! Let's call this a misdemeanour";
 		} else if (alibiQuestion.scaleOfIssue = 1) {
-			scaleOfIssueQ = "You know what, you'll be fine. I bet your " + alibiQuestion.who + ", " + whosePissed + " is already over it. Let's get you an alibi, just in case" 
+			scaleOfIssueQ = "You know what, you'll be fine. I bet " + whoIsMadwithName + " is already over it. Let's get you an alibi, just in case" 
 		}
 
-		var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off " + stringWhoPissed + "." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
+		var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off " + whoIsMadwithName + "." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>";
 		
 		$(".alibiSummary").append(analyzedAlibi); // inserts response to answers into the DOM
+		console.log(whoIsMadwithName);
 
 	}); // end of click submit function that analyzes scale of Issue
 
