@@ -6,7 +6,7 @@ $(document).ready(function(){
 *
 **/
 
-	$(".fitThis").fitText(0.8, {minFontSize:'25px', maxFontSize: '100px'});
+	$(".fitThis").fitText(0.8, {minFontSize:'25px', maxFontSize: '80px'});
 
 	$(".otherField").hide(); // hides other text field on page load
 	$("fieldset.pissedName").hide(); // hides pissedName fieldset on page load
