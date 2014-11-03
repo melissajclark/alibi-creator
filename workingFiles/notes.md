@@ -24,3 +24,13 @@
 2. hide items without selected class
 
 
+# FINAL TO DO'S (before project hand-in)
+
+1. Fix / stop the the create Alibi button from generating the same alibis again
+    - either get it to create new ones
+    - or get it to listen only once
+2. Style buttons
+3. Personalize the output of alibis more
+4. Add notes about what to do with the alibis
+5. Add link to me / github / etc
+6. Look for domain? 
