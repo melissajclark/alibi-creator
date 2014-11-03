@@ -110,7 +110,23 @@ $(document).ready(function(){
 	- ie. insert certain words based on input etc
 */
 
+// this function happens when user hits submit - analyzes input of "who" fields
+$("input[type=submit]").on("click",function(){
+	$(this).addClass("animated wobble"); // fun effect for submit
 
+	if (alibiQuestion.who == "other") { // checks the value of input with the value of "other"
+		alibiQuestion.who = $("fieldset.who input[type=text]").val();
+		alibiQuestion.who = otherName;
+	}
+
+	if (alibiQuestion.who != "other") { // checks the value of input with the value of "other"
+		alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
+	}
+
+	// on submit: updates the name with span class so it can be styled with CSS
+	whosePissed = '<span class="capitalized">' + alibiQuestion.whoName + '</span>';
+
+	$("section.formContent").hide();
 
 
 
