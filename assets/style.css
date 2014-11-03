@@ -33,6 +33,9 @@ body {
 =           Typography            =
 ==================================*/
 body {
+  font-family: "pragmatica-web",sans-serif;
+  font-style: normal;
+  font-weight: 300;
   color: #222;
 }
 
