@@ -15,8 +15,13 @@ body {
   margin-bottom: 3em;
 }
 
-.main {
-  max-width: 30em;
+main {
+  max-width: 45em;
+}
+
+footer {
+  margin-top: 3em;
+  text-align: center;
 }
 
 /*============================================
@@ -75,12 +80,13 @@ h2 {
 =============================*/
 a {
   color: #222222;
+  text-decoration: none;
 }
 a:focus {
   text-decoration: none;
 }
 a:hover {
-  border-bottom: 2px solid #586A79;
+  border-bottom: 3px solid #E3A424;
 }
 
 /* ================================
