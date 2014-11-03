@@ -47,7 +47,7 @@ $(document).ready(function(){
 		// more alibi questions?
 	}
 
-	// var nameofPissed = alibiQuestion.whoName.toUpperCase( );
+	var whosePissed = "";
 
 	// this function defines alibiQuestion.who alibi is for & stores the value
 	$("fieldset.who input[type='radio']").on("click", function(){
@@ -90,11 +90,11 @@ $(document).ready(function(){
 			alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
 		}
 
-		var whosePissed = '<span class="capitalizeName">' + alibiQuestion.whoName + '</span>';
+		whosePissed = '<span class="capitalizeName">' + alibiQuestion.whoName + '</span>'; // updates the name with span class so it can be styled with CSS
 
-		console.log("Name "+ alibiQuestion.whoName);
+		// console.log("Name "+ alibiQuestion.whoName);
 
-		console.log("Who alibi is for: " + alibiQuestion.who + ", " + whosePissed + "Happened before? "+ alibiQuestion.firstTime + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
+		// console.log("Who alibi is for: " + alibiQuestion.who + ", " + whosePissed + "Happened before? "+ alibiQuestion.firstTime + ", Scale of mess up: " + alibiQuestion.scaleOfIssue); // logs user's answers
 
 	}); // end of click submit function & logging of quick alibi summary
 
@@ -130,7 +130,7 @@ $(document).ready(function(){
 		} else if (alibiQuestion.scaleOfIssue >= 2 && alibiQuestion.scaleOfIssue <= 3) {
 			scaleOfIssueQ = "You barely messed up! Let's call this a misdemeanour";
 		} else if (alibiQuestion.scaleOfIssue = 1) {
-			scaleOfIssueQ = "You know what, you'll be fine. I bet your " + alibiQuestion.who + ", " + alibiQuestion.whoName + " is already over it. Let's get you an alibi, just in case" 
+			scaleOfIssueQ = "You know what, you'll be fine. I bet your " + alibiQuestion.who + ", " + whosePissed + " is already over it. Let's get you an alibi, just in case" 
 		}
 
 		var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + ", " + whosePissed + "." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
