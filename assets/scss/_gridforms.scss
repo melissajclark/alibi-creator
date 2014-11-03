@@ -33,7 +33,8 @@
 .grid-form fieldset {
 	border: none;
 	padding: 0;
-	margin: 0;
+	// margin: 0; 
+	// commented out margin - styling it myself in _form-elements.scss
 }
 .grid-form fieldset legend {
 	border: none;
