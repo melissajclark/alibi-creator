@@ -110,6 +110,8 @@ $(document).ready(function(){
 	- ie. insert certain words based on input etc
 */
 
+
+
 // this function happens when user hits submit - analyzes input of "who" fields
 $("input[type=submit]").on("click",function(){
 	$(this).addClass("animated wobble"); // fun effect for submit
@@ -120,10 +122,10 @@ $("input[type=submit]").on("click",function(){
 
 	if (alibiQuestion.who != "other") { // checks the value of input with the value of "other"
 		alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
-	}	stringWhoPissed = "your " + alibiQuestion.who + "," + whosePissed;
+		whosePissed = '<span class="capitalized">' + alibiQuestion.whoName + '</span>'; 	// on submit: updates the name with span class so it can be styled with CSS
+		stringWhoPissed = "your " + alibiQuestion.who + "," + whosePissed;
+	}	
 
-	// on submit: updates the name with span class so it can be styled with CSS
-	whosePissed = '<span class="capitalized">' + alibiQuestion.whoName + '</span>';
 
 	$("section.formContent").hide();
 
@@ -159,7 +161,7 @@ $("input[type=submit]").on("click",function(){
 			scaleOfIssueQ = "You know what, you'll be fine. I bet your " + alibiQuestion.who + ", " + whosePissed + " is already over it. Let's get you an alibi, just in case" 
 		}
 
-		var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off your " + alibiQuestion.who + ", " + whosePissed + "." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
+		var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off " + stringWhoPissed + "." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>"; 
 		
 		$(".alibiSummary").append(analyzedAlibi); // inserts response to answers into the DOM
 
