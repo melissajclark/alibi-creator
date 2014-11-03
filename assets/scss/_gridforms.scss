@@ -104,13 +104,13 @@
 	border-right: none;
 }
 .grid-form [data-row-span] [data-field-span].focus {
-	background: #fffad4;
+	background: rgba(57, 53, 111, 0.11);
 }
 .grid-form [data-row-span] [data-field-span].focus label {
 	color: #262626;
 }
 .grid-form [data-row-span] [data-field-span]:hover {
-	color: rgba(57, 53, 111, 0.11);
+	background-color: rgba(57, 53, 111, 0.11);
 	cursor: text;
 }
 .grid-form [data-row-span="1"] > [data-field-span="1"] {
