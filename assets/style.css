@@ -11,7 +11,7 @@ body {
   max-width: 45em;
   margin: auto;
   padding: 1em;
-  background-color: #b3b3b3;
+  background-color: rgba(179, 179, 179, 0);
 }
 
 .main {
