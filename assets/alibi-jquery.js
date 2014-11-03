@@ -78,26 +78,6 @@ $(document).ready(function(){
 		 alibiQuestion.scaleOfIssue = $(this).val(); 
 	}); // end of function listening on scale of Mess up Input	
 
-	// // this function happens when user hits submit - analyzes input of "who" fields
-	// $("input[type=submit]").on("click",function(){
-	// 	$(this).addClass("animated wobble"); // fun effect for submit
-
-	// 	if (alibiQuestion.who == "other") { // checks the value of input with the value of "other"
-	// 		alibiQuestion.who = $("fieldset.who input[type=text]").val();
-	// 		alibiQuestion.who = otherName;
-	// 	}
-
-	// 	if (alibiQuestion.who != "other") { // checks the value of input with the value of "other"
-	// 		alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
-	// 	}
-
-	// 	// on submit: updates the name with span class so it can be styled with CSS
-	// 	whosePissed = '<span class="capitalized">' + alibiQuestion.whoName + '</span>';
-
-	// 	$("section.formContent").hide();
-
-	// }); // end of click submit function & logging of quick alibi summary
-
 
 /**
 *
@@ -110,20 +90,20 @@ $(document).ready(function(){
 	- ie. insert certain words based on input etc
 */
 
-
-
 // this function happens when user hits submit - analyzes input of "who" fields
 $("input[type=submit]").on("click",function(){
 	$(this).addClass("animated wobble"); // fun effect for submit
 
 	if (alibiQuestion.who == "other") { // checks the value of input with the value of "other"
 		alibiQuestion.who = $("fieldset.who input[type=text]").val();
+		nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.who + '</span>'; 	// on submit: updates the name with span class so it can be styled with CSS
+		whoIsMadandTheirName = nameOfAngryPerson;
 	}
 
 	if (alibiQuestion.who != "other") { // checks the value of input with the value of "other"
 		alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
 		nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.whoName + '</span>'; 	// on submit: updates the name with span class so it can be styled with CSS
-		whoIsMadwithName = "your " + alibiQuestion.who + "," + nameOfAngryPerson;
+		whoIsMadandTheirName = "your " + alibiQuestion.who + "," + nameOfAngryPerson;
 	}	
 
 
@@ -158,13 +138,13 @@ $("input[type=submit]").on("click",function(){
 		} else if (alibiQuestion.scaleOfIssue >= 2 && alibiQuestion.scaleOfIssue <= 3) {
 			scaleOfIssueQ = "You barely messed up! Let's call this a misdemeanour";
 		} else if (alibiQuestion.scaleOfIssue = 1) {
-			scaleOfIssueQ = "You know what, you'll be fine. I bet " + whoIsMadwithName + " is already over it. Let's get you an alibi, just in case" 
+			scaleOfIssueQ = "You know what, you'll be fine. I bet " + whoIsMadandTheirName + " is already over it. Let's get you an alibi, just in case" 
 		}
 
-		var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off " + whoIsMadwithName + "." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>";
+		var analyzedAlibi = "<p>" + "Alright so you messed up and pissed off " + whoIsMadandTheirName + "." + "</p>" + "<p>" +scaleOfIssueQ + "." + "</p>";
 		
 		$(".alibiSummary").append(analyzedAlibi); // inserts response to answers into the DOM
-		console.log(whoIsMadwithName);
+		console.log(whoIsMadandTheirName);
 
 	}); // end of click submit function that analyzes scale of Issue
 
