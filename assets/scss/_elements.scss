@@ -1,13 +1,26 @@
-/*================================
+/* ================================
 =            Elements            =
-================================*/
+================================ */
 
-hr {
-	color: #586A79;
-	border: 1px solid;
-	margin-bottom:2em;
+hr { // reset
+	display: block;
+	height: 1px;
+	border: 0;
+	// border-top: 1px solid #ccc;
+	margin: 1em 0;
+	padding: 0;
 }
-
+hr {
+	border-bottom: 5px solid #E3A424;
+	margin-bottom: 2em;
+	display: block;
+	-webkit-margin-before: 0em;
+	-webkit-margin-after: 0em;
+	-webkit-margin-start: auto;
+	-webkit-margin-end: auto;
+	// border-style: inherit;
+	// border-width: 1px;
+}
 li {
-  padding: 0.5em;
+	padding: 0.5em;
 }
