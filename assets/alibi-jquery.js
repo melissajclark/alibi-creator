@@ -97,7 +97,7 @@ var nameUsedInFinalAlibi = "";
 **/
 
 // this function happens when user hits submit - analyzes input of "who" fields
-$("input[type=submit]").on("click",function(){ 
+$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){ 
 	$(this).addClass("animated wobble"); // fun effect for submit
 
 
@@ -133,7 +133,7 @@ $("input[type=submit]").on("click",function(){
 *
 **/
 
-	$("input[type=submit]").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
+	$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
 
 		if (alibiQuestion.scaleOfIssue === 10 || alibiQuestion.scaleOfIssue >= 10) {
 			scaleOfIssueQ = "Holy shit, this could be bad. I don't know if I can get you outta this one";
@@ -197,7 +197,7 @@ $("input[type=submit]").on("click",function(){
 
 var alibiButton = '<button type="button" class="createAlibi btn btn-default btn-lg btn-block">Ready for an Alibi?</button>';
 
-$("input[type=submit]").one("click",function(){ 	// functions below are executed after user hits submit
+$("button.submitButton.btn.btn-default.btn-lg.btn-block").one("click",function(){ 	// functions below are executed after user hits submit
 	$(".alibiSummary").after(alibiButton); // adds button after AlibiSummary
 	$("button.createAlibi.btn.btn-default.btn-lg.btn-block").one("click", function(){
 		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption1+"</li>");
