@@ -34,3 +34,15 @@
 4. Add notes about what to do with the alibis
 5. Add link to me / github / etc
 6. Look for domain? 
+
+## To DO 
+
+(November 4, 2014)
+
+1. Make name field required --> right now, if user clicks through without putting in a name, it prints "Undefined in the summary." Would be much cleaner if I prevented this.
+2. Make Alibi Summary more dynamic - random strings?
+3. Button for user to start again?
+4. Put content on seperate pages instead of hiding content? (Then user could go back to earlier page)
+5. Figure out how to point github pages URL to purchased domain
+
+
