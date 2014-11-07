@@ -18,7 +18,6 @@
 - Project 2 involves building an interface and using jQuery for more advanced interactions
 
 ## To Dos / Planned Updates:
--------
 
 ### Bugs to Fix
 
