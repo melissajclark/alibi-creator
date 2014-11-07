@@ -2,14 +2,12 @@
 
 **By:** Melissa Jean Clark
 
-**For:** Project 1 in HackerYou's Javascript & Jquery class
+**For:** Project 1 & 2 of [HackerYou](http://hackeryou.com/)'s JavaScript & jQuery class (fall 2014)
 
 ----
 
 **Branch**: master = Project 1
-
 **Branch**: alibi-jquery = Project 2 (early stages, abandoned to use gh-pages branch)
-
 **Branch**: gh-pages = Project 2 committed to Github Pages
 
 ## Project 1 vs. Project 2
