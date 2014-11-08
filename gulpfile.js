@@ -1,18 +1,6 @@
-// var gulp      = require("gulp"),
-// takana    = require("takana");
-
-gulp.task('default', ['styles']);
+gulp.task('default', ['styles', 'watch']);
  
-// gulp.task("takana", function() {
-//   takana.run({
-//     path:         "assets/scss/",
-//     includePaths: [] // Optional
-//   });
-// });
-
-
 var gulp = require('gulp'),
-
     sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
