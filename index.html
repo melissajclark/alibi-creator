@@ -49,8 +49,21 @@
 
 <section class="formContent">
 	<form class="questions grid-form">
+
+	<!-- User's Name -->
+	<fieldset class="userName">
+		<legend>What's your name?</legend>
 		
-	<!-- Question 1 -->
+		<section data-row-span="1">
+
+			<p data-field-span="1">
+				<input type="text" name="your" id="who_8" placeholder="name" />
+			</p>
+
+		</section>
+	</fieldset>
+		
+	<!-- Who is the alibi for? -->
 		
 	<fieldset class="who">
 	    <legend class="alibiQ">Who is this alibi for?</legend>
@@ -121,13 +134,12 @@
 
 	   </section> <!-- end of third & final set of 3 rows -->
 	   
-	  <!-- Question 1B -->
+	  <!-- Name of Pissed appears here via jQuery -->
 
-	  <!-- Who is pissed Q appears next -->
 	  </fieldset>
-
 		
-		<!-- Question 2 -->		
+		<!-- Alibi Timing Q -->	
+
 		<fieldset class="alibiTiming">
 		   <legend class="alibiQ">Have you done this before?</legend>
 
@@ -146,7 +158,8 @@
 		    </section> <!-- End of set of 2 Rows -->
 		  </fieldset>
 		
-		<!-- Question 3 -->
+		<!-- Scale of Mess Up Q -->
+
 		<fieldset>
 			<legend class="alibiQ">How bad did you mess up?</legend>
 		<section data-row-span="2">
@@ -168,6 +181,7 @@
 				</select>
 			</p>
 		</fieldset>
+		
 		<p>
 			<button type="submit" class="submitButton btn btn-default btn-lg btn-block">Submit!</button>
 		</p>
