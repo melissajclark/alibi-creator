@@ -1,11 +1,11 @@
-gulp.task('default', ['takana']);
-
 var gulp      = require('gulp'),
-    takana    = require('takana');
+takana    = require('takana');
+
+gulp.task("default", ["takana"]);
  
-gulp.task('takana', function() {
+gulp.task("takana", function() {
   takana.run({
-    path:    (['/assets/'])
-    // includePaths: [] // Optional
+    path:         "assets/scsss/",
+    includePaths: [] // Optional
   });
 });
