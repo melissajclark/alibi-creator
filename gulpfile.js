@@ -30,3 +30,19 @@ gulp.task('styles', function(){
         .pipe(minifycss())
         .pipe(gulp.dest(''));
 });
+
+
+gulp.task('watch', function() {
+  // Listen on port 35729
+  server.listen(35729, function (err) {
+      if (err) {
+        return console.log(err);
+      }
+  
+      // Watch .scss files
+      gulp.watch('assets/scss/*.scss', ['styles']);
+      gulp.watch('assets/scss/**/*.scss', ['styles']);
+  
+    });
+
+});
