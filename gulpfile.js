@@ -1,7 +1,7 @@
 // var gulp      = require("gulp"),
 // takana    = require("takana");
 
-// gulp.task("default", ["takana"]);
+gulp.task('default', ['styles']);
  
 // gulp.task("takana", function() {
 //   takana.run({
