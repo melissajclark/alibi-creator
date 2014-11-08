@@ -41,9 +41,9 @@ var nameUsedInFinalAlibi = "";
 		$(".otherField").show();
 	});
 
-	// $("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(event){
-	// 	event.preventDefault(); // prevents form from refreshing
-	// }); // end of form.questions event function
+	$("form.questions").on("submit",function(event){
+		event.preventDefault(); // prevents form from refreshing
+	}); // end of form.questions event function
 
 	
 /**
@@ -211,6 +211,5 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").one("click",function()
 
 
 }); // end doc ready function
-
 
 
