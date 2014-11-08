@@ -17,8 +17,6 @@ gulp.task('styles', function(){
         .pipe(gulp.dest(''));
 });
 
-gulp.task('default', ['styles']);
-
 gulp.task('watch', function() {
   // Listen on port 35729
   server.listen(35729, function (err) {
@@ -33,3 +31,5 @@ gulp.task('watch', function() {
     });
 
 });
+
+gulp.task('default', ['styles', 'watch']);
