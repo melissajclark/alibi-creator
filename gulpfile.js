@@ -1,5 +1,5 @@
-var gulp      = require('gulp'),
-takana    = require('takana');
+var gulp      = require("gulp"),
+takana    = require("takana");
 
 gulp.task("default", ["takana"]);
  

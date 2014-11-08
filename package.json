@@ -1,6 +1,6 @@
 { "dependencies" :
 	{
 		"gulp" : "*",
-		"takana" : "https://github.com/mechio/takana"
+		"takana" : "*"
 	}
 }
