@@ -97,12 +97,8 @@
 }
 .grid-form [data-row-span] [data-field-span] label:first-child {
 	margin-top: 0;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	font-size: 10px;
 	color: #333333;
 	display: block;
-	margin-bottom: 4px;
 }
 .grid-form [data-row-span] [data-field-span] label:first-child:hover {
 	cursor: text;
