@@ -5,7 +5,7 @@ gulp.task("default", ["takana"]);
  
 gulp.task("takana", function() {
   takana.run({
-    path:         "assets/scsss/",
+    path:         "assets/scss/",
     includePaths: [] // Optional
   });
 });
