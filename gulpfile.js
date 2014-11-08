@@ -3,8 +3,7 @@ var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
-    newer = require('gulp-newer'),
-    server = lr();
+    newer = require('gulp-newer');
 
 gulp.task('styles', function(){
   return gulp.src(['assets/scss/*.scss',
