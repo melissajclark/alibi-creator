@@ -41,7 +41,7 @@ var nameUsedInFinalAlibi = "";
 		$(".otherField").show();
 	});
 
-	$("form.questions").on("submit",function(event){
+	$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("submit",function(event){
 		event.preventDefault(); // prevents form from refreshing
 	}); // end of form.questions event function
 
