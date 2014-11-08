@@ -3,8 +3,9 @@
     "gulp": "*",
     "gulp-ruby-sass": "*",
     "gulp-autoprefixer": "*",
-    "gulp-minify-css": "*",
     "gulp-newer": "*",
+    "gulp-imagemin": "*",
+    "tiny-lr": "*",
     "gulp-plumber": "*"
   }
 }
