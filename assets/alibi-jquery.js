@@ -22,6 +22,7 @@ var scaleOfIssueQ = "";
 var analyzedAlibi = "";
 var whoIsMadandTheirName = "";
 var nameUsedInFinalAlibi = "";
+var alibiUserName = "";
 
 /*-----  End of All empty variables ------*/
 
@@ -43,6 +44,8 @@ var nameUsedInFinalAlibi = "";
 
 	$("form.questions").on("submit",function(event){
 		event.preventDefault(); // prevents form from refreshing
+		alibiUserName = $("fielset.userName [input='text"]).val();
+		console.log(alibiUserName);
 	}); // end of form.questions event function
 
 	
