@@ -1,5 +1,3 @@
-gulp.task('default', ['styles', 'watch']);
- 
 var gulp = require('gulp'),
     sass = require('gulp-ruby-sass'),
     autoprefixer = require('gulp-autoprefixer'),
@@ -19,6 +17,7 @@ gulp.task('styles', function(){
         .pipe(gulp.dest(''));
 });
 
+gulp.task('default', ['styles']);
 
 gulp.task('watch', function() {
   // Listen on port 35729
