@@ -1,6 +1,10 @@
-{ "dependencies" :
-	{
-		"gulp" : "*",
-		"takana" : "*"
-	}
+{
+  "dependencies": {
+    "gulp": "*",
+    "gulp-ruby-sass": "*",
+    "gulp-autoprefixer": "*",
+    "gulp-minify-css": "*",
+    "gulp-newer": "*",
+    "gulp-plumber": "*"
+  }
 }
