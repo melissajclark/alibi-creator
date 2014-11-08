@@ -38,14 +38,12 @@ var alibiUserName = "";
 
 	$(".otherField").hide(); // hides other text field on page load
 	$("fieldset.pissedName").hide(); // hides pissedName fieldset on page load
-	$("fieldset.who [value='other']").on("click", function(){
+	$("fieldset.who input[type=text]").on("click", function(){
 		$(".otherField").show();
 	});
 
 	$("form.questions").on("submit",function(event){
 		event.preventDefault(); // prevents form from refreshing
-		alibiUserName = $("fielset.userName [input='text"]).val();
-		console.log(alibiUserName);
 	}); // end of form.questions event function
 
 	
@@ -92,7 +90,6 @@ var alibiUserName = "";
 		 alibiQuestion.scaleOfIssue = $(this).val(); 
 	}); // end of function listening on scale of Mess up Input	
 
-
 /**
 *
 * Function Updates Value of "Who"
@@ -100,7 +97,7 @@ var alibiUserName = "";
 **/
 
 // this function happens when user hits submit - analyzes input of "who" fields
-$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){ 
+$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("submit",function(){ 
 	$(this).addClass("animated wobble"); // fun effect for submit
 
 
