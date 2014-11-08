@@ -21,8 +21,6 @@
 
 ### Bugs to Fix
 
-- Yes & No can both be selected
-- Professor auto-selects Yes?
 - Name field is not required (need to fix since this allows user to see "Undefined" if they skip selecting a name)
 - Styling of labels on checkboxes (inheriting gridform styling)  
 
