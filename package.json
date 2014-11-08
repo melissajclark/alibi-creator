@@ -5,6 +5,5 @@
     "gulp-autoprefixer": "*",
     "gulp-minify-css": "*",
     "gulp-newer": "*",
-    "gulp-plumber": "*"
   }
 }
