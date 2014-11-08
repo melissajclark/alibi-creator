@@ -32,7 +32,7 @@ var nameUsedInFinalAlibi = "";
 *
 **/
 
-	$(".fitThis").fitText(0.8, {minFontSize:'30px', maxFontSize: '80px'});
+	$(".fitThis").fitText(0.8, {minFontSize:'30px', maxFontSize: '100px'});
 	$(".caption").fitText(0.8, {minFontSize:'15px', maxFontSize: '25px'});
 
 	$(".otherField").hide(); // hides other text field on page load
