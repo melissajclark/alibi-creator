@@ -2,3 +2,7 @@
 
 .sass-cache
 *.css.map
+
+### Gulp Stuff ###
+
+node_modules/*
