@@ -4,7 +4,6 @@ var gulp = require('gulp'),
     autoprefixer = require('gulp-autoprefixer'),
     minifycss = require('gulp-minify-css'),
     newer = require('gulp-newer'),
-    imagemin = require('gulp-imagemin'),
     server = lr();
 
 gulp.task('styles', function(){
