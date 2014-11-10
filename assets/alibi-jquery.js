@@ -22,7 +22,6 @@ var scaleOfIssueQ = "";
 var analyzedAlibi = "";
 var whoIsMadandTheirName = "";
 var nameUsedInFinalAlibi = "";
-var alibiUserName = "";
 
 /*-----  End of All empty variables ------*/
 
@@ -38,7 +37,7 @@ var alibiUserName = "";
 
 	$(".otherField").hide(); // hides other text field on page load
 	$("fieldset.pissedName").hide(); // hides pissedName fieldset on page load
-	$("fieldset.who input[type=text]").on("click", function(){
+	$("fieldset.who [value='other']").on("click", function(){
 		$(".otherField").show();
 	});
 
@@ -90,6 +89,7 @@ var alibiUserName = "";
 		 alibiQuestion.scaleOfIssue = $(this).val(); 
 	}); // end of function listening on scale of Mess up Input	
 
+
 /**
 *
 * Function Updates Value of "Who"
@@ -97,7 +97,7 @@ var alibiUserName = "";
 **/
 
 // this function happens when user hits submit - analyzes input of "who" fields
-$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("submit",function(){ 
+$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){ 
 	$(this).addClass("animated wobble"); // fun effect for submit
 
 
@@ -211,5 +211,4 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").one("click",function()
 
 
 }); // end doc ready function
-
 
