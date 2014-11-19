@@ -17,20 +17,13 @@
 
 ---------
 
-## To Dos / Planned Updates: _as of November 7, 2014_
-
-### Bugs to Fix
-
-- Name field is not required (need to fix since this allows user to see "Undefined" if they skip selecting a name)
-- Styling of labels on checkboxes (inheriting gridform styling)  
+## To Dos / Planned Updates: _last updated November 19, 2014_
 
 ### Features to Add / Updates
 
 - Button to generate more Alibis
-- Split content into pages (so user can easily go back and change answers / right now JS hides content)
 - Ask user's name
 - Sharing buttons
 - Fun animations / effects when Alibi is being created
 - More questions? 
 - More possible answers
-- Publish on purchased domain (alibicreator.com)!
