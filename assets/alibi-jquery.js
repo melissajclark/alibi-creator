@@ -211,9 +211,14 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").one("click",function()
 		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption2+"</li>");
 		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption3+"</li>");
 	$("button.createMoreAlibis.btn.btn-default.btn-lg.btn-block").show(); // appends button after initial three alibis
+	}); // closes function on create alibi button
 
+	$("button.createMoreAlibis.btn.btn-default.btn-lg.btn-block").one("click", function(){ // appends button after initial three alibis
+		$("section.moreAlibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption1+"</li>");
+		$("section.moreAlibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption2+"</li>");
+		$("section.moreAlibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption3+"</li>");
+	}); // closes function on more alibi button
 
-	}); // closes function on button
 }); // closes on click submit function
 
 
