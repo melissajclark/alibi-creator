@@ -127,7 +127,7 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){
 
 	// sets user's Name entry as value in alibiQuestion.userName variable
 	alibiQuestion.userName = $("fieldset.userName input[type='text']").val();
-	var usersName = alibiQuestion.userName; 
+	var usersName = "<span class='capitalized'>" + alibiQuestion.userName + "</span>"; 
 	console.log(usersName);
 
 }); // end of click submit function & logging of quick alibi summary
