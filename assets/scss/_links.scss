@@ -3,16 +3,15 @@
 =============================*/
 
 a {
-	color: #222222;
+	color: rgba(0, 73, 96, 0.89);
 	text-decoration: none;
 	border-bottom: 3px solid #E3A424;
+	font-weight:strong;
 		&:focus {
 		text-decoration: none;
 		}
 		&:hover {
-		background-color: rgba(57, 53, 111, 0.11);
-		padding: 5px;
-		border: none;
+		border-bottom: none;
 		}
 }
 
