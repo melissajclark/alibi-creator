@@ -126,7 +126,7 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){
 	$("section.formContent").hide();
 
 	// sets user's Name entry as value in alibiQuestion.userName variable
-	var alibiQuestion.userName = $("fieldset.userName input[type='text']").val();
+	alibiQuestion.userName = $("fieldset.userName input[type='text']").val();
 	var userNameEntry = alibiQuestion.userName; 
 	console.log(userNameEntry);
 
