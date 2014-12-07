@@ -40,6 +40,7 @@ var nameUsedInFinalAlibi = "";
 	$("fieldset.who [value='other']").on("click", function(){
 		$(".otherField").show();
 	});
+	$("button.createMoreAlibis.btn.btn-default.btn-lg.btn-block").hide(); // hides button on page load
 
 	$("form.questions").on("submit",function(event){
 		event.preventDefault(); // prevents form from refreshing
@@ -209,11 +210,11 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").one("click",function()
 		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption1+"</li>");
 		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption2+"</li>");
 		$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption3+"</li>");
+	$("button.createMoreAlibis.btn.btn-default.btn-lg.btn-block").show(); // appends button after initial three alibis
+
 
 	}); // closes function on button
 }); // closes on click submit function
-
-
 
 
 }); // end doc ready function
