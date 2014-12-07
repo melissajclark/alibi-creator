@@ -53,6 +53,7 @@ var nameUsedInFinalAlibi = "";
 **/
 
 	var alibiQuestion = { 
+		userName: "",
 		who: "",
 		whoName: "",
 		firstTime: "",
