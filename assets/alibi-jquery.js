@@ -133,7 +133,7 @@ var pissedNameInputOther = "";
 		}
 
 		console.log(nameOfAngryPerson);
-		$("section.formContent").hide();
+		// $("section.formContent").hide();
 
 		// sets user's Name entry as value in alibiQuestion.userName variable
 		alibiQuestion.userName = $("fieldset.userName input[type='text']").val();
@@ -148,7 +148,7 @@ var pissedNameInputOther = "";
 *
 **/
 
-	$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
+	$("button.submitButton.btn.btn-default.btn-lg.btn-block [type='submit']").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
 
 		if (alibiQuestion.scaleOfIssue === 10 || alibiQuestion.scaleOfIssue >= 10) {
 			scaleOfIssueQ = "Holy shit, this could be bad. I don't know if I can get you outta this one";
@@ -213,7 +213,7 @@ var pissedNameInputOther = "";
 var alibiButton = '<button type="button" class="createAlibi btn btn-default btn-lg btn-block animated">Ready for an Alibi?</button>';
 
 // functions below are executed after user hits submit
-$("button.submitButton.btn.btn-default.btn-lg.btn-block").one("click",function(){ 	
+$("button.submitButton.btn.btn-default.btn-lg.btn-block [type='submit']").on("click",function(){ 	
 
 	$(".alibiSummary").after(alibiButton); // adds button after AlibiSummary
 		$("button.createAlibi.btn.btn-default.btn-lg.btn-block").one("click", function(){
