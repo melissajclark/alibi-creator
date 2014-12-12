@@ -94,7 +94,7 @@ var pissedNameInputOther = "";
 
 /**
 *
-* Function Listens on Submit & adds [type=submit] on click
+* Function Updates Value of "Who"
 *
 **/
 
@@ -110,12 +110,6 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){
 
 		var nameInputOther = $("input#who_9").val();
 		// console.log(nameInputOther);
-
-	/**
-	*
-	* Function Updates Value of "Who"
-	*
-	**/
 
 		if (alibiQuestion.who === "mom" || alibiQuestion.who === "dad" ) {
 			alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
@@ -145,14 +139,18 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){
 		var usersName = "<span class='capitalized'>" + alibiQuestion.userName + "</span>"; 
 		console.log(usersName);
 
+	}); // end of click submit function & logging of quick alibi summary	
+}); // end of function adding type=submit to button
 
-	/**
-	*
-	* Alibi Summary for User
-	*
-	**/
+	
 
-		// this section analyzes user's answer to scaleofIssue prompt
+/**
+*
+* Alibi Summary for User
+*
+**/
+
+	$("button.submitButton.btn.btn-default.btn-lg.btn-block [type='submit']").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
 
 		if (alibiQuestion.scaleOfIssue === 10 || alibiQuestion.scaleOfIssue >= 10) {
 			scaleOfIssueQ = "Holy shit, this could be bad. I don't know if I can get you outta this one";
@@ -173,44 +171,40 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){
 		$(".alibiSummary").append(analyzedAlibi); // inserts response to answers into the DOM
 		console.log(whoIsMadandTheirName);
 
-		/**
-		*
-		* Alibi Creation
-		*
-		**/
+	}); // end of click submit function that analyzes scale of Issue
 
-		// defines prefixes to insert before array items
-		var prefix = [ "my", "I had", "I was"]; 
+/**
+*
+* Alibi Creation
+*
+**/
 
-		/* My */ var alibiOption1 = [ "toilet exploded", "apartment flooded", "great-aunt twice removed died", "cat had a seizure", "my phone died"];
+	// defines prefixes to insert before array items
+	var prefix = [ "my", "I had", "I was"]; 
 
-		/* I had */ var alibiOption2 = [ "diarrhea", "the bird flu", "my first period", "to meet my parole officer", "food poisoning", "vertigo"]; 
+	/* My */ var alibiOption1 = [ "toilet exploded", "apartment flooded", "great-aunt twice removed died", "cat had a seizure", "my phone died"];
 
-		/* I was */ var alibiOption3 = ["watching porn", "in Montreal", "in a coma", "helping an old lady cross the street", "robbed", "arrested", "doing laundry", "in rehab", "at a Katy Perry concert", "dealing with my bedbug infestation"]; 
+	/* I had */ var alibiOption2 = [ "diarrhea", "the bird flu", "my first period", "to meet my parole officer", "food poisoning", "vertigo"]; 
 
-		/* bad */ var badWord = ["awful", "terrible", "serious", "a bummer", "dreadful", "atrocious", "godawful", "gross", "abominable", "despicable", "horrid", "repulsive", "rotten"];
+	/* I was */ var alibiOption3 = ["watching porn", "in Montreal", "in a coma", "helping an old lady cross the street", "robbed", "arrested", "doing laundry", "in rehab", "at a Katy Perry concert", "dealing with my bedbug infestation"]; 
 
-		/* more*/ var moreAlibi = ["If you knew the state I was in, you wouldn't have wanted me around.", "I still can't believe this happened!", "I'm still dealing with it all, you know?", "Ugh, it's not even over yet. It's still going on."]
+	/* bad */ var badWord = ["awful", "terrible", "serious", "a bummer", "dreadful", "atrocious", "godawful", "gross", "abominable", "despicable", "horrid", "repulsive", "rotten"];
 
-		/* apology */ var alibiApology = ["Can we get past this?", "I hope we can move on from this, let's remember the good times. What do you say?", "I know I'm a bit of a fuckup, I hope you can find it in your hear to forgive me.", "This whole situation has been awful, but the worst part is knowing I disappointed you. This will never happen again. Let's move on. So uh, can I get you a beer?"]
+	/* more*/ var moreAlibi = ["If you knew the state I was in, you wouldn't have wanted me around.", "I still can't believe this happened!", "I'm still dealing with it all, you know?", "Ugh, it's not even over yet. It's still going on."]
 
-		// returns random item from array (full disclosure: borrowed from cat name project)
-		  var random = function(arr) {
-		  var num = arr.length;
-		  var random = Math.floor(Math.random() * arr.length);
-		  return arr[random];
-		}
+	/* apology */ var alibiApology = ["Can we get past this?", "I hope we can move on from this, let's remember the good times. What do you say?", "I know I'm a bit of a fuckup, I hope you can find it in your hear to forgive me.", "This whole situation has been awful, but the worst part is knowing I disappointed you. This will never happen again. Let's move on. So uh, can I get you a beer?"]
 
-		// updates array values to include prefix + elaborates with more info
-		var alibiOption1 = "I am SO sorry! Oh god, " + prefix[0] + " " + random(alibiOption1) + ". It was a real nightmare. " + random(moreAlibi) + " " + random(alibiApology); 
-		var alibiOption2 = "Believe me, I wish I could have been there. " + prefix[1] + " " + random(alibiOption2) + " and it was " + random(badWord) + "! " + random(moreAlibi) + " " + random(alibiApology);
-		var alibiOption3 = "I can't believe I'm saying this aloud, I feel  " + random(badWord) + ". But, I need to be honest with you... " + prefix[2] + " " + random(alibiOption3) + ". " + random(moreAlibi) + " " + random(alibiApology);
+	// returns random item from array (full disclosure: borrowed from cat name project)
+	  var random = function(arr) {
+	  var num = arr.length;
+	  var random = Math.floor(Math.random() * arr.length);
+	  return arr[random];
+	}
 
-	}); // end of click submit function & logging of quick alibi summary
-		
-}); // end of function adding type=submit to button
-
-
+	// updates array values to include prefix + elaborates with more info
+	var alibiOption1 = "I am SO sorry! Oh god, " + prefix[0] + " " + random(alibiOption1) + ". It was a real nightmare. " + random(moreAlibi) + " " + random(alibiApology); 
+	var alibiOption2 = "Believe me, I wish I could have been there. " + prefix[1] + " " + random(alibiOption2) + " and it was " + random(badWord) + "! " + random(moreAlibi) + " " + random(alibiApology);
+	var alibiOption3 = "I can't believe I'm saying this aloud, I feel  " + random(badWord) + ". But, I need to be honest with you... " + prefix[2] + " " + random(alibiOption3) + ". " + random(moreAlibi) + " " + random(alibiApology);
 
 /**
 *
@@ -250,4 +244,3 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block [type='submit']").one("c
 
 
 }); // end doc ready function
-
