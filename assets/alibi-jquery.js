@@ -199,7 +199,7 @@ var pissedNameInputOther = "";
 
 	/* apology */ var alibiApology = ["Can we get past this?", "I hope we can move on from this, let's remember the good times. What do you say?", "I know I'm a bit of a fuckup, I hope you can find it in your hear to forgive me.", "This whole situation has been awful, but the worst part is knowing I disappointed you. This will never happen again. Let's move on. So uh, can I get you a beer?"]
 
-	// returns random item from array (full disclosure: borrowed from cat name project)
+	// returns random item from array
 	  var random = function(arr) {
 	  var num = arr.length;
 	  var random = Math.floor(Math.random() * arr.length);
