@@ -68,7 +68,7 @@ var pissedNameInputOther = "";
 	$("fieldset.who input[type='radio']").on("click", function(){
 		 alibiQuestion.who = $(this).val(); 
 
-		 var nameQhtml = '<fieldset class="pissedName"><legend>Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</legend><br/><input type="text" name="name" id="who_10" placeholder="name"/></fieldset>';
+		 var nameQhtml = '<fieldset class="pissedName"><legend>Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</legend><br/><input type="text" name="name" id="who_10" placeholder="name" required/></fieldset>';
 
 		 if (alibiQuestion.who != "other") { // checks for input that is not "other"
 		 	$("fieldset.pissedName").remove();
@@ -92,14 +92,15 @@ var pissedNameInputOther = "";
 		 alibiQuestion.scaleOfIssue = $(this).val(); 
 	}); // end of function listening on scale of Mess up Input
 
+	$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){ 
+		$("button.submitButton.btn.btn-default.btn-lg.btn-block").attr("type", "submit");	
+	}); // end of click submit function & logging of quick alibi summary
+
 /**
 *
 * Function Updates Value of "Who"
 *
 **/
-
-$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){ 
-	$("button.submitButton.btn.btn-default.btn-lg.btn-block").attr("type", "submit");
 
 	// this function happens when user hits submit - analyzes input of "who" fields
 	$("button.submitButton.btn.btn-default.btn-lg.btn-block [type='submit']").on("click",function(){ 
@@ -139,10 +140,7 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){
 		var usersName = "<span class='capitalized'>" + alibiQuestion.userName + "</span>"; 
 		console.log(usersName);
 
-	}); // end of click submit function & logging of quick alibi summary	
-}); // end of function adding type=submit to button
-
-	
+	}); // end of click submit function & logging of quick alibi summary
 
 /**
 *
@@ -150,7 +148,7 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){
 *
 **/
 
-	$("button.submitButton.btn.btn-default.btn-lg.btn-block [type='submit']").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
+	$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
 
 		if (alibiQuestion.scaleOfIssue === 10 || alibiQuestion.scaleOfIssue >= 10) {
 			scaleOfIssueQ = "Holy shit, this could be bad. I don't know if I can get you outta this one";
@@ -215,7 +213,7 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){
 var alibiButton = '<button type="button" class="createAlibi btn btn-default btn-lg btn-block animated">Ready for an Alibi?</button>';
 
 // functions below are executed after user hits submit
-$("button.submitButton.btn.btn-default.btn-lg.btn-block [type='submit']").one("click",function(){ 	
+$("button.submitButton.btn.btn-default.btn-lg.btn-block").one("click",function(){ 	
 
 	$(".alibiSummary").after(alibiButton); // adds button after AlibiSummary
 		$("button.createAlibi.btn.btn-default.btn-lg.btn-block").one("click", function(){
