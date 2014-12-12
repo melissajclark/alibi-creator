@@ -22,6 +22,7 @@ var scaleOfIssueQ = "";
 var analyzedAlibi = "";
 var whoIsMadandTheirName = "";
 var nameUsedInFinalAlibi = "";
+var nameIwant = "";
 
 /*-----  End of All empty variables ------*/
 
@@ -66,7 +67,7 @@ var nameUsedInFinalAlibi = "";
 	$("fieldset.who input[type='radio']").on("click", function(){
 		 alibiQuestion.who = $(this).val(); 
 
-		 var nameQhtml = '<fieldset class="pissedName"><legend>Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</legend><br/><input type="text" name="their" id="who_8" placeholder="name" /></fieldset>';
+		 var nameQhtml = '<fieldset class="pissedName"><legend>Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</legend><br/><input type="text" name="their" id="who_10" placeholder="name" /></fieldset>';
 
 		 if (alibiQuestion.who != "other") { // checks for input that is not "other"
 		 	$("fieldset.pissedName").remove();
@@ -98,9 +99,9 @@ var nameUsedInFinalAlibi = "";
 *
 **/
 
-if (alibiQuestion.who.length < 0) {
-	alert("Oops you need to fill that in!");
-}
+
+
+
 
 
 /**
