@@ -206,7 +206,8 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){
 		var alibiOption2 = "Believe me, I wish I could have been there. " + prefix[1] + " " + random(alibiOption2) + " and it was " + random(badWord) + "! " + random(moreAlibi) + " " + random(alibiApology);
 		var alibiOption3 = "I can't believe I'm saying this aloud, I feel  " + random(badWord) + ". But, I need to be honest with you... " + prefix[2] + " " + random(alibiOption3) + ". " + random(moreAlibi) + " " + random(alibiApology);
 
-	}); // end of click submit function & logging of quick alibi summary	
+	}); // end of click submit function & logging of quick alibi summary
+		
 }); // end of function adding type=submit to button
 
 
