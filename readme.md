@@ -18,7 +18,7 @@
 ---------
 
 ## To Dos / Planned Updates: 
-_list last updated November 19, 2014_
+_list last updated December 12, 2014_
 
 ### Features to Add / Updates
 
