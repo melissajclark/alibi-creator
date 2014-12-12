@@ -110,6 +110,11 @@ var pissedNameInputOther = "";
 		var nameInputOther = $("input#who_9").val();
 		console.log(nameInputOther);
 
+		if (nameInput.length === 0 && nameInputOther.length === 0) {
+			console.log("no name");
+
+		}
+
 		if (alibiQuestion.who === "mom" || alibiQuestion.who === "dad" ) {
 			alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
 			nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.whoName + '</span>';
