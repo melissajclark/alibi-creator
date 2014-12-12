@@ -94,7 +94,7 @@ var pissedNameInputOther = "";
 
 /**
 *
-* Function Updates Value of "Who"
+* Function Listens on Submit & adds [type=submit] on click
 *
 **/
 
@@ -110,6 +110,12 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){
 
 		var nameInputOther = $("input#who_9").val();
 		// console.log(nameInputOther);
+
+	/**
+	*
+	* Function Updates Value of "Who"
+	*
+	**/
 
 		if (alibiQuestion.who === "mom" || alibiQuestion.who === "dad" ) {
 			alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
@@ -139,18 +145,14 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){
 		var usersName = "<span class='capitalized'>" + alibiQuestion.userName + "</span>"; 
 		console.log(usersName);
 
-	}); // end of click submit function & logging of quick alibi summary	
-}); // end of function adding type=submit to button
 
-	
+	/**
+	*
+	* Alibi Summary for User
+	*
+	**/
 
-/**
-*
-* Alibi Summary for User
-*
-**/
-
-	$("button.submitButton.btn.btn-default.btn-lg.btn-block [type='submit']").on("click",function(){ 	// this section analyzes user's answer to scaleofIssue prompt
+		// this section analyzes user's answer to scaleofIssue prompt
 
 		if (alibiQuestion.scaleOfIssue === 10 || alibiQuestion.scaleOfIssue >= 10) {
 			scaleOfIssueQ = "Holy shit, this could be bad. I don't know if I can get you outta this one";
@@ -171,7 +173,10 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){
 		$(".alibiSummary").append(analyzedAlibi); // inserts response to answers into the DOM
 		console.log(whoIsMadandTheirName);
 
-	}); // end of click submit function that analyzes scale of Issue
+	}); // end of click submit function & logging of quick alibi summary	
+}); // end of function adding type=submit to button
+
+
 
 /**
 *
