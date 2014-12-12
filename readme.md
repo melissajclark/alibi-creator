@@ -22,9 +22,9 @@ _list last updated November 19, 2014_
 
 ### Features to Add / Updates
 
-- Button to generate more Alibis
-- Ask user's name
-- Sharing buttons
-- Fun animations / effects when Alibi is being created
-- More questions? 
-- More possible answers
+- [  ] Button to generate more Alibis
+- [  ] Ask user's name
+- [  ] Sharing buttons
+- [  ] Fun animations / effects when Alibi is being created
+- [  ] More questions? 
+- [  ] More possible answers
