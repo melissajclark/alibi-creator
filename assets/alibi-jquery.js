@@ -223,7 +223,7 @@ var alibiButton = '<button type="button" class="createAlibi btn btn-default btn-
 $("form.questions").on("submit",function(){ 	
 
 	$(".alibiSummary").after(alibiButton); // adds button after AlibiSummary
-		$("button.createAlibi.btn.btn-default.btn-lg.btn-block").on("click", function(){
+		$("button.createAlibi.btn.btn-default.btn-lg.btn-block").one("click", function(){
 			$(this).addClass('tada');
 			setTimeout(function(){ // appends alibis after time out function
 				$("section.alibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption1+"</li>" + "<li>"+nameUsedInFinalAlibi + ' ' + alibiOption2+"</li>" + "<li>"+nameUsedInFinalAlibi + ' ' + alibiOption3+"</li>");
@@ -231,19 +231,6 @@ $("form.questions").on("submit",function(){
 		}); // closes function on create alibi button
 
  // closes function on create alibi button
-
-	// 	setTimeout(function(){
-	// 		$("button.createMoreAlibis.btn.btn-default.btn-lg.btn-block").show(); // appends button after initial three alibis
-	// 		setTimeout(function(){
-	// 			$("button.createMoreAlibis.btn.btn-default.btn-lg.btn-block").one("click", function(){ // appends button after initial three alibis
-	// 				$(this).addClass('tada');
-	// 				$("section.moreAlibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption1+"</li>");
-	// 				$("section.moreAlibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption2+"</li>");
-	// 				$("section.moreAlibiOutput ol").append("<li>"+nameUsedInFinalAlibi + ' ' + alibiOption3+"</li>");
-	// 			}); // closes function on more alibi button
-	// 		},2000); // time between click and appendage of list items
-
-	// },5000); // closes function on more alibis button
 
 }); // closes on click submit function
 
