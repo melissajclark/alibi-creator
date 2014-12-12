@@ -90,9 +90,11 @@ var pissedNameInputOther = "";
 	// this function defines the scale of the issue & stores the value
 	$("select.scaleMessUp").on("change", function(){
 		 alibiQuestion.scaleOfIssue = $(this).val(); 
-	}); // end of function listening on scale of Mess up Input	
+	}); // end of function listening on scale of Mess up Input
 
-
+	$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){ 
+		$("button.submitButton.btn.btn-default.btn-lg.btn-block").attr("type", "submit");	
+	}); // end of click submit function & logging of quick alibi summary
 
 /**
 *
@@ -101,7 +103,7 @@ var pissedNameInputOther = "";
 **/
 
 	// this function happens when user hits submit - analyzes input of "who" fields
-	$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){ 
+	$("button.submitButton.btn.btn-default.btn-lg.btn-block [type='submit']").on("click",function(){ 
 		$(this).addClass("animated wobble"); // fun effect for submit
 
 		var nameInput = $("fieldset.pissedName input[type='text']").val();
