@@ -94,46 +94,81 @@ var nameUsedInFinalAlibi = "";
 
 /**
 *
+* Function checks if "who" is empty
+*
+**/
+
+
+
+// this function happens when user hits submit - analyzes input of "who" fields
+$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){ 
+
+	var pissedNameInput = $("fieldset.pissedName input[type=text]").val();
+	console.log(pissedNameInput);
+	var pissedNameInputOther = $("fieldset.pissedName input#who_9").val();
+	console.log(pissedNameInputOther);
+
+	// check if name field is empty!
+	if (pissedNameInput.length <= 0) { 
+		console.log("empty!" + pissedNameInput.length);
+		alert("You forgot to fill that out their name!");
+	}	
+	if (pissedNameInputOther.length <= 0) { 
+		console.log("empty!" + pissedNameInput.length);
+		alert("You forgot to fill that their name other!");
+	}
+	else if (pissedNameInput.length >= 0 || pissedNameInputOther.length >= 0) { 
+		console.log("filled in!" + pissedNameInputOther.length);
+		alert("filled out!");
+	}
+
+}); // end of click submit function & logging of quick alibi summary
+
+
+
+/**
+*
 * Function Updates Value of "Who"
 *
 **/
 
-// this function happens when user hits submit - analyzes input of "who" fields
-$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){ 
-	$(this).addClass("animated wobble"); // fun effect for submit
+// if ( $("fieldset.pissedName input[type=text]").length > 0){
 
+	// this function happens when user hits submit - analyzes input of "who" fields
+	$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){ 
+		$(this).addClass("animated wobble"); // fun effect for submit
 
-	if (alibiQuestion.who === "mom" || alibiQuestion.who === "dad" ) {
-		alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
-		nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.whoName + '</span>';
-		nameUsedInFinalAlibi = ' ' + '<span class="capitalized">' + alibiQuestion.who + '</span>' + ', ';
-		whoIsMadandTheirName = " your " + alibiQuestion.who + "," + nameOfAngryPerson;
-	} 
+		if (alibiQuestion.who === "mom" || alibiQuestion.who === "dad" ) {
+			alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
+			nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.whoName + '</span>';
+			nameUsedInFinalAlibi = ' ' + '<span class="capitalized">' + alibiQuestion.who + '</span>' + ', ';
+			whoIsMadandTheirName = " your " + alibiQuestion.who + "," + nameOfAngryPerson;
+		} 
 
-	if (alibiQuestion.who ===  "other") { // checks the value of input with the value of "other"
-		alibiQuestion.who = $("fieldset.who input[type=text]").val();
-		nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.who + '</span>';
-		whoIsMadandTheirName = nameOfAngryPerson;
-		nameUsedInFinalAlibi = nameOfAngryPerson + ', ';
-	}
-	else if (alibiQuestion.who != "other" && alibiQuestion.who != "mom" && alibiQuestion.who != "dad") { 
-		alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
-		nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.whoName + '</span>';
-		whoIsMadandTheirName = " your " + alibiQuestion.who + "," + nameOfAngryPerson;
-		nameUsedInFinalAlibi = nameOfAngryPerson + ', ';
-	}
+		if (alibiQuestion.who ===  "other") { // checks the value of input with the value of "other"
+			alibiQuestion.who = $("fieldset.who input[type=text]").val();
+			nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.who + '</span>';
+			whoIsMadandTheirName = nameOfAngryPerson;
+			nameUsedInFinalAlibi = nameOfAngryPerson + ', ';
+		}
+		else if (alibiQuestion.who != "other" && alibiQuestion.who != "mom" && alibiQuestion.who != "dad") { 
+			alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
+			nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.whoName + '</span>';
+			whoIsMadandTheirName = " your " + alibiQuestion.who + "," + nameOfAngryPerson;
+			nameUsedInFinalAlibi = nameOfAngryPerson + ', ';
+		}
 
+		console.log(nameOfAngryPerson);
+		$("section.formContent").hide();
 
-	console.log(nameOfAngryPerson);
-	$("section.formContent").hide();
+		// sets user's Name entry as value in alibiQuestion.userName variable
+		alibiQuestion.userName = $("fieldset.userName input[type='text']").val();
+		var usersName = "<span class='capitalized'>" + alibiQuestion.userName + "</span>"; 
+		console.log(usersName);
 
-	// sets user's Name entry as value in alibiQuestion.userName variable
-	alibiQuestion.userName = $("fieldset.userName input[type='text']").val();
-	var usersName = "<span class='capitalized'>" + alibiQuestion.userName + "</span>"; 
-	console.log(usersName);
+	}); // end of click submit function & logging of quick alibi summary
 
-}); // end of click submit function & logging of quick alibi summary
-
+// } // ends if statement that runs code if content is filled in
 
 /**
 *
