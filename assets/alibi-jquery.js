@@ -22,7 +22,6 @@ var scaleOfIssueQ = "";
 var analyzedAlibi = "";
 var whoIsMadandTheirName = "";
 var nameUsedInFinalAlibi = "";
-var nameIwant = "";
 
 /*-----  End of All empty variables ------*/
 
@@ -67,7 +66,7 @@ var nameIwant = "";
 	$("fieldset.who input[type='radio']").on("click", function(){
 		 alibiQuestion.who = $(this).val(); 
 
-		 var nameQhtml = '<fieldset class="pissedName"><legend>Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</legend><br/><input type="text" name="their" id="who_10" placeholder="name" /></fieldset>';
+		 var nameQhtml = '<fieldset class="pissedName"><legend>Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</legend><br/><input type="text" name="their" id="who_10" placeholder="name" value="name"/></fieldset>';
 
 		 if (alibiQuestion.who != "other") { // checks for input that is not "other"
 		 	$("fieldset.pissedName").remove();
@@ -91,17 +90,6 @@ var nameIwant = "";
 	$("select.scaleMessUp").on("change", function(){
 		 alibiQuestion.scaleOfIssue = $(this).val(); 
 	}); // end of function listening on scale of Mess up Input	
-
-
-/**
-*
-* Function Checks if fields are filled in before running submit
-*
-**/
-
-
-
-
 
 
 /**
@@ -134,7 +122,7 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){
 		whoIsMadandTheirName = " your " + alibiQuestion.who + "," + nameOfAngryPerson;
 		nameUsedInFinalAlibi = nameOfAngryPerson + ', ';
 	}
-	
+
 	console.log(nameOfAngryPerson);
 	$("section.formContent").hide();
 
