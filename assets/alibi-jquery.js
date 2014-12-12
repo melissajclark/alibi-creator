@@ -68,7 +68,7 @@ var pissedNameInputOther = "";
 	$("fieldset.who input[type='radio']").on("click", function(){
 		 alibiQuestion.who = $(this).val(); 
 
-		 var nameQhtml = '<fieldset class="pissedName"><legend>Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</legend><br/><input type="text" name="their" id="who_10" placeholder="name"/></fieldset>';
+		 var nameQhtml = '<fieldset class="pissedName"><legend>Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</legend><br/><input type="text" name="name" id="who_10" placeholder="name"/></fieldset>';
 
 		 if (alibiQuestion.who != "other") { // checks for input that is not "other"
 		 	$("fieldset.pissedName").remove();
@@ -81,7 +81,6 @@ var pissedNameInputOther = "";
 		 }
 
 	}); // end of function listening on "alibiQuestion.who" question
-
 
 	// this function defines whether it's the first time or not & stores the value
 	$("fieldset.alibiTiming input[type='radio']").on("change", function(){
@@ -104,6 +103,12 @@ var pissedNameInputOther = "";
 	// this function happens when user hits submit - analyzes input of "who" fields
 	$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){ 
 		$(this).addClass("animated wobble"); // fun effect for submit
+
+		var nameInput = $("fieldset.pissedName input[type='text']").val();
+		console.log(nameInput);
+
+		var nameInputOther = $("input#who_9").val();
+		console.log(nameInputOther);
 
 		if (alibiQuestion.who === "mom" || alibiQuestion.who === "dad" ) {
 			alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
