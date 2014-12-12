@@ -39,11 +39,9 @@ var pissedNameInputOther = "";
 
 	$(".otherField").hide(); // hides other text field on page load
 	$("fieldset.pissedName").hide(); // hides pissedName fieldset on page load
-
-
-
-
-
+	$("fieldset.who [value='other']").on("click", function(){
+		$(".otherField").show();
+	});
 	$("button.createMoreAlibis.btn.btn-default.btn-lg.btn-block").hide(); // hides button on page load
 
 	$("form.questions").on("submit",function(event){
@@ -75,12 +73,13 @@ var pissedNameInputOther = "";
 		 if (alibiQuestion.who != "other") { // checks for input that is not "other"
 		 	$("fieldset.pissedName").remove();
 		 	$("fieldset.who").after(nameQhtml); // puts Q about name after first fieldset
-		 	$("#otherField").hide(); // hides other text if "other" is not selected
+		 	$(".otherField").hide(); // hides other text if "other" is not selected
+		 	$("input#who_9").attr("required", false); // sets "required" to false if other field is not active
 		 }
 
 		 if (alibiQuestion.who === "other") { // hides name Q if user selects other
 		 	$("fieldset.pissedName").hide();
-		 	$("#otherField").append('<input type="text" name="your" id="who_9" placeholder="other" required/>'); 
+		 	$("input#who_9").attr("required", true); // sets "other" field to required if it is selected
 		 }
 
 	}); // end of function listening on "alibiQuestion.who" question
