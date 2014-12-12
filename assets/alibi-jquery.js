@@ -22,6 +22,8 @@ var scaleOfIssueQ = "";
 var analyzedAlibi = "";
 var whoIsMadandTheirName = "";
 var nameUsedInFinalAlibi = "";
+var pissedNameInput = "";
+var pissedNameInputOther = "";
 
 /*-----  End of All empty variables ------*/
 
@@ -99,30 +101,45 @@ var nameUsedInFinalAlibi = "";
 **/
 
 
+	// this function defines whether it's the first time or not & stores the value
+	$("fieldset.pissedName input[type=text]").change(function(){
+		 pissedNameInput = $("fieldset.pissedName input[type=text]").val();
+		 console.log(pissedNameInput); 
+		 alert("filled in name!");
+	}); // end of function listening on alibi Timing
 
-// this function happens when user hits submit - analyzes input of "who" fields
-$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){ 
+// // this function happens when user hits submit - analyzes input of "who" fields
+// $("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){ 
 
-	var pissedNameInput = $("fieldset.pissedName input[type=text]").val();
-	console.log(pissedNameInput);
-	var pissedNameInputOther = $("fieldset.pissedName input#who_9").val();
-	console.log(pissedNameInputOther);
 
-	// check if name field is empty!
-	if (pissedNameInput.length <= 0) { 
-		console.log("empty!" + pissedNameInput.length);
-		alert("You forgot to fill that out their name!");
-	}	
-	if (pissedNameInputOther.length <= 0) { 
-		console.log("empty!" + pissedNameInput.length);
-		alert("You forgot to fill that their name other!");
-	}
-	else if (pissedNameInput.length >= 0 || pissedNameInputOther.length >= 0) { 
-		console.log("filled in!" + pissedNameInputOther.length);
-		alert("filled out!");
-	}
 
-}); // end of click submit function & logging of quick alibi summary
+
+// 	// this function defines whether it's the first time or not & stores the value
+// 	$("fieldset.pissedName input#who_9").on("change", function(){
+// 		 pissedNameInputOther = $(this).val();
+// 		 console.log(pissedNameInputOther); 
+// 	}); // end of function listening on alibi Timing
+
+
+// 	if (pissedNameInput = !pissedNameInput) {
+// 		console.log("pissedname empty");
+// 	}
+
+// 	// // check if name field is empty!
+// 	// if (pissedNameInput.length <= 0) { 
+// 	// 	console.log("empty!" + pissedNameInput.length);
+// 	// 	alert("You forgot to fill that out their name!");
+// 	// }	
+// 	// if (pissedNameInputOther.length <= 0) { 
+// 	// 	console.log("empty!" + pissedNameInput.length);
+// 	// 	alert("You forgot to fill that their name other!");
+// 	// }
+// 	// else if (pissedNameInput.length >= 0 || pissedNameInputOther.length >= 0) { 
+// 	// 	console.log("filled in!" + pissedNameInputOther.length);
+// 	// 	alert("filled out!");
+// 	// }
+
+// }); // end of click submit function & logging of quick alibi summary
 
 
 
@@ -131,8 +148,6 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){
 * Function Updates Value of "Who"
 *
 **/
-
-// if ( $("fieldset.pissedName input[type=text]").length > 0){
 
 	// this function happens when user hits submit - analyzes input of "who" fields
 	$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){ 
@@ -167,8 +182,6 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){
 		console.log(usersName);
 
 	}); // end of click submit function & logging of quick alibi summary
-
-// } // ends if statement that runs code if content is filled in
 
 /**
 *
