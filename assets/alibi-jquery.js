@@ -66,7 +66,7 @@ var nameUsedInFinalAlibi = "";
 	$("fieldset.who input[type='radio']").on("click", function(){
 		 alibiQuestion.who = $(this).val(); 
 
-		 var nameQhtml = '<fieldset class="pissedName"><legend>Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</legend><br/><input type="text" name="their" id="who_10" placeholder="name" value="name"/></fieldset>';
+		 var nameQhtml = '<fieldset class="pissedName"><legend>Whats your ' + alibiQuestion.who + '&#39;s ' + 'name?' + '</legend><br/><input type="text" name="their" id="who_10" placeholder="name"/></fieldset>';
 
 		 if (alibiQuestion.who != "other") { // checks for input that is not "other"
 		 	$("fieldset.pissedName").remove();
@@ -122,6 +122,7 @@ $("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(){
 		whoIsMadandTheirName = " your " + alibiQuestion.who + "," + nameOfAngryPerson;
 		nameUsedInFinalAlibi = nameOfAngryPerson + ', ';
 	}
+
 
 	console.log(nameOfAngryPerson);
 	$("section.formContent").hide();
