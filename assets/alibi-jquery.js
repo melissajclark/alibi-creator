@@ -112,7 +112,10 @@ var pissedNameInputOther = "";
 
 		if (nameInput.length === 0 && nameInputOther.length === 0) {
 			console.log("no name");
-
+			alert("Cmon fill em out");
+				$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(event){
+					event.preventDefault(); // prevents form from refreshing
+				}); // end of form.questions event function
 		}
 
 		if (alibiQuestion.who === "mom" || alibiQuestion.who === "dad" ) {
