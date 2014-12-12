@@ -110,13 +110,6 @@ var pissedNameInputOther = "";
 		var nameInputOther = $("input#who_9").val();
 		// console.log(nameInputOther);
 
-		if (nameInput.length >= 0 && nameInputOther.length >= 0) {
-			prompt("Oops! Fill out a name, please.");
-			$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(event){
-				event.preventDefault(); // prevents form from refreshing
-			}); // end of form.questions event function
-		}
-
 		if (alibiQuestion.who === "mom" || alibiQuestion.who === "dad" ) {
 			alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
 			nameOfAngryPerson = ' ' + '<span class="capitalized">' + alibiQuestion.whoName + '</span>';
