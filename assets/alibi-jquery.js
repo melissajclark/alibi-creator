@@ -105,12 +105,12 @@ var pissedNameInputOther = "";
 		$(this).addClass("animated wobble"); // fun effect for submit
 
 		var nameInput = $("fieldset.pissedName input[type='text']").val();
-		console.log(nameInput);
+		// console.log(nameInput);
 
 		var nameInputOther = $("input#who_9").val();
-		console.log(nameInputOther);
+		// console.log(nameInputOther);
 
-		if (nameInput.length === 0 && nameInputOther.length === 0) {
+		if (nameInput === undefined && nameInputOther === undefined || nameInput.length >= 0 && nameInputOther.length >= 0) {
 			console.log("no name");
 			alert("Cmon fill em out");
 				$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(event){
