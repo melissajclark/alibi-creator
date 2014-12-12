@@ -110,13 +110,18 @@ var pissedNameInputOther = "";
 		var nameInputOther = $("input#who_9").val();
 		// console.log(nameInputOther);
 
-		if (nameInput === undefined && nameInputOther === undefined || nameInput.length >= 0 && nameInputOther.length >= 0) {
-			console.log("no name");
-			alert("Cmon fill em out");
-				$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(event){
-					event.preventDefault(); // prevents form from refreshing
-				}); // end of form.questions event function
+		if (nameInput == undefined && nameInputOther == undefined) {
+			$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(event){
+				event.preventDefault(); // prevents form from refreshing
+				alert("cmon!");
+			}); // end of form.questions event function
 		}
+
+		// if (nameInput.length >= 0 && nameInputOther.length >= 0) {
+		// 	$("button.submitButton.btn.btn-default.btn-lg.btn-block").on("click",function(event){
+		// 		event.preventDefault(); // prevents form from refreshing
+		// 	}); // end of form.questions event function
+		// }
 
 		if (alibiQuestion.who === "mom" || alibiQuestion.who === "dad" ) {
 			alibiQuestion.whoName = $("fieldset.pissedName input[type=text]").val();
