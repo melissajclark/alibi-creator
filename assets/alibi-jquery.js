@@ -40,7 +40,7 @@ var pissedNameInputOther = "";
 	$(".otherField").hide(); // hides other text field on page load
 	$("fieldset.pissedName").hide(); // hides pissedName fieldset on page load
 	$("fieldset.who [value='other']").on("click", function(){
-		$(".otherField").show();
+		$("#otherField").append('<input type="text" name="your" id="who_9" placeholder="other" required/>');
 	});
 	$("button.createMoreAlibis.btn.btn-default.btn-lg.btn-block").hide(); // hides button on page load
 
