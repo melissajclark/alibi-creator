@@ -94,6 +94,17 @@ var nameUsedInFinalAlibi = "";
 
 /**
 *
+* Function Checks if fields are filled in before running submit
+*
+**/
+
+if (alibiQuestion.who.length < 0) {
+	alert("Oops you need to fill that in!");
+}
+
+
+/**
+*
 * Function Updates Value of "Who"
 *
 **/
